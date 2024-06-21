@@ -5719,8 +5719,6 @@ fieldset:disabled .btn {
   touch-action: pan-y;
 }
 .carousel-inner {
-  position: relative;
-  width: 100%;
   overflow: hidden;
 }
 .carousel-inner::after {
