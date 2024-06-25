@@ -19,17 +19,20 @@
 
 	<style>
 		.carousel-control-next,
-		.carousel-control-prev
-
-		/*, .carousel-indicators */
-			{
-			filter: invert(100%);
+		.carousel-control-prev,
+		.carousel-indicators {
+			color: white;
+			opacity: .9;
+			/* filter: invert(100%); */
 		}
+
 
 		.bg-green {
 			background: #3b5d50;
 			color: white;
 		}
+
+		/* *{outline: 1px solid red !important;} */
 	</style>
 </head>
 
@@ -79,7 +82,7 @@
 				</p>
 			</div>
 			<div class="col-12 mb-4 text-center">
-				<a href="#floorplans" class="btn btn-secondary mx-auto m-3">Floorplan</a>
+				<a href="#floorplans" class="btn btn-secondary mx-auto m-3">Floorplans</a>
 				<a href="#interior" class="btn btn-secondary mx-auto m-3">Interior</a>
 				<a href="#exterior" class="btn btn-secondary mx-auto m-3">Exterior</a>
 			</div>
@@ -105,19 +108,19 @@
 			</div>
 			<!-- End Column 1 -->
 			<div class="col-12 text-center">
-				<div id="carouselExampleIndicators" class="carousel slide">
+				<div id="carouselExampleIndicators0" class="carousel slide">
 					<div class="carousel-indicators">
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+						<button type="button" data-bs-target="#carouselExampleIndicators0" data-bs-slide-to="0"
 							class="active" aria-current="true" aria-label="Slide 1"></button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+						<button type="button" data-bs-target="#carouselExampleIndicators0" data-bs-slide-to="1"
 							aria-label="Slide 2"></button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+						<button type="button" data-bs-target="#carouselExampleIndicators0" data-bs-slide-to="2"
 							aria-label="Slide 3"></button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+						<button type="button" data-bs-target="#carouselExampleIndicators0" data-bs-slide-to="3"
 							aria-label="Slide 4"></button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+						<button type="button" data-bs-target="#carouselExampleIndicators0" data-bs-slide-to="4"
 							aria-label="Slide 5"></button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+						<button type="button" data-bs-target="#carouselExampleIndicators0" data-bs-slide-to="5"
 							aria-label="Slide 6"></button>
 					</div>
 					<div class="carousel-inner">
@@ -203,13 +206,13 @@
 						</div>
 
 					</div>
-					<button class="carousel-control-prev mt-3" type="button" data-bs-target="#carouselExampleIndicators"
-						data-bs-slide="prev">
+					<button class="carousel-control-prev mt-3" type="button"
+						data-bs-target="#carouselExampleIndicators0" data-bs-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Previous</span>
 					</button>
 					<button class="carousel-control-next mt-3 " type="button"
-						data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+						data-bs-target="#carouselExampleIndicators0" data-bs-slide="next">
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Next</span>
 					</button>
@@ -236,18 +239,18 @@
 			</div>
 			<!-- End Column 1 -->
 			<div class="col-12 text-center">
-				<div id="carouselExampleIndicators" class="carousel slide">
+				<div id="carouselExampleIndicators1" class="carousel slide">
 					<div class="carousel-indicators">
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+						<button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0"
 							class="active" aria-current="true" aria-label="Slide 1"></button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+						<button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1"
 							aria-label="Slide 2"></button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+						<button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2"
 							aria-label="Slide 3"></button>
 					</div>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<div class="row rounded bg-dark shadow-lg my-auto mx-auto p-3">
+							<div class="row rounded bg-dark shadow-lg my-auto mx-auto p-3 mb-5">
 								<!-- Left side of card -->
 								<div class="col-sm-12 col-md-12 col-lg-6 my-auto mx-auto p-3">
 									<img src="images/interiors/package-1/WCLot20B.VonHausMedia_14-thumbnail.jpg"
@@ -260,20 +263,48 @@
 											<b>Interior Package &num; 1</b>
 										</h3>
 									</div>
-									<div class="col-sm-12 col-md-12 text-center mb-5">
-										<p><b>Cabinet Color</b></p>
-										<p>Top: Black <br> Bottom: Vanilla</p>
-										<p><b>Countertops</b></p>
-										<p>MSI Quartz: Sparkling White Eased Edge</p>
-										<p><b>Handles</b></p>
-										<p>BP 65096-900</p>
-										<p><b>Laminate</b></p>
-										<p>Pro Plus: Flagstaff Oak</p>
-										<p><b>MB112 Entice Carpet</b></p>
-										<p>733 Compel</p>
-										<p><b>Interior Paint</b></p>
-										<p>SW 7016 "Mindful Gray"</p>
-										<a href="build.html" class="m-2 btn btn-secondary">Learn More</a>
+									<div class="row">
+										<div class="col-sm-6 col-md-6 text-center">
+											<p><b>Cabinet Color</b></p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p>Top: Black <br> Bottom: Vanilla</p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p><b>Countertops</b></p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p>MSI Quartz: Sparkling White Eased Edge</p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p><b>Handles</b></p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p>BP 65096-900</p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p><b>Laminate</b></p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p>Pro Plus: Flagstaff Oak</p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p><b>MB112 Entice Carpet</b></p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p>733 Compel</p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p><b>Interior Paint</b></p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p>SW 7016 "Mindful Gray"</p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12 col-md-12 text-center">
+											<a href="build.html" class="m-2 btn btn-secondary">Learn More</a>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -281,118 +312,7 @@
 
 						<!-- Item 2 -->
 						<div class="carousel-item">
-							<div class="row rounded bg-dark shadow-lg my-auto mx-auto p-3">
-								<!-- Left side of card -->
-								<div class="col-sm-12 col-md-12 col-lg-6 my-auto mx-auto p-3">
-									<img src="images/interiors/package-2/Wescottbuilding7.VonhausMedia_18-thumbail.jpg"
-										class="img-fluid rounded shadow-lg ">
-								</div>
-								<!-- Right side of card -->
-								<div class="col-sm-12 col-md-12 col-lg-6 bg-green rounded ">
-									<div class="col-12 text-center">
-										<h3 class="product-title mt-3 mb-4">
-											<b>Interior Package &num; 2</b>
-										</h3>
-									</div>
-									<div class="col-sm-12 col-md-12 text-center mb-5">
-										<p><b>Cabinet Color</b></p>
-										<p>Top: Chameleon <br> Bottom: Navy</p>
-										<p><b>Countertops</b></p>
-										<p>MSI Quartz: Sparkling White Eased Edge</p>
-										<p><b>Handles</b></p>
-										<p>BP 65096-900</p>
-										<p><b>Laminate</b></p>
-										<p>Pro Plus: Monterrey Oak</p>
-										<p><b>MB112 Entice Carpet</b></p>
-										<p>733 Compel</p>
-										<p><b>Interior Paint</b></p>
-										<p>SW 7016 "Mindful Gray"</p>
-										<a href="build.html" class="m-2 btn btn-secondary">Learn More</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Item 3 -->
-						<div class="carousel-item">
-							<div class="row rounded bg-dark shadow-lg my-auto mx-auto p-3">
-								<!-- Left side of card -->
-								<div class="col-sm-12 col-md-12 col-lg-6 my-auto mx-auto p-3">
-									<img src="images/interiors/package-3/Westcott7.VonHausMedia_11-thumbnail.jpg"
-										class="img-fluid rounded shadow-lg ">
-								</div>
-								<!-- Right side of card -->
-								<div class="col-sm-12 col-md-12 col-lg-6 bg-green rounded">
-									<div class="col-12 text-center">
-										<h3 class="product-title mt-3 mb-4">
-											<b>Interior Package &num; 3</b>
-										</h3>
-									</div>
-									<div class="col-sm-12 col-md-12 text-center mb-5">
-										<p><b>Cabinet Color</b></p>
-										<p>Top: Khaki <br> Bottom: Ivory</p>
-										<p><b>Countertops</b></p>
-										<p>MSI Quartz: Sparkling White Eased Edge</p>
-										<p><b>Handles</b></p>
-										<p>BP 65096-900</p>
-										<p><b>Laminate</b></p>
-										<p>Pro Plus: Galveston Oak</p>
-										<p><b>MB112 Entice Carpet</b></p>
-										<p>956</p>
-										<p><b>Interior Paint</b></p>
-										<p>SW 6163 "Grassland"</p>
-										<a href="build.html" class="m-2 btn btn-secondary">Learn More</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-
-					</div>
-					<button class="carousel-control-prev mt-3" type="button" data-bs-target="#carouselExampleIndicators"
-						data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next mt-3 " type="button"
-						data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Interior Section -->
-
-	<!-- Start Exterior Section -->
-	<div class="container">
-		<div class="row bg-white rounded pb-3 mt-3 mb-3">
-			<!-- Start Column 1 -->
-			<div id="exterior" class="col-12 mb-4 text-center">
-				<h2 class="mb-4 mt-4 section-title">Exterior Packages</h2>
-				<p class="mb-4">
-					Our exterior packages are designed to enhance the curb appeal and durability of your home. Each
-					package includes a variety of high-quality materials and finishes, from classic brickwork to modern
-					siding options. With a range of colors and styles to choose from, you can create an exterior that
-					reflects your personal taste and complements the surrounding environment. Our team will help you
-					select the perfect exterior package to ensure your home stands out and makes a lasting impression.
-				</p>
-			</div>
-			<!-- End Column 1 -->
-			<div class="col-12 text-center">
-				<div id="carouselExampleIndicators" class="carousel slide">
-					<div class="carousel-indicators">
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-							class="active" aria-current="true" aria-label="Slide 1"></button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-							aria-label="Slide 2"></button>
-						<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-							aria-label="Slide 3"></button>
-					</div>
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<div class="row rounded bg-dark shadow-lg my-auto mx-auto p-3">
+							<div class="row rounded bg-dark shadow-lg my-auto mx-auto p-3 mb-5">
 								<!-- Left side of card -->
 								<div class="col-sm-12 col-md-12 col-lg-6 my-auto mx-auto p-3">
 									<img src="images/interiors/package-1/WCLot20B.VonHausMedia_14-thumbnail.jpg"
@@ -405,159 +325,226 @@
 											<b>Interior Package &num; 1</b>
 										</h3>
 									</div>
-									<div class="col-sm-12 col-md-12 text-center mb-5">
-										<p><b>Cabinet Color</b></p>
-										<p>Top: Black <br> Bottom: Vanilla</p>
-										<p><b>Countertops</b></p>
-										<p>MSI Quartz: Sparkling White Eased Edge</p>
-										<p><b>Handles</b></p>
-										<p>BP 65096-900</p>
-										<p><b>Laminate</b></p>
-										<p>Pro Plus: Flagstaff Oak</p>
-										<p><b>MB112 Entice Carpet</b></p>
-										<p>733 Compel</p>
-										<p><b>Interior Paint</b></p>
-										<p>SW 7016 "Mindful Gray"</p>
-										<a href="build.html" class="m-2 btn btn-secondary">Learn More</a>
+									<div class="row">
+										<div class="col-sm-6 col-md-6 text-center">
+											<p><b>Cabinet Color</b></p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p>Top: Black <br> Bottom: Vanilla</p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p><b>Countertops</b></p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p>MSI Quartz: Sparkling White Eased Edge</p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p><b>Handles</b></p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p>BP 65096-900</p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p><b>Laminate</b></p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p>Pro Plus: Flagstaff Oak</p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p><b>MB112 Entice Carpet</b></p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p>733 Compel</p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p><b>Interior Paint</b></p>
+										</div>
+										<div class="col-sm-6 col-md-6 text-center">
+											<p>SW 7016 "Mindful Gray"</p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12 col-md-12 text-center">
+											<a href="build.html" class="m-2 btn btn-secondary">Learn More</a>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-
-						<!-- Item 2 -->
-						<div class="carousel-item">
-							<div class="row rounded bg-dark shadow-lg my-auto mx-auto p-3">
-								<!-- Left side of card -->
-								<div class="col-sm-12 col-md-12 col-lg-6 my-auto mx-auto p-3">
-									<img src="images/interiors/package-2/Wescottbuilding7.VonhausMedia_18-thumbail.jpg"
-										class="img-fluid rounded shadow-lg ">
-								</div>
-								<!-- Right side of card -->
-								<div class="col-sm-12 col-md-12 col-lg-6 bg-green rounded ">
-									<div class="col-12 text-center">
-										<h3 class="product-title mt-3 mb-4">
-											<b>Interior Package &num; 2</b>
-										</h3>
-									</div>
-									<div class="col-sm-12 col-md-12 text-center mb-5">
-										<p><b>Cabinet Color</b></p>
-										<p>Top: Chameleon <br> Bottom: Navy</p>
-										<p><b>Countertops</b></p>
-										<p>MSI Quartz: Sparkling White Eased Edge</p>
-										<p><b>Handles</b></p>
-										<p>BP 65096-900</p>
-										<p><b>Laminate</b></p>
-										<p>Pro Plus: Monterrey Oak</p>
-										<p><b>MB112 Entice Carpet</b></p>
-										<p>733 Compel</p>
-										<p><b>Interior Paint</b></p>
-										<p>SW 7016 "Mindful Gray"</p>
-										<a href="build.html" class="m-2 btn btn-secondary">Learn More</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Item 3 -->
-						<div class="carousel-item">
-							<div class="row rounded bg-dark shadow-lg my-auto mx-auto p-3">
-								<!-- Left side of card -->
-								<div class="col-sm-12 col-md-12 col-lg-6 my-auto mx-auto p-3">
-									<img src="images/interiors/package-3/Westcott7.VonHausMedia_11-thumbnail.jpg"
-										class="img-fluid rounded shadow-lg ">
-								</div>
-								<!-- Right side of card -->
-								<div class="col-sm-12 col-md-12 col-lg-6 bg-green rounded">
-									<div class="col-12 text-center">
-										<h3 class="product-title mt-3 mb-4">
-											<b>Interior Package &num; 3</b>
-										</h3>
-									</div>
-									<div class="col-sm-12 col-md-12 text-center mb-5">
-										<p><b>Cabinet Color</b></p>
-										<p>Top: Khaki <br> Bottom: Ivory</p>
-										<p><b>Countertops</b></p>
-										<p>MSI Quartz: Sparkling White Eased Edge</p>
-										<p><b>Handles</b></p>
-										<p>BP 65096-900</p>
-										<p><b>Laminate</b></p>
-										<p>Pro Plus: Galveston Oak</p>
-										<p><b>MB112 Entice Carpet</b></p>
-										<p>956</p>
-										<p><b>Interior Paint</b></p>
-										<p>SW 6163 "Grassland"</p>
-										<a href="build.html" class="m-2 btn btn-secondary">Learn More</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-
+						<button class="carousel-control-prev mt-3" type="button"
+							data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next mt-3 " type="button"
+							data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
 					</div>
-					<button class="carousel-control-prev mt-3" type="button" data-bs-target="#carouselExampleIndicators"
-						data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next mt-3 " type="button"
-						data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- End Exterior Section -->
+		<!-- End Interior Section -->
 
-	<!-- Start Footer Section -->
-	<footer class="footer-section">
-		<div class="container relative">
-			<div class="row g-5 mb-5">
-				<div class="col-lg-12">
-					<div class="mb-4 footer-logo-wrap">
-						<a href="#" class="footer-logo">Westcott<span>.</span></a>
-					</div>
+		<!-- Start Exterior Section -->
+		<div class="container">
+			<div class="row bg-white rounded pb-3 mt-3 mb-3">
+				<!-- Start Column 1 -->
+				<div id="exterior" class="col-12 mb-4 text-center">
+					<h2 class="mb-4 mt-4 section-title">Exterior Packages</h2>
 					<p class="mb-4">
-						Presenting Westcott—a neighborhood located in beautiful Southern Indiana near NSWC Crane and the
-						dynamic West Gate area. Enjoy the countryside with convenient connection to many of our state’s
-						largest employers. Westcott offers you home ownership with three choices of Single-Family
-						Lifestyle Homes. Built with the quality and craftsmanship of a third-generation Indiana builder,
-						Westcott is a neighborhood designed for living.
+						Our exterior packages are designed to enhance the curb appeal and durability of your home. Each
+						package includes a variety of high-quality materials and finishes, from classic brickwork to
+						modern
+						siding options. With a range of colors and styles to choose from, you can create an exterior
+						that
+						reflects your personal taste and complements the surrounding environment. Our team will help you
+						select the perfect exterior package to ensure your home stands out and makes a lasting
+						impression.
 					</p>
-
-					<ul class="list-unstyled custom-social mx-auto">
-						<li>
-							<a href="#"><span class="fa fa-brands fa-facebook-f"></span></a>
-						</li>
-						<li>
-							<a href="#"><span class="fa fa-brands fa-instagram"></span></a>
-						</li>
-					</ul>
 				</div>
-			</div>
+				<!-- End Column 1 -->
+				<div class="col-12 text-center">
+					<div id="carouselExampleIndicators2" class="carousel slide">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0"
+								class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"
+								aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"
+								aria-label="Slide 3"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div class="row rounded bg-dark shadow-lg my-auto mx-auto p-3">
+									<!-- Left side of card -->
+									<div class="col-sm-12 col-md-12 col-lg-6 my-auto mx-auto p-3">
+										<img src="images/interiors/package-1/WCLot20B.VonHausMedia_14-thumbnail.jpg"
+											class="img-fluid rounded shadow-lg ">
+									</div>
+									<!-- Right side of card -->
+									<div class="col-sm-12 col-md-12 col-lg-6 bg-green rounded ">
+										<div class="col-12 text-center">
+											<h3 class="product-title mt-3 mb-4">
+												<b>Exterior Package &num; 1</b>
+											</h3>
+										</div>
+										<div class="row">
+											<div class="col-sm-6 col-md-6 text-center">
+												<p><b>Cabinet Color</b></p>
+											</div>
+											<div class="col-sm-6 col-md-6 text-center">
+												<p>Top: Black <br> Bottom: Vanilla</p>
+											</div>
+											<div class="col-sm-6 col-md-6 text-center">
+												<p><b>Countertops</b></p>
+											</div>
+											<div class="col-sm-6 col-md-6 text-center">
+												<p>MSI Quartz: Sparkling White Eased Edge</p>
+											</div>
+											<div class="col-sm-6 col-md-6 text-center">
+												<p><b>Handles</b></p>
+											</div>
+											<div class="col-sm-6 col-md-6 text-center">
+												<p>BP 65096-900</p>
+											</div>
+											<div class="col-sm-6 col-md-6 text-center">
+												<p><b>Laminate</b></p>
+											</div>
+											<div class="col-sm-6 col-md-6 text-center">
+												<p>Pro Plus: Flagstaff Oak</p>
+											</div>
+											<div class="col-sm-6 col-md-6 text-center">
+												<p><b>MB112 Entice Carpet</b></p>
+											</div>
+											<div class="col-sm-6 col-md-6 text-center">
+												<p>733 Compel</p>
+											</div>
+											<div class="col-sm-6 col-md-6 text-center">
+												<p><b>Interior Paint</b></p>
+											</div>
+											<div class="col-sm-6 col-md-6 text-center">
+												<p>SW 7016 "Mindful Gray"</p>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12 col-md-12 text-center mt-5">
+												<a href="build.html" class="m-2 btn btn-secondary">Learn More</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 
-			<div class="border-top copyright">
-				<div class="row pt-4">
-					<div class="col-lg-12">
-						<p class="mx-auto text-center">
-							Copyright &copy;
-							<script>
-								document.write(new Date().getFullYear());
-							</script>
-							. All Rights Reserved. <br /><a href="https://unshiftedbitdev.com">Unshifted Bit
-								Development</a>
-						</p>
+						<button class="carousel-control-prev mt-3" type="button"
+							data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next mt-3 " type="button"
+							data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
 					</div>
 				</div>
 			</div>
 		</div>
-	</footer>
-	<!-- End Footer Section -->
+		<!-- End Exterior Section -->
 
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/tiny-slider.js"></script>
-	<script src="js/custom.js"></script>
+		<!-- Start Footer Section -->
+		<footer class="footer-section">
+			<div class="container relative">
+				<div class="row g-5 mb-5">
+					<div class="col-lg-12">
+						<div class="mb-4 footer-logo-wrap">
+							<a href="#" class="footer-logo">Westcott<span>.</span></a>
+						</div>
+						<p class="mb-4">
+							Presenting Westcott—a neighborhood located in beautiful Southern Indiana near NSWC Crane and
+							the
+							dynamic West Gate area. Enjoy the countryside with convenient connection to many of our
+							state’s
+							largest employers. Westcott offers you home ownership with three choices of Single-Family
+							Lifestyle Homes. Built with the quality and craftsmanship of a third-generation Indiana
+							builder,
+							Westcott is a neighborhood designed for living.
+						</p>
+
+						<ul class="list-unstyled custom-social mx-auto">
+							<li>
+								<a href="#"><span class="fa fa-brands fa-facebook-f"></span></a>
+							</li>
+							<li>
+								<a href="#"><span class="fa fa-brands fa-instagram"></span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-top copyright">
+					<div class="row pt-4">
+						<div class="col-lg-12">
+							<p class="mx-auto text-center">
+								Copyright &copy;
+								<script>
+									document.write(new Date().getFullYear());
+								</script>
+								. All Rights Reserved. <br /><a href="https://unshiftedbitdev.com">Unshifted Bit
+									Development</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- End Footer Section -->
+
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/tiny-slider.js"></script>
+		<script src="js/custom.js"></script>
 </body>
 
 </html>
