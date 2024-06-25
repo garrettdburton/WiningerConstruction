@@ -10,6 +10,10 @@ form {
   background: #3b5d50;
 }
 
+.bg-black {
+  background: black;
+}
+
 html,
 body {
   width: 100%;
@@ -48,9 +52,10 @@ a.more {
   margin-top: 50px;
 }
 .custom-navbar {
-  background: #3b5d50 !important;
+  background: black !important;
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 .custom-navbar .navbar-brand {
   font-size: 32px;
@@ -88,10 +93,10 @@ a.more {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 8px;
-    right: 8px;
+    left: 10px;
+    right: 10px;
     background: #f9bf29;
-    height: 5px;
+    height: 3px;
     opacity: 1;
     visibility: visible;
     width: 0;
