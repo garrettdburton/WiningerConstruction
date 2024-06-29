@@ -126,10 +126,10 @@
 
   <div class="container-fluid bg-green">
     <div class="row">
-      <div class="col-8 mx-auto text-center bg-green text-black">
+      <div class="col-8 mx-auto bg-green text-black">
         <form class="rounded bg-green" id="regForm" action="">
           <!--Start tab-->
-          <div class="tab bg-dark rounded mt-4">
+          <div class="tab bg-dark rounded text-center mt-4">
             <h1 class="section-title p-5 text-white ">Westcott Home Builder</h1>
             <img src="images/westcott-logo.png" alt="" class="img-fluid rounded my-auto mb-3"
               style="height: 200px;" /><br>
@@ -142,29 +142,41 @@
           </div>
 
           <!-- Start of tab 1 -->
-          <div class="tab bg-dark bg-gradient rounded mt-4">
-            <!-- Title -->
-            <h4 class="text-white p-3">Who are we working with?</h4>
-
-            <!-- Name Input -->
-            <div class="input-group mb-3 p-3">
-              <input type="text" class="form-control" aria-label="Name" aria-describedby="inputGroup-sizing-default"
-                placeholder="Name">
-            </div>
-            <!-- Email Input -->
-            <div class="input-group mb-3 p-3">
-              <input type="text" class="form-control" aria-label="Email" aria-describedby="inputGroup-sizing-default"
-                placeholder="Email">
-            </div>
-            <!-- Phone Input -->
-            <div class="input-group mb-3 p-3">
-              <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
-                placeholder="Phone Number">
-            </div>
-            <!-- Buttons -->
-            <div class="mt-5 mb-5" style="overflow:auto;">
-              <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Previous</button>
-              <button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Next</button>
+          <div class="tab bg-gradient rounded mt-4">
+            <div class="row bg-white">
+              <div class="col-12">
+                <!-- Title -->
+                <h4 class="p-3 m-4 bg-dark text-white text-center rounded">Who are we working with?</h4>
+              </div>
+              <!-- Name Input -->
+              <div class="col-7 mx-auto">
+                <label for="inputName" class="form-label">Name</label>
+                <div class="input-group mb-3 pb-3">
+                  <input type="text" class="form-control bg-light" aria-label="" aria-describedby="inputGroup-sizing-default"
+                    placeholder="">
+                </div>
+              </div>
+              <!-- Email Input -->
+              <div class="col-7 mx-auto">
+                <label for="inputEmail" class="form-label">Email</label>
+                <div class="input-group mb-3 pb-3">
+                  <input type="text" class="form-control bg-light" aria-label=""
+                    aria-describedby="inputGroup-sizing-default" placeholder="">
+                </div>
+              </div>
+              <!-- Phone Input -->
+              <div class="col-7 mx-auto">
+                <label for="inputPhone" class="form-label">Phone Number</label>
+                <div class="input-group mb-3 pb-3">
+                  <input type="text" class="form-control bg-light" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default" placeholder="">
+                </div>
+              </div>
+              <!-- Buttons -->
+              <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+                <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Previous</button>
+                <button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Next</button>
+              </div>
             </div>
           </div>
           <!-- End of tab 1 -->
@@ -257,28 +269,39 @@
         </form>
       </div>
     </div>
-    
+
   </div>
 
   <!-- Start Footer Section -->
   <footer class="footer-section text-center">
     <div class="container relative">
-      <div class="row g-5 mb-5">
+      <div class="row mb-5">
         <div class="col-lg-12">
-          <div class="mb-4 footer-logo-wrap">
-            <img src="images/westcott-logo.png" alt="" class="img-fluid text-center rounded m-4 p-3"
-              style="height: 165px;" />
+          <div class="footer-logo-wrap">
+            <img src="images/westcott-logo.png" alt="" class="img-fluid text-center rounded" style="height: 165px;" />
           </div>
-          <p class="mb-4">
-            Presenting Westcott—a neighborhood located in beautiful Southern Indiana near NSWC Crane and the dynamic
-            West Gate area. Enjoy the countryside with convenient connection to many of our state’s largest employers.
-            Westcott offers you home ownership with three choices of Single-Family Lifestyle Homes. Built with the
-            quality and craftsmanship of a third-generation Indiana builder, Westcott is a neighborhood designed for
-            living.
-          </p>
+
         </div>
       </div>
-
+      <!-- Other Products -->
+      <div class="row justify-content-between align-items-center rounded pb-3 mt-3 mb-3">
+        <h5 class="mb-3">Our other custom built neighborhoods</h5>
+        <div class="col-lg-3 mx-auto text-center mb-3 rounded ">
+          <a class="text-white" href="https://www.livesomo.com">
+            <img src="images/somo-thumbnail.jpg" class="img-fluid rounded mb-3">
+            <br>SOMO</a>
+        </div>
+        <div class="col-lg-3 mx-auto text-center mb-3 rounded ">
+          <a class="text-white" href="https://www.hparkestates.com">
+            <img src="images/HPE-thumbnail.jpg" class="img-fluid rounded mb-3">
+            <br>Highland Park Estates</a>
+        </div>
+        <div class="col-lg-3 mx-auto text-center mb-3 rounded ">
+          <a class="text-white" href="https://www.wickliving.com">
+            <img src="images/wick-thumbnail.jpg" class="img-fluid rounded mb-3">
+            <br>Lifestyle Apartments</a>
+        </div>
+      </div>
       <div class="border-top copyright">
         <div class="row pt-4">
           <div class="col-lg-12">
