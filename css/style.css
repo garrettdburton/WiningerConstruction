@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 /* Custom */
-h1{
+h1 {
   font-family: "Inter", sans-serif;
 }
 form {
@@ -19,12 +19,12 @@ form {
 }
 
 .img-zoom {
-  transition:transform 0.25s ease;
+  transition: transform 0.25s ease;
 }
 
 .img-zoom:hover {
-  -webkit-transform:scale(1.5); /* or some other value */
-  transform:scale(1.5);
+  -webkit-transform: scale(1.5); /* or some other value */
+  transform: scale(1.5);
 }
 
 /* Custom */
