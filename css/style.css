@@ -18,11 +18,11 @@ form {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-img {
+.img-zoom {
   transition:transform 0.25s ease;
 }
 
-img:hover {
+.img-zoom:hover {
   -webkit-transform:scale(1.5); /* or some other value */
   transform:scale(1.5);
 }
