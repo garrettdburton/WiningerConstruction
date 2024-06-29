@@ -87,12 +87,17 @@
     }
 
     #regForm {
-      min-height: 500px;
+      min-height: 700px;
     }
 
     .tab {
-      min-height: 625px;
+      min-height: 700px;
     }
+
+    .tab input{
+      height: 40px;
+    }
+
   </style>
 </head>
 
@@ -127,7 +132,7 @@
   <div class="container-fluid bg-green">
     <div class="row">
       <div class="col-8 mx-auto bg-green text-black">
-        <form class="rounded bg-green" id="regForm" action="">
+        <form class="rounded bg-green m-4" id="regForm" action="">
           <!--Start tab-->
           <div class="tab bg-dark rounded text-center mt-4">
             <h1 class="section-title p-5 text-white ">Westcott Home Builder</h1>
@@ -152,24 +157,24 @@
               <div class="col-7 mx-auto">
                 <label for="inputName" class="form-label">Name</label>
                 <div class="input-group mb-3 pb-3">
-                  <input type="text" class="form-control bg-light" aria-label="" aria-describedby="inputGroup-sizing-default"
-                    placeholder="">
+                  <input type="text" class="form-control bg-light" aria-label=""
+                    aria-describedby="inputGroup-sizing-default" placeholder="" required>
                 </div>
               </div>
               <!-- Email Input -->
               <div class="col-7 mx-auto">
                 <label for="inputEmail" class="form-label">Email</label>
                 <div class="input-group mb-3 pb-3">
-                  <input type="email" class="form-control bg-light" aria-label=""
-                    aria-describedby="inputGroup-sizing-default" placeholder="">
+                  <input type="email" name="email" class="form-control bg-light" aria-label=""
+                    aria-describedby="inputGroup-sizing-default" placeholder="" required>
                 </div>
               </div>
               <!-- Phone Input -->
               <div class="col-7 mx-auto">
                 <label for="inputPhone" class="form-label">Phone Number</label>
                 <div class="input-group mb-3 pb-3">
-                  <input type="tel" class="form-control bg-light" aria-label="Default"
-                    aria-describedby="inputGroup-sizing-default" placeholder="">
+                  <input type="tel" required minlength="9" maxlength="9" class="form-control bg-light"
+                    aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="">
                 </div>
               </div>
               <!-- Buttons -->
@@ -181,30 +186,22 @@
           </div>
           <!-- End of tab 1 -->
 
-          <!-- Start of tab 2 -->
-          <div class="tab bg-dark rounded mt-4">
-            <!-- Title -->
-            <p>Which floorplan are you interested in?</p>
-
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-              <label class="form-check-label" for="flexRadioDefault1">
-                Default radio
-              </label>
+          <!-- Start of tab 1 -->
+          <div class="tab bg-gradient rounded mt-4">
+            <div class="row bg-white rounded shadow-1">
+              <div class="col-12">
+                <!-- Title -->
+                <h4 class="p-3 m-4 bg-dark text-white text-center rounded">Select Floorplan</h4>
+              </div>
+              
+              </div>
+              <!-- Buttons -->
+              <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+                <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Previous</button>
+                <button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Next</button>
+              </div>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-              <label class="form-check-label" for="flexRadioDefault2">
-                Default checked radio
-              </label>
-            </div>
-            <!-- Buttons -->
-            <div class="mt-5 mb-5" style="overflow:auto;">
-              <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Previous</button>
-              <button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Next</button>
-            </div>
-          </div>
-          <!-- End of tab 2 -->
+          <!-- End of tab 1 -->
 
           <!-- Start of tab 3 -->
           <div class="tab bg-dark rounded mt-4">
