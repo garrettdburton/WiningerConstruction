@@ -35,169 +35,143 @@
 			outline: 1px solid red !important;
 		}
 
-		.carousel {
-			overflow: hidden;
-			padding-bottom: 4rem;
-		}
-
-		.carousel-caption {
-			top: 100%;
-		}
-
-		.carousel-inner {
-			overflow: visible;
-		}
-
-		.carousel-control-next,
-		.carousel-control-prev,
-		.carousel-indicators {
-			bottom: 4rem;
+		.card-img-top {
+			min-height: 700px;
 		}
 	</style>
 </head>
 
 <body>
-	<!-- Start Exterior Section -->
-	<div class="container">
-		 <!-- Start of tab floor plan -->
-		 <div class="tab bg-gradient rounded mt-4">
-            <div class="row bg-white rounded shadow-1">
-              <div class="col-12">
-                <!-- Title -->
-                <h4 class="p-3 m-4 bg-dark text-white text-center rounded">Select Floorplan</h4>
-              </div>
-              <div class="row bg-light text-center pt-3 pb-3 rounded shadow-1 m-1">
-                <div class="col-11 mb-4 mx-auto text-center">
-                  <h3 class="p-3 m-4 bg-green text-white text-center rounded">Single Units</h3>
-                </div>
-                <!-- Start Westcott Townhome Style Homeplan -->
-                <div class="col-8 mx-auto shadow-1 product-item m-2">
-                  <img src="images/floorplans/townhome-plan-a.jpg" class="img-fluid product-thumbnail" />
-                  <h5 class="product-title">Townhome &#40;Single&#41;</h5>
-                  <p>
-                    A two-story Townhome with 3 Bedroom, 2-1/2 Bath plan options.
-                    Featuring Outdoor Living Patios, Covered Porch, Designer
-                    Kitchens and Baths, and single-car Garage.
-                  </p>
-                  <strong class="product-price">Base Price: $249,000.00</strong>
 
-                  <span class="icon-cross">
-                    <img src="images/cross.svg" class="img-fluid" />
-                  </span>
+	<!-- Start of tab floor plan -->
+	<div class="tab bg-gradient rounded mt-4">
+		<div class="row bg-white rounded shadow-1">
+		  <div class="col-12 text-center">
+			<!-- Title -->
+			<h4 class="p-3 m-4 bg-dark text-white text-center rounded">Select Floorplan</h4>
+		  </div>
+		  <div class="row bg-light text-center pt-3 pb-3 rounded shadow-1 m-1">
+			<div class="col-lg-4 mb-4 mx-auto text-center">
+			  <div class="card mx-auto" style="max-width: 25rem;">
+				<img src="/images/floorplans/townhome-plan-a.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Townhome &#40;Single&#41;</h5>
+				  <p class="card-text">A two-story Townhome with 3 Bedroom, 2-1/2 Bath plan options. Featuring
+					Outdoor Living Patios, Covered Porch, Designer Kitchens and Baths, and single-car
+					Garage.</p>
+				</div>
+				<ul class="list-group list-group-flush">
+				  <li class="list-group-item text-black">Living Space: 1440-1478 sq ft</li>
+				  <li class="list-group-item text-black">Base Price: $249,000.00</li>
+				</ul>
+				<div class="card-body">
+					<button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Select</button>
+				</div>
+			  </div>
+			</div>
+			<div class="col-lg-4 mb-4 mx-auto text-center">
+			  <div class="card mx-auto" style="max-width: 25rem;">
+				<img src="/images/floorplans/sm_ranch.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Small Ranch &#40;Single&#41;</h5>
+				  <p class="card-text">A single-story Ranch-Style 3 Bedroom, 2 Bath Homeplan. Featuring
+					Designer Kitchens and Baths, Modern Finishes, Outdoor Living Patio, Covered Porch, and
+					single-car Garage.</p>
+				</div>
+				<ul class="list-group list-group-flush">
+				  <li class="list-group-item text-black">Living Space: 1206 sq ft</li>
+				  <li class="list-group-item text-black">Base Price: $267,000.00</li>
+				</ul>
+				<div class="card-body">
+					<button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Select</button>
+				</div>
+			  </div>
+			</div>
+			<div class="col-lg-4 mb-4 mx-auto text-center">
+			  <div class="card mx-auto" style="max-width: 25rem;">
+				<img src="/images/floorplans/lg_ranch.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Large Ranch &#40;Single&#41;</h5>
+				  <p class="card-text">A spacious single-story Ranch-Style 3 Bedroom, 2 Bath Homeplan.
+					Featuring Designer Kitchens and Baths, Modern Finishes, Outdoor Living Patio, Covered
+					Porch, and 2-car Garage.</p>
+				</div>
+				<ul class="list-group list-group-flush">
+				  <li class="list-group-item text-black">Living Space: 1737 sq ft</li>
+				  <li class="list-group-item text-black">Base Price: $327,000.00</li>
+				</ul>
+				<div class="card-body">
+					<button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Select</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
 
-                </div>
-                <!-- End Westcott Townhome Style Homeplan -->
+		  <!-- Pair Units -->
+		  <div class="row bg-light text-center pt-3 pb-3 rounded shadow-1 m-1">
+			<div class="col-lg-4 mb-4 mx-auto text-center">
+			  <div class="card mx-auto" style="max-width: 25rem;">
+				<img src="/images/floorplans/westcott-townhome-plan-b.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Townhome &#40;Pair&#41;</h5>
+				  <p class="card-text">A two-story Townhome with 3 Bedroom, 2-1/2 Bath plan options. Featuring
+					Outdoor Living Patios, Covered Porch, Designer Kitchens and Baths, and single-car
+					Garage.</p>
+				</div>
+				<ul class="list-group list-group-flush">
+				  <li class="list-group-item text-black">Living Space: 1440-1478 sq ft</li>
+				  <li class="list-group-item text-black">Base Price: $243,500.00</li>
+				</ul>
+				<div class="card-body">
+					<button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Select</button>
+				</div>
+			  </div>
+			</div>
+			<div class="col-lg-4 mb-4 mx-auto text-center">
+			  <div class="card mx-auto" style="max-width: 25rem;">
+				<img src="/images/floorplans/westcott-ranch-b.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Small Ranch &#40;Pair&#41;</h5>
+				  <p class="card-text">A single-story Ranch-Style 3 Bedroom, 2 Bath Homeplan. Featuring
+					Designer Kitchens and Baths, Modern Finishes, Outdoor Living Patio, Covered Porch, and
+					single-car Garage.</p>
+				</div>
+				<ul class="list-group list-group-flush">
+				  <li class="list-group-item text-black">Living Space: 1206 sq ft</li>
+				  <li class="list-group-item text-black">Base Price: $247,000.00</li>
+				</ul>
+				<div class="card-body">
+					<button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Select</button>
+				</div>
+			  </div>
+			</div>
+			<div class="col-lg-4 mb-4 mx-auto text-center">
+			  <div class="card mx-auto" style="max-width: 25rem;">
+				<img src="/images/floorplans/lg_ranch_pair.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Large Ranch &#40;Pair&#41;</h5>
+				  <p class="card-text">A spacious single-story Ranch-Style 3 Bedroom, 2 Bath Homeplan.
+					Featuring Designer Kitchens and Baths, Modern Finishes, Outdoor Living Patio, Covered
+					Porch, and 2-car Garage.</p>
+				</div>
+				<ul class="list-group list-group-flush">
+				  <li class="list-group-item text-black">Living Space: 1737 sq ft</li>
+				  <li class="list-group-item text-black">Base Price: $298,000.00</li>
+				</ul>
+				<div class="card-body">
+					<button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Select</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
 
-                <!-- Start Sm Ranch Homeplan Style B -->
-                <div class="col-8 mx-auto  shadow-1 product-item m-2">
-
-                  <img src="images/floorplans/sm_ranch.jpg" class="img-fluid product-thumbnail" />
-                  <h5 class="product-title">Small Ranch &#40;Single&#41;</h5>
-                  <p>
-                    A single-story Ranch-Style 3 Bedroom, 2 Bath Homeplan. Featuring
-                    Designer Kitchens and Baths, Modern Finishes, Outdoor Living
-                    Patio, Covered Porch, and single-car Garage.
-                  </p>
-                  <strong class="product-price">Base Price: $267,000.00</strong>
-
-                  <span class="icon-cross">
-                    <img src="images/cross.svg" class="img-fluid" />
-                  </span>
-
-                </div>
-                <!-- End Sm Ranch Homeplan Style B -->
-                <!-- Start Lg Ranch Homeplan Style A -->
-                <div class="col-8 mx-auto  shadow-1 product-item m-2">
-
-                  <img src="images/floorplans/lg_ranch.jpg" class="img-fluid product-thumbnail" />
-                  <h5 class="product-title">Large Ranch &#40;Single&#41;</h5>
-                  <p>
-                    A spacious single-story Ranch-Style 3 Bedroom, 2 Bath Homeplan.
-                    Featuring Designer Kitchens and Baths, Modern Finishes, Outdoor
-                    Living Patio, Covered Porch, and 2-car Garage.
-                  </p>
-                  <strong class="product-price">Base Price: $327,000.00</strong>
-
-                  <span class="icon-cross">
-                    <img src="images/cross.svg" class="img-fluid" />
-                  </span>
-
-                </div>
-                <!-- End Lg Ranch Homeplan Style A -->
-              </div>
-
-              <div class="row bg-light text-center mt-5 pt-3 pb-3 rounded shadow-1 m-1">
-                <div class="col-11 mb-4 mx-auto text-center">
-                  <h3 class="rp-3 m-4 bg-green text-white text-center rounded">Paired Units</h3>
-                </div>
-                <!-- Start Townhome Style Homeplan -->
-                <div class="col-8 mx-auto shadow-1 product-item m-2">
-
-                  <img src="images/floorplans/westcott-townhome-plan-b.jpg" class="img-fluid product-thumbnail" />
-                  <h5 class="product-title">Townhome &#40;Pair&#41;</h5>
-                  <p>
-                    A two-story Townhome with 3 Bedroom, 2-1/2 Bath plan options.
-                    Featuring Outdoor Living Patios, Covered Porch, Designer
-                    Kitchens and Baths, and single-car Garage. Available with an
-                    attached garage.
-                  </p>
-                  <strong class="product-price">Base Price &#40;Per Side&#41;: $243,500.00</strong>
-
-                  <span class="icon-cross">
-                    <img src="images/cross.svg" class="img-fluid" />
-                  </span>
-
-                </div>
-                <!-- End Townhome Style Homeplan -->
-                <!-- Start Paired Ranch Homeplan Style B -->
-                <div class="col-8 mx-auto shadow-1 product-item m-2">
-
-                  <img src="images/floorplans/westcott-ranch-b.jpg" class="img-fluid product-thumbnail mb-3 b" />
-                  <h5 class="product-title">Small Ranch &#40;Pair&#41; </h5>
-                  <p>
-                    A single-story Ranch-Style 3 Bedroom, 2 Bath Homeplan. Featuring
-                    Designer Kitchens and Baths, Modern Finishes, Outdoor Living
-                    Patio, Covered Porch, and single-car Garage.
-                  </p>
-                  <strong class="product-price">Base Price &#40;Per Side&#41;: $247,000.00</strong>
-
-                  <span class="icon-cross">
-                    <img src="images/cross.svg" class="img-fluid" />
-                  </span>
-
-                </div>
-                <!-- End Paired Ranch Homeplan Style B -->
-                <!-- Start Paired Ranch Homeplan Style A -->
-                <div class="col-8 mx-auto shadow-1 product-item m-2">
-
-                  <img src="images/floorplans/westcott-ranch-a.jpg" class="img-fluid product-thumbnail" />
-                  <h5 class="product-title">Large Ranch &#40;Pair&#41;</h5>
-                  <p>
-                    A spacious single-story Ranch-Style 3 Bedroom, 2 Bath Homeplan.
-                    Featuring Designer Kitchens and Baths, Modern Finishes, Outdoor
-                    Living Patio, Covered Porch, and 2-car Garage.
-                  </p>
-                  <br>
-                  <br>
-                  <br>
-                  <br>
-                  <strong class="product-price">Base Price &#40;Per Side&#41;: $298,000.00</strong>
-
-                  <span class="icon-cross">
-                    <img src="images/cross.svg" class="img-fluid" />
-                  </span>
-
-                </div>
-                <!-- End Paired Ranch Homeplan Style A -->
-              </div>
-            </div>
-            <!-- Buttons -->
-            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-              <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Previous</button>
-              <button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Next</button>
-            </div>
-          </div>
-          <!-- End of tab floorplan -->
+		  <!-- Buttons -->
+		  <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+			<button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Previous</button>
+			<button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Next</button>
+		  </div>
+		</div>
+		<!-- End of tab floorplan -->
 	</div>
 	<!-- End Exterior Section -->
 
