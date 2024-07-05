@@ -27,6 +27,8 @@
       background-color: #f1f1f1;
     }
 
+    
+
     h1 {
       text-align: center;
     }
@@ -65,8 +67,12 @@
       opacity: 0.8;
     }
 
+    .card{
+      background:linear-gradient(45deg, #EEEEEE, #FAF8F9, #FFFFFF);
+    }
+
     .card:hover {
-      border: 2px solid darkgreen;
+      border: 2px solid darkslategrey;
       opacity: .8;
     }
 
@@ -137,10 +143,10 @@
     </div>
   </nav>
 
-  <div class="container-fluid bg-green">
+  <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-12 col-sm-12 mx-auto bg-green text-black">
-        <form class="rounded bg-green m-1" id="regForm" action="">
+      <div class="col-lg-12 col-md-12 col-sm-12 mx-auto text-black">
+        <form class="rounded  m-1" id="regForm" action="">
           <!--Start tab-->
           <div class="tab bg-dark rounded text-center mt-4">
             <h1 class="section-title pt-5 pb-5 text-white ">Westcott Home Builder</h1>
@@ -156,7 +162,7 @@
 
           <!-- Start of tab 1 -->
           <div class="tab bg-gradient rounded mt-4">
-            <div class="row bg-white rounded shadow-1">
+            <div class="row bg-white rounded shadow-1 mx-auto" style="max-width: 750px;">
               <div class="col-12">
                 <!-- Title -->
                 <h4 class="p-3 m-4 bg-dark text-white text-center rounded">Who are we working with?</h4>
@@ -222,7 +228,7 @@
                   </ul>
                   <div class="card-body">
                     <a href="pdfs/Westcott_Townhome-Plan.pdf" download="Westcott Townhome"><button id=""
-                        class="btn rounded" onclick="">Select</button> </a>
+                        class="btn rounded" onclick="nextPrev(1)">Select</button> </a>
                   </div>
                 </div>
               </div>
@@ -245,7 +251,7 @@
                   </ul>
                   <div class="card-body">
                     <a href="pdfs/Westcott_Ranch-B-Plan.pdf" download="Westcott Ranch B"><button id=""
-                        class="btn rounded" onclick="">Select</button> </a>
+                        class="btn rounded" onclick="nextPrev(1)">Select</button> </a>
                   </div>
                 </div>
               </div>
@@ -267,7 +273,7 @@
                   </ul>
                   <div class="card-body">
                     <a href="pdfs/Westcott_Ranch-A-Plan.pdf" download="Westcott Ranch A"><button id=""
-                        class="btn rounded" onclick="">Select</button> </a>
+                        class="btn rounded" onclick="nextPrev(1)">Select</button> </a>
                   </div>
                 </div>
               </div>
@@ -295,7 +301,7 @@
 
                   <div class="card-body">
                     <a href="pdfs/Westcott_Townhome-Pair.pdf" download="Westcott Townhome Pair"><button id=""
-                        class="btn rounded" onclick="">Select</button> </a>
+                        class="btn rounded" onclick="nextPrev(1)">Select</button> </a>
                   </div>
                 </div>
               </div>
@@ -319,7 +325,7 @@
 
                   <div class="card-body">
                     <a href="pdfs/Westcott_Ranch-B-Pair.pdf" download="Westcott Ranch B"><button id=""
-                        class="btn rounded" onclick="">Select</button> </a>
+                        class="btn rounded" onclick="nextPrev(1)">Select</button> </a>
                   </div>
                 </div>
               </div>
@@ -343,7 +349,7 @@
 
                   <div class="card-body">
                     <a href="pdfs/Westcott_Ranch-A-Pair.pdf" download="Westcott Ranch A"><button id=""
-                        class="btn rounded" onclick="">Select</button> </a>
+                        class="btn rounded" onclick="nextPrev(1)">Select</button> </a>
                   </div>
                 </div>
               </div>
@@ -405,7 +411,7 @@
             </div>
             <!-- Buttons -->
             <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-              <button type="button" id="nextBtn" class="rounded" onclick="">Submit</button>
+              <button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Submit</button>
             </div>
           </div>
           <!-- End of tab 1 -->
