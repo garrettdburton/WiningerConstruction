@@ -27,7 +27,7 @@
       background-color: #f1f1f1;
     }
 
-    
+
 
     h1 {
       text-align: center;
@@ -67,8 +67,8 @@
       opacity: 0.8;
     }
 
-    .card{
-      background:linear-gradient(45deg, #EEEEEE, #FAF8F9, #FFFFFF);
+    .card {
+      background: linear-gradient(45deg, #EEEEEE, #FAF8F9, #FFFFFF);
     }
 
     .card:hover {
@@ -115,7 +115,7 @@
   </style>
 </head>
 
-<body class="bg-green bg-gradient">
+<body class="bg-green">
   <!-- Start Header/Navigation -->
   <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
     <div class="container">
@@ -160,8 +160,8 @@
             <button type="button" class="mt-5 mb-3 shadow-lg rounded" id="" onclick="nextPrev(1)">Start Build</button>
           </div>
 
-          <!-- Start of tab 1 -->
-          <div class="tab bg-gradient rounded mt-4">
+          <!-- Start of information tab -->
+          <div class="tab">
             <div class="row bg-white rounded shadow-1 mx-auto" style="max-width: 750px;">
               <div class="col-12">
                 <!-- Title -->
@@ -197,13 +197,10 @@
               </div>
             </div>
           </div>
-          <!-- End of tab 1 -->
+          <!-- End of information tab -->
 
-          <!-- Start of tab floor plan -->
-          <div class="tab bg-gradient rounded mt-4">
-            <div class="row bg-white rounded shadow-1">
-              
-            </div>
+          <!-- Start of floor plan tab-->
+          <div class="tab">
             <div class="row bg-light text-center pt-3 pb-3 rounded shadow-1 m-1 text-black" id="floorplans">
               <div class="col-12 text-center">
                 <!-- Title -->
@@ -221,14 +218,15 @@
                     <li class="list-group-item text-black"><b>Baths</b><br>2.5</li>
                     <li class="list-group-item text-black"><b>Floors</b><br>2</li>
                     <li class="list-group-item text-black"><b>Garages</b><br>1 car</li>
-                    <li class="list-group-item text-black text-left"><b>Features</b><br>Covered Porch<br>Outdoor
+                    <li class="list-group-item text-black text-left"><b>Features</b><br>Covered
+                      Porch<br>Outdoor
                       Living Patios<br>Designer Kitchens and Baths<br /><br /></li>
-                    <li class="list-group-item text-black"><b>Living Space</b><br>1440-1478 sq ft</li>
+                    <li class="list-group-item text-black"><b>Living Space</b><br>1440-1478 sq ft
+                    </li>
                     <li class="list-group-item text-black"><b>Base Price</b><br>$249,000.00</li>
                   </ul>
                   <div class="card-body">
-                    <a href="pdfs/Westcott_Townhome-Plan.pdf" download="Westcott Townhome"><button id=""
-                        class="btn rounded" onclick="nextPrev(1)">Select</button> </a>
+                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
                   </div>
                 </div>
               </div>
@@ -244,14 +242,14 @@
                     <li class="list-group-item text-black"><b>Baths</b><br>2</li>
                     <li class="list-group-item text-black"><b>Floors</b><br>1</li>
                     <li class="list-group-item text-black"><b>Garages</b><br>1 car</li>
-                    <li class="list-group-item text-black"><b>Features</b><br>Modern Finishes<br>Covered
+                    <li class="list-group-item text-black"><b>Features</b><br>Modern
+                      Finishes<br>Covered
                       Porch<br>Outdoor Living Patios<br>Designer Kitchens and Baths</li>
                     <li class="list-group-item text-black"><b>Living Space</b><br>1206 sq ft</li>
                     <li class="list-group-item text-black"><b>Base Price</b><br> $267,000.00</li>
                   </ul>
                   <div class="card-body">
-                    <a href="pdfs/Westcott_Ranch-B-Plan.pdf" download="Westcott Ranch B"><button id=""
-                        class="btn rounded" onclick="nextPrev(1)">Select</button> </a>
+                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
                   </div>
                 </div>
               </div>
@@ -266,23 +264,20 @@
                     <li class="list-group-item text-black"><b>Baths</b><br>2</li>
                     <li class="list-group-item text-black"><b>Floors</b><br>1</li>
                     <li class="list-group-item text-black"><b>Garages</b><br>2 car</li>
-                    <li class="list-group-item text-black"><b>Features</b><br>Modern Finishes<br>Covered
+                    <li class="list-group-item text-black"><b>Features</b><br>Modern
+                      Finishes<br>Covered
                       Porch<br>Outdoor Living Patios<br>Designer Kitchens and Baths</li>
                     <li class="list-group-item text-black"><b>Living Space</b><br>1737 sq ft</li>
                     <li class="list-group-item text-black"><b>Base Price</b><br> $327,000.00</li>
                   </ul>
                   <div class="card-body">
-                    <a href="pdfs/Westcott_Ranch-A-Plan.pdf" download="Westcott Ranch A"><button id=""
-                        class="btn rounded" onclick="nextPrev(1)">Select</button> </a>
+                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <!-- Pair Units -->
-            <div class="row bg-light text-center pt-3 pb-3 rounded shadow-1 m-1 text-black">
+              <!-- Pair Units -->
               <div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
-                <div class="card mx-auto" style="max-width: 25rem;">
+                <div class="card mx-auto" style="max-width: 30rem;">
                   <img src="images/floorplans/westcott-townhome-plan-b.jpg" style="height: 450px;" class="card-img-top"
                     alt="...">
                   <div class="card-body">
@@ -293,20 +288,22 @@
                     <li class="list-group-item text-black"><b>Baths</b><br>2.5</li>
                     <li class="list-group-item text-black"><b>Floors</b><br>1</li>
                     <li class="list-group-item text-black"><b>Garages</b><br>2 car</li>
-                    <li class="list-group-item text-black"><b>Features</b><br>Covered Porch<br>Outdoor Living
+                    <li class="list-group-item text-black"><b>Features</b><br>Covered
+                      Porch<br>Outdoor Living
                       Patios<br>Designer Kitchens and Baths<br /><br /></li>
-                    <li class="list-group-item text-black"><b>Living Space</b><br>1440-1478 sq ft</li>
-                    <li class="list-group-item text-black"><b>Base Price &#40;Per Side&#41;</b><br> $243,500.00</li>
+                    <li class="list-group-item text-black"><b>Living Space</b><br>1440-1478 sq ft
+                    </li>
+                    <li class="list-group-item text-black"><b>Base Price &#40;Per Side&#41;</b><br>
+                      $243,500.00</li>
                   </ul>
 
                   <div class="card-body">
-                    <a href="pdfs/Westcott_Townhome-Pair.pdf" download="Westcott Townhome Pair"><button id=""
-                        class="btn rounded" onclick="nextPrev(1)">Select</button> </a>
+                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
                   </div>
                 </div>
               </div>
               <div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
-                <div class="card mx-auto" style="max-width: 25rem;">
+                <div class="card mx-auto" style="max-width: 30rem;">
                   <img src="images/floorplans/westcott-ranch-b.jpg" style="height: 450px;" class="card-img-top"
                     alt="...">
                   <div class="card-body">
@@ -317,20 +314,21 @@
                     <li class="list-group-item text-black"><b>Baths</b><br>2</li>
                     <li class="list-group-item text-black"><b>Floors</b><br>1</li>
                     <li class="list-group-item text-black"><b>Garages</b><br>1 car</li>
-                    <li class="list-group-item text-black"><b>Features</b><br>Modern Finishes<br>Covered
+                    <li class="list-group-item text-black"><b>Features</b><br>Modern
+                      Finishes<br>Covered
                       Porch<br>Outdoor Living Patios<br>Designer Kitchens and Baths</li>
                     <li class="list-group-item text-black"><b>Living Space</b><br>1206 sq ft</li>
-                    <li class="list-group-item text-black"><b>Base Price &#40;Per Side&#41;</b><br> $247,000.00</li>
+                    <li class="list-group-item text-black"><b>Base Price &#40;Per Side&#41;</b><br>
+                      $247,000.00</li>
                   </ul>
 
                   <div class="card-body">
-                    <a href="pdfs/Westcott_Ranch-B-Pair.pdf" download="Westcott Ranch B"><button id=""
-                        class="btn rounded" onclick="nextPrev(1)">Select</button> </a>
+                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
                   </div>
                 </div>
               </div>
               <div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
-                <div class="card mx-auto" style="max-width: 25rem;">
+                <div class="card mx-auto" style="max-width: 30rem;">
                   <img src="images/floorplans/lg_ranch_pair.jpg" style="height: 365px;" class="card-img-top" alt="...">
                   <br><br><br>
                   <div class="card-body">
@@ -341,15 +339,16 @@
                     <li class="list-group-item text-black"><b>Baths</b><br>2</li>
                     <li class="list-group-item text-black"><b>Floors</b><br>1</li>
                     <li class="list-group-item text-black"><b>Garages</b><br>2 car</li>
-                    <li class="list-group-item text-black"><b>Features</b><br>Modern Finishes<br>Covered
+                    <li class="list-group-item text-black"><b>Features</b><br>Modern
+                      Finishes<br>Covered
                       Porch<br>Outdoor Living Patios<br>Designer Kitchens and Baths</li>
                     <li class="list-group-item text-black"><b>Living Space</b><br>1737 sq ft</li>
-                    <li class="list-group-item text-black"><b>Base Price &#40;Per Side&#41;</b><br> $298,000.00</li>
+                    <li class="list-group-item text-black"><b>Base Price &#40;Per Side&#41;</b><br>
+                      $298,000.00</li>
                   </ul>
 
                   <div class="card-body">
-                    <a href="pdfs/Westcott_Ranch-A-Pair.pdf" download="Westcott Ranch A"><button id=""
-                        class="btn rounded" onclick="nextPrev(1)">Select</button> </a>
+                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
                   </div>
                 </div>
               </div>
@@ -360,72 +359,435 @@
               <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Back</button>
             </div>
           </div>
-          <!-- End of tab floorplan -->
 
-          <!-- Start of tab 1 -->
-          <div class="tab bg-gradient rounded mt-4">
+          <!-- End of floorplan tab -->
+
+          <!-- Start of exterior tab -->
+          <div class="tab">
+						<div class="row bg-white rounded shadow-1">
+							<div class="col-12">
+								<!-- Title -->
+								<h4 class="p-3 m-4 bg-dark text-white text-center rounded">Which exterior package are
+									you interested in?</h4>
+							</div>
+
+							<!-- Start Package #1 -->
+							<div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
+								<div class="card bg-green mx-auto shadow-1" style="max-width: 25rem;">
+									<div class="card-body">
+										<h5 class="card-title">Package #1</h5>
+										<p class="card-text"><img class="rounded mx-auto d-block" style="height: 200px;"
+												src="images/exteriors/exterior-package-1/exterior.jpg"></p>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
+											Gray<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-1/charcoalgray.jpg"></li>
+										<li class="list-group-item text-black"><b>Siding</b><br>Royal: "Redwood"<br><img
+												class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-1/redwood.jpg"></li>
+										<li class="list-group-item text-black"><b>Accent Color</b><br>Royal: "Toasted
+											Almond"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-1/toastedalmond.jpg"></li>
+										<li class="list-group-item text-black"><b>Stone</b><br>Birch Stackstone<br><img
+												class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-1/birchstackstone.jpg"></li>
+										<li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
+											"Cityscape"</li>
+									</ul>
+									<div class="card-body bg-dark"><button id="" class="btn rounded"
+											onclick="nextPrev(1)">Select
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- Start Package #2 -->
+							<div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
+								<div class="card bg-green mx-auto shadow-1" style="max-width: 25rem;">
+									<div class="card-body">
+										<h5 class="card-title ">Package #2</h5>
+										<p class="card-text"><img class="rounded mx-auto d-block" style="height: 200px;"
+												src="images/exteriors/exterior-package-2/exterior.jpg"></p>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
+											Gray<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-2/charcoalgray.jpg"></li>
+										<li class="list-group-item text-black"><b>Siding</b><br>Royal: "Heritage
+											Blue"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-2/heritageblue.jpg"></li>
+										<li class="list-group-item text-black"><b>Accent Color</b><br>Royal: "Blue
+											Gray"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-2/bluegray.jpg"></li>
+										<li class="list-group-item text-black"><b>Stone</b><br>Catalpa Summit
+											Ledge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-2/catalpasummitledge.jpg"></li>
+										<li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
+											"Cityscape"</li>
+									</ul>
+									<div class="card-body bg-dark"><button id="" class="btn rounded"
+											onclick="nextPrev(1)">Select
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- Start Package #3 -->
+							<div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
+								<div data-aos="fade-up" data-aos-duration="1000" class="card bg-green mx-auto shadow-1"
+									style="max-width: 25rem;">
+									<div class="card-body">
+										<h5 class="card-title ">Package #3</h5>
+										<p class="card-text"><img class="rounded mx-auto d-block" style="height: 200px;"
+												src="images/exteriors/exterior-package-3/exterior.jpg"></p>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
+											Gray<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-3/charcoalgray.jpg"></li>
+										<li class="list-group-item text-black"><b>Siding</b><br>Royal: "Cypress"<br><img
+												class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-3/cypress.jpg"></li>
+										<li class="list-group-item text-black"><b>Accent Color</b><br>Royal:
+											"Storm"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-3/storm.jpg"></li>
+										<li class="list-group-item text-black"><b>Stone</b><br>Twilight Summit
+											Ledge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-3/twillightsummitledge.jpg"></li>
+										<li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
+											"Cityscape"</li>
+									</ul>
+									<div class="card-body bg-dark"><button id="" class="btn rounded"
+											onclick="nextPrev(1)">Select
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- Start Package #4 -->
+							<div class="col-lg-4 col-md-12 mb-4 ml-auto text-center">
+								<div data-aos="fade-up" data-aos-duration="1000" class="card bg-green mx-auto shadow-1"
+									style="max-width: 25rem;">
+									<div class="card-body">
+										<h5 class="card-title ">Package #4</h5>
+										<p class="card-text"><img class="rounded mx-auto d-block" style="height: 200px;"
+												src="images/exteriors/exterior-package-4/exterior.jpg"></p>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
+											Gray<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-4/charcoalgray.jpg"></li>
+										<li class="list-group-item text-black"><b>Siding</b><br>Royal:
+											"Ironstone"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-4/ironstone.jpg"></li>
+										<li class="list-group-item text-black"><b>Accent Color</b><br>Royal:
+											"Cypress"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-4/cypress.jpg"></li>
+										<li class="list-group-item text-black"><b>Stone</b><br>Cinder Manor
+											Stone<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-4/cindermanorstone.jpg"></li>
+										<li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
+											"Cityscape"</li>
+									</ul>
+									<div class="card-body bg-dark"><button id="" class="btn rounded"
+											onclick="nextPrev(1)">Select
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- Start Package #5 -->
+							<div class="col-lg-4 col-md-12 mb-4 ml-auto text-center">
+								<div data-aos="fade-up" data-aos-duration="1000" class="card bg-green mx-auto shadow-1"
+									style="max-width: 25rem;">
+									<div class="card-body">
+										<h5 class="card-title ">Package #5</h5>
+										<p class="card-text"><img class="rounded mx-auto d-block"
+												style="max-width: 25rem;height: 200px;"
+												src="images/exteriors/exterior-package-5/exterior.jpg"></p>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
+											Gray<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-5/charcoalgray.jpg"></li>
+										<li class="list-group-item text-black"><b>Siding</b><br>Royal:
+											"Linen"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-5/linen.jpg"></li>
+										<li class="list-group-item text-black"><b>Accent Color</b><br>Royal:
+											"Marine Blue"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-5/marineblue.jpg"></li>
+										<li class="list-group-item text-black"><b>Stone</b><br>Black Birch
+											Summit Ledge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-5/blackbirchsummitledge.jpg">
+										</li>
+										<li class="list-group-item text-black"><b>Front Door Color</b><br>SW
+											7067 "Cityscape"</li>
+									</ul>
+									<div class="card-body bg-dark"><button id="" class="btn rounded"
+											onclick="nextPrev(1)">Select
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- Buttons -->
+							<div class="mt-5 mb-5 text-center" style="overflow:auto;">
+								<button type="button" id="prevBtn" class="rounded"
+									onclick="nextPrev(-1)">Previous</button>
+								<button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Next</button>
+							</div>
+
+							<!-- End of tab 1 -->
+
+						</div>
+					</div>
+          <!-- End of exterior tab -->
+
+          <!-- Start of interior tab -->
+          <div class="tab">
             <div class="row bg-white rounded shadow-1">
               <div class="col-12">
                 <!-- Title -->
-                <h4 class="p-3 m-4 bg-dark text-white text-center rounded">Which exterior package are you interested
+                <h4 class="p-3 m-4 bg-dark text-white text-center rounded">Which interior package are
+                  you interested
                   in?
                 </h4>
               </div>
-
-            </div>
-            <!-- Buttons -->
-            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-              <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Previous</button>
-              <button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Next</button>
-            </div>
-          </div>
-          <!-- End of tab 1 -->
-
-          <!-- Start of tab 1 -->
-          <div class="tab bg-gradient rounded mt-4">
-            <div class="row bg-white rounded shadow-1">
-              <div class="col-12">
-                <!-- Title -->
-                <h4 class="p-3 m-4 bg-dark text-white text-center rounded">Which interior package are you interested
-                  in?
-                </h4>
+              <!-- Start Package #1 -->
+              <div class="col-lg-5 col-md-12 mb-4 mx-auto text-center">
+                <div class="card bg-green mx-auto shadow-1" style="max-width: 25rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Package #1</h5>
+                    <p class="card-text"><img class="rounded mx-auto d-block" style="height: 200px;"
+                        src="images/interiors/interior-package-1/samples/interior.jpg"></p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-black"><b>Cabinets</b><br> Top: Black<br><img
+                        class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-1/samples/cabinet_black.jpg"><br>Bottom:
+                      Vanilla<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-1/samples/cabinet_vanilla.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Countertops</b><br>MSI Quartz:
+                      Sparkling White
+                      Eased Edge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-1/samples/quartz_sparklingwhite.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Handles</b><br>BP 65096-900</li>
+                    <li class="list-group-item text-black"><b>Laminate</b><br>Flagstaff
+                      Oak<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-1/samples/lvp_flagstaffoak.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Carpet</b><br>733 Compel<br><img
+                        class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-1/samples/carpet_compel.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Paint</b><br>SW 7016 "Mindful
+                      Gray"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-1/samples/SW7016-mindful-gray-lg.png">
+                    </li>
+                  </ul>
+                  <div class="card-body">
+                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Start Package #2 -->
+              <div class="col-lg-5 col-md-12 mb-4 mx-auto text-center">
+                <div class="card bg-green mx-auto shadow-1" style="max-width: 25rem;">
+                  <div class="card-body">
+                    <h5 class="card-title ">Package #2</h5>
+                    <p class="card-text"><img class="rounded mx-auto d-block" style="height: 200px;"
+                        src="images/interiors/interior-package-2/samples/interior.jpg"></p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-black"><b>Cabinets</b><br> Top:
+                      Chameleon<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-2/samples/cabinet_chameleon.jpg">
+                      <br> Bottom:
+                      Navy<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-2/samples/cabinet_navy.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Countertops</b><br>MSI Quartz:
+                      Sparkling White
+                      Eased Edge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-2/samples/quartz_sparklingwhite.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Handles</b><br>BP 65096-900</li>
+                    <li class="list-group-item text-black"><b>Laminate</b><br>Monterrey
+                      Oak<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-2/samples/lvp_montereyoak.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Carpet</b><br>733 Compel<br><img
+                        class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-2/samples/carpet_compel.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Paint</b><br>SW 7058 "Magnetic
+                      Gray"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-2/samples/SW7058-magnetic-gray-lg.png">
+                    </li>
+                  </ul>
+                  <div class="card-body">
+                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                  </div>
+                </div>
               </div>
 
-            </div>
-            <!-- Buttons -->
-            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-              <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Previous</button>
-              <button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Next</button>
-            </div>
-          </div>
-          <!-- End of tab 1 -->
-
-          <!-- Start of tab 1 -->
-          <div class="tab bg-gradient rounded mt-4">
-            <div class="row bg-white rounded shadow-1">
-              <div class="col-12">
-                <!-- Title -->
-                <h4 class="p-3 m-4 bg-dark text-white text-center rounded">Submit Request</h4>
+              <!-- Start Package #3 -->
+              <div class="col-lg-5 col-md-12 mb-4 mx-auto text-center">
+                <div class="card bg-green mx-auto shadow-1" style="max-width: 25rem;">
+                  <div class="card-body">
+                    <h5 class="card-title ">Package #3</h5>
+                    <p class="card-text"><img class="rounded mx-auto d-block" style="height: 200px;"
+                        src="images/interiors/interior-package-3/samples/interior.jpg"></p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-black"><b>Cabinets</b><br> Top: Khaki<br><img
+                        class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-3/samples/cabinet_khaki.jpg">
+                      <br> Bottom:
+                      Ivory<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-3/samples/cabinet_ivory.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Countertops</b><br>MSI Quartz:
+                      Sparkling White
+                      Eased Edge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-3/samples/quartz_sparklingwhite.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Handles</b><br>BP 65096-900</li>
+                    <li class="list-group-item text-black"><b>Laminate</b><br>Galveston
+                      Oak<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-3/samples/lvp_galvestonoak.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Carpet</b><br>956 Engage<br><img
+                        class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-3/samples/carpet_engage.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Paint</b><br>SW 7022 "Alpaca
+                      "<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-3/samples/SW7022-alpaca-lg.png">
+                    </li>
+                  </ul>
+                  <div class="card-body">
+                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                  </div>
+                </div>
               </div>
 
+              <!-- Start Package #4 -->
+              <div class="col-lg-5 col-md-12 mb-4 mx-auto text-center">
+                <div class="card bg-green mx-auto shadow-1" style="max-width: 25rem;">
+                  <div class="card-body">
+                    <h5 class="card-title ">Package #4</h5>
+                    <p class="card-text"><img class="rounded mx-auto d-block" style="height: 200px;"
+                        src="images/interiors/interior-package-4/samples/interior.jpg"></p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-black"><b>Cabinets</b><br> Top: Sage<br><img
+                        class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-4/samples/cabinet_sage.jpg"> <br>
+                      Bottom:
+                      Coffee<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-4/samples/cabinet_coffee.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Countertops</b><br>MSI Quartz:
+                      Sparkling White
+                      Eased Edge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-4/samples/quartz_sparklingwhite.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Handles</b><br>BP 65096-900</li>
+                    <li class="list-group-item text-black"><b>Laminate</b><br>Flagstaff
+                      Oak<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-4/samples/lvp_flagstaffoak.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Carpet</b><br>944 Tantalize<br><img
+                        class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-4/samples/carpet_tantlalize.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Paint</b><br>SW 6163 "Grassland
+                      "<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-4/samples/SW6163-grassland-lg.png">
+                    </li>
+                  </ul>
+                  <div class="card-body">
+                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Start Package #5 -->
+              <div class="col-lg-5 col-md-12 mb-4 mx-auto text-center">
+                <div class="card bg-green mx-auto shadow-1" style="max-width: 25rem;">
+                  <div class="card-body">
+                    <h5 class="card-title ">Package #5</h5>
+                    <p class="card-text"><img class="rounded mx-auto d-block" style="height: 200px;"
+                        src="images/interiors/interior-package-5/samples/interior.jpg"></p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-black"><b>Cabinets</b><br> Top: Vanilla<br><img
+                        class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-5/samples/cabinet_vanilla.jpg">
+                      <br> Bottom:
+                      Navy<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-5/samples/cabinet_navy.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Countertops</b><br>MSI Quartz:
+                      Sparkling White
+                      Eased Edge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-5/samples/quartz_sparklingwhite.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Handles</b><br>BP 65096-900</li>
+                    <li class="list-group-item text-black"><b>Laminate</b><br>Flagstaff
+                      Oak<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-5/samples/lvp_flagstaffoak.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Carpet</b><br>733 Compel<br><img
+                        class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-5/samples/carpet_compel.jpg">
+                    </li>
+                    <li class="list-group-item text-black"><b>Paint</b><br>SW 6255 "Morning Fog
+                      "<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                        src="images/interiors/interior-package-5/samples/SW6255-morning-fog-lg.png">
+                    </li>
+                  </ul>
+                  <div class="card-body">
+                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Buttons -->
+              <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+                <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Previous</button>
+              </div>
             </div>
-            <!-- Buttons -->
-            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-              <button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Submit</button>
+            <!-- End of interior tab -->
+
+            <!-- Start of confirmation tab -->
+            <div class="tab bg-gradient rounded mt-4">
+              <div class="row bg-white rounded shadow-1">
+                <div class="col-12">
+                  <!-- Title -->
+                  <h4 class="p-3 m-4 bg-dark text-white text-center rounded">Submit Request</h4>
+                </div>
+
+              </div>
+              <!-- Buttons -->
+              <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+                <button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Submit</button>
+              </div>
             </div>
-          </div>
-          <!-- End of tab 1 -->
+            <!-- End of confirmation tab -->
 
-
-
-          <!-- Circles which indicates the steps of the form: -->
-          <div style="text-align:center;margin-top:40px;">
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
+            <!-- Circles which indicates the steps of the form: -->
+            <div style="text-align:center;margin-top:40px;">
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
           </div>
         </form>
       </div>

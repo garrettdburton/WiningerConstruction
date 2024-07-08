@@ -2,501 +2,461 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="author" content="Unshifted Bit Development" />
-  <link rel="shortcut icon" href="icon.png" />
-  <link rel="apple-touch-icon" sizes="128x128" href="icon.png">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="author" content="Unshifted Bit Development" />
+	<link rel="shortcut icon" href="icon.png" />
+	<link rel="apple-touch-icon" sizes="128x128" href="icon.png">
 
-  <meta name="description" content="" />
-  <meta name="keywords" content="bootstrap, bootstrap4" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap4" />
 
-  <!-- Bootstrap CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-  <link href="css/tiny-slider.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" />
-  <title>Westcott: Paired Lifestyle Homes by Wininger Construction</title>
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+	<link href="css/tiny-slider.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+	<title>Westcott: Paired Lifestyle Homes by Wininger Construction</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+	<style>
+		* {
+			box-sizing: border-box;
+		}
 
-    body {
-      background-color: #f1f1f1;
-    }
+		body {
+			background-color: #f1f1f1;
+		}
 
-    h1 {
-      text-align: center;
-    }
 
-    input {
-      padding: 10px;
-      width: 100%;
-      font-size: 17px;
-      border: 1px solid #aaaaaa;
-    }
 
-    /* .card-img-top {
+		h1 {
+			text-align: center;
+		}
+
+		input {
+			padding: 10px;
+			width: 100%;
+			font-size: 17px;
+			border: 1px solid #aaaaaa;
+		}
+
+		/* .card-img-top {
       min-height: 700px;
     } */
 
-    /* Mark input boxes that gets an error on validation: */
-    input.invalid {
-      background-color: #ffdddd;
-    }
+		/* Mark input boxes that gets an error on validation: */
+		input.invalid {
+			background-color: #ffdddd;
+		}
 
-    /* Hide all steps by default: */
-    .tab {
-      display: none;
-    }
+		/* Hide all steps by default: */
+		.tab {
+			display: none;
+		}
 
-    button {
-      background-color: #04AA6D;
-      color: #ffffff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 17px;
-      cursor: pointer;
-    }
+		button {
+			background-color: #04AA6D;
+			color: #ffffff;
+			border: none;
+			padding: 10px 20px;
+			font-size: 17px;
+			cursor: pointer;
+		}
 
-    button:hover {
-      opacity: 0.8;
-    }
+		button:hover {
+			opacity: 0.8;
+		}
 
-    .card:hover {
-      border: 2px solid darkgreen;
-      opacity: .8;
-    }
+		.card {
+			background: linear-gradient(45deg, #EEEEEE, #FAF8F9, #FFFFFF);
+		}
 
-    #prevBtn {
-      background-color: #bbbbbb;
-    }
+		.card:hover {
+			border: 2px solid darkslategrey;
+			opacity: .8;
+		}
 
-    /* Make circles that indicate the steps of the form: */
-    .step {
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbbbbb;
-      border: none;
-      border-radius: 50%;
-      display: inline-block;
-      opacity: 0.5;
-    }
+		#prevBtn {
+			background-color: #bbbbbb;
+		}
 
-    .step.active {
-      opacity: 1;
-    }
+		/* Make circles that indicate the steps of the form: */
+		.step {
+			height: 15px;
+			width: 15px;
+			margin: 0 2px;
+			background-color: #bbbbbb;
+			border: none;
+			border-radius: 50%;
+			display: inline-block;
+			opacity: 0.5;
+		}
 
-    /* Mark the steps that are finished and valid: */
-    .step.finish {
-      background-color: #04AA6D;
-    }
+		.step.active {
+			opacity: 1;
+		}
 
-    #regForm {
-      min-height: 700px;
-    }
+		/* Mark the steps that are finished and valid: */
+		.step.finish {
+			background-color: #04AA6D;
+		}
 
-    .tab {
-      min-height: 700px;
-    }
+		#regForm {
+			min-height: 700px;
+		}
 
-    .tab input {
-      height: 40px;
-    }
-  </style>
+		.tab {
+			min-height: 700px;
+		}
+
+		.tab input {
+			height: 40px;
+		}
+	</style>
 </head>
 
-<body class="bg-green bg-gradient">
-  <!-- Start Header/Navigation -->
-  <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><img class="rounded float-start" src="images/wininger-logo.png"
-          style="height: 65px;"></a>
+<body class="bg-green">
+	<!-- Start Header/Navigation -->
+	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html"><img class="rounded float-start" src="images/wininger-logo.png"
+					style="height: 65px;"></a>
 
-      <button class="navbar-toggler mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
-        aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+			<button class="navbar-toggler mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+				aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-      <div class="collapse navbar-collapse" id="navbarsFurni">
-        <ul class="text-center custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="active">
-            <a class="nav-link" href="build.html">Build</a>
-          </li>
-          <li><a class="nav-link" href="packages.html">Packages</a></li>
-          <li><a class="nav-link" href="about.html">About</a></li>
-          <li><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+			<div class="collapse navbar-collapse" id="navbarsFurni">
+				<ul class="text-center custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="active">
+						<a class="nav-link" href="build.html">Build</a>
+					</li>
+					<li><a class="nav-link" href="packages.html">Packages</a></li>
+					<li><a class="nav-link" href="about.html">About</a></li>
+					<li><a class="nav-link" href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-  <div class="container-fluid bg-green">
-    <div class="row">
-      <div class="col-lg-8 col-md-12 col-sm-12 mx-auto bg-green text-black">
-        <form class="rounded bg-green" id="regForm" action="">
-          <!-- Start of tab floor plan -->
-          <div class="tab bg-gradient rounded mt-4">
-            <div class="row bg-white rounded shadow-1">
-              
-            </div>
-            <div class="row bg-light text-center pt-3 pb-3 rounded shadow-1 m-1 text-black" id="floorplans">
-              <div class="col-12 text-center">
-                <!-- Title -->
-                <h4 class="p-3 m-4 bg-dark text-white text-center rounded">Select Floorplan</h4>
-              </div>
-              <div class="col-lg-4 col-md-12 col-sm-12 mb-4 mx-auto text-center">
-                <div class="card mx-auto" style="max-width: 30rem;">
-                  <img src="images/floorplans/townhome-plan-a.jpg" style="height: 510px;" class="card-img-top"
-                    alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Townhome &#40;Single&#41;</h5>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-black"><b>Beds</b><br>3</li>
-                    <li class="list-group-item text-black"><b>Baths</b><br>2.5</li>
-                    <li class="list-group-item text-black"><b>Floors</b><br>2</li>
-                    <li class="list-group-item text-black"><b>Garages</b><br>1 car</li>
-                    <li class="list-group-item text-black text-left"><b>Features</b><br>Covered Porch<br>Outdoor
-                      Living Patios<br>Designer Kitchens and Baths<br /><br /></li>
-                    <li class="list-group-item text-black"><b>Living Space</b><br>1440-1478 sq ft</li>
-                    <li class="list-group-item text-black"><b>Base Price</b><br>$249,000.00</li>
-                  </ul>
-                  <div class="card-body">
-                    <a href="pdfs/Westcott_Townhome-Plan.pdf" download="Westcott Townhome"><button id=""
-                        class="btn rounded" onclick="">Select</button> </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
-                <div class="card mx-auto" style="max-width: 30rem;">
-                  <img src="images/floorplans/sm_ranch.jpg" class="card-img-top" alt="...">
-                  <br><br><br><br><br><br><br><br>
-                  <div class="card-body">
-                    <h5 class="card-title">Small Ranch &#40;Single&#41;</h5>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-black"><b>Beds</b><br>3</li>
-                    <li class="list-group-item text-black"><b>Baths</b><br>2</li>
-                    <li class="list-group-item text-black"><b>Floors</b><br>1</li>
-                    <li class="list-group-item text-black"><b>Garages</b><br>1 car</li>
-                    <li class="list-group-item text-black"><b>Features</b><br>Modern Finishes<br>Covered
-                      Porch<br>Outdoor Living Patios<br>Designer Kitchens and Baths</li>
-                    <li class="list-group-item text-black"><b>Living Space</b><br>1206 sq ft</li>
-                    <li class="list-group-item text-black"><b>Base Price</b><br> $267,000.00</li>
-                  </ul>
-                  <div class="card-body">
-                    <a href="pdfs/Westcott_Ranch-B-Plan.pdf" download="Westcott Ranch B"><button id=""
-                        class="btn rounded" onclick="">Select</button> </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
-                <div class="card mx-auto" style="max-width: 30rem;">
-                  <img src="images/floorplans/lg_ranch.jpg" style="height: 505px;" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Large Ranch &#40;Single&#41;</h5>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-black"><b>Beds</b><br>3</li>
-                    <li class="list-group-item text-black"><b>Baths</b><br>2</li>
-                    <li class="list-group-item text-black"><b>Floors</b><br>1</li>
-                    <li class="list-group-item text-black"><b>Garages</b><br>2 car</li>
-                    <li class="list-group-item text-black"><b>Features</b><br>Modern Finishes<br>Covered
-                      Porch<br>Outdoor Living Patios<br>Designer Kitchens and Baths</li>
-                    <li class="list-group-item text-black"><b>Living Space</b><br>1737 sq ft</li>
-                    <li class="list-group-item text-black"><b>Base Price</b><br> $327,000.00</li>
-                  </ul>
-                  <div class="card-body">
-                    <a href="pdfs/Westcott_Ranch-A-Plan.pdf" download="Westcott Ranch A"><button id=""
-                        class="btn rounded" onclick="">Select</button> </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 mx-auto text-black">
+				<form class="rounded m-1" id="regForm" action="">
+					<!-- Start of Interior -->
+					<div class="tab">
+						<div class="row bg-white rounded shadow-1">
+							<div class="col-12">
+								<!-- Title -->
+								<h4 class="p-3 m-4 bg-dark text-white text-center rounded">Which exterior package are
+									you interested in?</h4>
+							</div>
 
-            <!-- Pair Units -->
-            <div class="row bg-light text-center pt-3 pb-3 rounded shadow-1 m-1 text-black">
-              <div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
-                <div class="card mx-auto" style="max-width: 25rem;">
-                  <img src="images/floorplans/westcott-townhome-plan-b.jpg" style="height: 450px;" class="card-img-top"
-                    alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Townhome &#40;Pair&#41;</h5>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-black"><b>Beds</b><br>3</li>
-                    <li class="list-group-item text-black"><b>Baths</b><br>2.5</li>
-                    <li class="list-group-item text-black"><b>Floors</b><br>1</li>
-                    <li class="list-group-item text-black"><b>Garages</b><br>2 car</li>
-                    <li class="list-group-item text-black"><b>Features</b><br>Covered Porch<br>Outdoor Living
-                      Patios<br>Designer Kitchens and Baths<br /><br /></li>
-                    <li class="list-group-item text-black"><b>Living Space</b><br>1440-1478 sq ft</li>
-                    <li class="list-group-item text-black"><b>Base Price &#40;Per Side&#41;</b><br> $243,500.00</li>
-                  </ul>
+							<!-- Start Package #1 -->
+							<div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
+								<div class="card bg-green mx-auto shadow-1" style="max-width: 25rem;">
+									<div class="card-body">
+										<h5 class="card-title">Package #1</h5>
+										<p class="card-text"><img class="rounded mx-auto d-block" style="height: 200px;"
+												src="images/exteriors/exterior-package-1/exterior.jpg"></p>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
+											Gray<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-1/charcoalgray.jpg"></li>
+										<li class="list-group-item text-black"><b>Siding</b><br>Royal: "Redwood"<br><img
+												class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-1/redwood.jpg"></li>
+										<li class="list-group-item text-black"><b>Accent Color</b><br>Royal: "Toasted
+											Almond"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-1/toastedalmond.jpg"></li>
+										<li class="list-group-item text-black"><b>Stone</b><br>Birch Stackstone<br><img
+												class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-1/birchstackstone.jpg"></li>
+										<li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
+											"Cityscape"</li>
+									</ul>
+									<div class="card-body bg-dark"><button id="" class="btn rounded"
+											onclick="nextPrev(1)">Select
+										</button>
+									</div>
+								</div>
+							</div>
 
-                  <div class="card-body">
-                    <a href="pdfs/Westcott_Townhome-Pair.pdf" download="Westcott Townhome Pair"><button id=""
-                        class="btn rounded" onclick="">Select</button> </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
-                <div class="card mx-auto" style="max-width: 25rem;">
-                  <img src="images/floorplans/westcott-ranch-b.jpg" style="height: 450px;" class="card-img-top"
-                    alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Small Ranch &#40;Pair&#41;</h5>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-black"><b>Beds</b><br>3</li>
-                    <li class="list-group-item text-black"><b>Baths</b><br>2</li>
-                    <li class="list-group-item text-black"><b>Floors</b><br>1</li>
-                    <li class="list-group-item text-black"><b>Garages</b><br>1 car</li>
-                    <li class="list-group-item text-black"><b>Features</b><br>Modern Finishes<br>Covered
-                      Porch<br>Outdoor Living Patios<br>Designer Kitchens and Baths</li>
-                    <li class="list-group-item text-black"><b>Living Space</b><br>1206 sq ft</li>
-                    <li class="list-group-item text-black"><b>Base Price &#40;Per Side&#41;</b><br> $247,000.00</li>
-                  </ul>
+							<!-- Start Package #2 -->
+							<div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
+								<div class="card bg-green mx-auto shadow-1" style="max-width: 25rem;">
+									<div class="card-body">
+										<h5 class="card-title ">Package #2</h5>
+										<p class="card-text"><img class="rounded mx-auto d-block" style="height: 200px;"
+												src="images/exteriors/exterior-package-2/exterior.jpg"></p>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
+											Gray<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-2/charcoalgray.jpg"></li>
+										<li class="list-group-item text-black"><b>Siding</b><br>Royal: "Heritage
+											Blue"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-2/heritageblue.jpg"></li>
+										<li class="list-group-item text-black"><b>Accent Color</b><br>Royal: "Blue
+											Gray"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-2/bluegray.jpg"></li>
+										<li class="list-group-item text-black"><b>Stone</b><br>Catalpa Summit
+											Ledge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-2/catalpasummitledge.jpg"></li>
+										<li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
+											"Cityscape"</li>
+									</ul>
+									<div class="card-body bg-dark"><button id="" class="btn rounded"
+											onclick="nextPrev(1)">Select
+										</button>
+									</div>
+								</div>
+							</div>
 
-                  <div class="card-body">
-                    <a href="pdfs/Westcott_Ranch-B-Pair.pdf" download="Westcott Ranch B"><button id=""
-                        class="btn rounded" onclick="">Select</button> </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
-                <div class="card mx-auto" style="max-width: 25rem;">
-                  <img src="images/floorplans/lg_ranch_pair.jpg" style="height: 365px;" class="card-img-top" alt="...">
-                  <br><br><br>
-                  <div class="card-body">
-                    <h5 class="card-title">Large Ranch &#40;Pair&#41;</h5>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-black"><b>Beds</b><br>3</li>
-                    <li class="list-group-item text-black"><b>Baths</b><br>2</li>
-                    <li class="list-group-item text-black"><b>Floors</b><br>1</li>
-                    <li class="list-group-item text-black"><b>Garages</b><br>2 car</li>
-                    <li class="list-group-item text-black"><b>Features</b><br>Modern Finishes<br>Covered
-                      Porch<br>Outdoor Living Patios<br>Designer Kitchens and Baths</li>
-                    <li class="list-group-item text-black"><b>Living Space</b><br>1737 sq ft</li>
-                    <li class="list-group-item text-black"><b>Base Price &#40;Per Side&#41;</b><br> $298,000.00</li>
-                  </ul>
+							<!-- Start Package #3 -->
+							<div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
+								<div data-aos="fade-up" data-aos-duration="1000" class="card bg-green mx-auto shadow-1"
+									style="max-width: 25rem;">
+									<div class="card-body">
+										<h5 class="card-title ">Package #3</h5>
+										<p class="card-text"><img class="rounded mx-auto d-block" style="height: 200px;"
+												src="images/exteriors/exterior-package-3/exterior.jpg"></p>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
+											Gray<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-3/charcoalgray.jpg"></li>
+										<li class="list-group-item text-black"><b>Siding</b><br>Royal: "Cypress"<br><img
+												class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-3/cypress.jpg"></li>
+										<li class="list-group-item text-black"><b>Accent Color</b><br>Royal:
+											"Storm"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-3/storm.jpg"></li>
+										<li class="list-group-item text-black"><b>Stone</b><br>Twilight Summit
+											Ledge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-3/twillightsummitledge.jpg"></li>
+										<li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
+											"Cityscape"</li>
+									</ul>
+									<div class="card-body bg-dark"><button id="" class="btn rounded"
+											onclick="nextPrev(1)">Select
+										</button>
+									</div>
+								</div>
+							</div>
 
-                  <div class="card-body">
-                    <a href="pdfs/Westcott_Ranch-A-Pair.pdf" download="Westcott Ranch A"><button id=""
-                        class="btn rounded" onclick="">Select</button> </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+							<!-- Start Package #4 -->
+							<div class="col-lg-4 col-md-12 mb-4 ml-auto text-center">
+								<div data-aos="fade-up" data-aos-duration="1000" class="card bg-green mx-auto shadow-1"
+									style="max-width: 25rem;">
+									<div class="card-body">
+										<h5 class="card-title ">Package #4</h5>
+										<p class="card-text"><img class="rounded mx-auto d-block" style="height: 200px;"
+												src="images/exteriors/exterior-package-4/exterior.jpg"></p>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
+											Gray<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-4/charcoalgray.jpg"></li>
+										<li class="list-group-item text-black"><b>Siding</b><br>Royal:
+											"Ironstone"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-4/ironstone.jpg"></li>
+										<li class="list-group-item text-black"><b>Accent Color</b><br>Royal:
+											"Cypress"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-4/cypress.jpg"></li>
+										<li class="list-group-item text-black"><b>Stone</b><br>Cinder Manor
+											Stone<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-4/cindermanorstone.jpg"></li>
+										<li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
+											"Cityscape"</li>
+									</ul>
+									<div class="card-body bg-dark"><button id="" class="btn rounded"
+											onclick="nextPrev(1)">Select
+										</button>
+									</div>
+								</div>
+							</div>
 
-            <!-- Buttons -->
-            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-              <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Back</button>
-            </div>
-          </div>
-          <!-- End of tab floorplan -->
+							<!-- Start Package #5 -->
+							<div class="col-lg-4 col-md-12 mb-4 ml-auto text-center">
+								<div data-aos="fade-up" data-aos-duration="1000" class="card bg-green mx-auto shadow-1"
+									style="max-width: 25rem;">
+									<div class="card-body">
+										<h5 class="card-title ">Package #5</h5>
+										<p class="card-text"><img class="rounded mx-auto d-block"
+												style="max-width: 25rem;height: 200px;"
+												src="images/exteriors/exterior-package-5/exterior.jpg"></p>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
+											Gray<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-5/charcoalgray.jpg"></li>
+										<li class="list-group-item text-black"><b>Siding</b><br>Royal:
+											"Linen"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-5/linen.jpg"></li>
+										<li class="list-group-item text-black"><b>Accent Color</b><br>Royal:
+											"Marine Blue"<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-5/marineblue.jpg"></li>
+										<li class="list-group-item text-black"><b>Stone</b><br>Black Birch
+											Summit Ledge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+												src="images/exteriors/exterior-package-5/blackbirchsummitledge.jpg">
+										</li>
+										<li class="list-group-item text-black"><b>Front Door Color</b><br>SW
+											7067 "Cityscape"</li>
+									</ul>
+									<div class="card-body bg-dark"><button id="" class="btn rounded"
+											onclick="nextPrev(1)">Select
+										</button>
+									</div>
+								</div>
+							</div>
 
-          <!-- Start of tab 1 -->
-          <div class="tab bg-gradient rounded mt-4">
-            <div class="row bg-white rounded shadow-1">
-              <div class="col-12">
-                <!-- Title -->
-                <h4 class="p-3 m-4 bg-dark text-white text-center rounded">Which exterior package are you interested
-                  in?
-                </h4>
-              </div>
+							<!-- Buttons -->
+							<div class="mt-5 mb-5 text-center" style="overflow:auto;">
+								<button type="button" id="prevBtn" class="rounded"
+									onclick="nextPrev(-1)">Previous</button>
+								<button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Next</button>
+							</div>
 
-            </div>
-            <!-- Buttons -->
-            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-              <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Previous</button>
-              <button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Next</button>
-            </div>
-          </div>
-          <!-- End of tab 1 -->
+							<!-- End of tab 1 -->
 
-          <!-- Start of tab 1 -->
-          <div class="tab bg-gradient rounded mt-4">
-            <div class="row bg-white rounded shadow-1">
-              <div class="col-12">
-                <!-- Title -->
-                <h4 class="p-3 m-4 bg-dark text-white text-center rounded">Which interior package are you interested
-                  in?
-                </h4>
-              </div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Start Footer Section -->
+	<footer class="footer-section text-center">
+		<div class="container relative">
+			<div class="row mb-5">
+				<div class="col-lg-12">
+					<div class="footer-logo-wrap">
+						<img src="images/westcott-logo.png" alt="" class="img-fluid text-center rounded"
+							style="height: 165px;" />
+					</div>
 
-            </div>
-            <!-- Buttons -->
-            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-              <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Previous</button>
-              <button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Next</button>
-            </div>
-          </div>
-          <!-- End of tab 1 -->
+				</div>
+			</div>
+			<!-- Other Products -->
+			<div class="row justify-content-between align-items-center rounded pb-3 mt-3 mb-3">
+				<h5 class="mb-3">Our other custom built neighborhoods</h5>
+				<div class="col-lg-3 mx-auto text-center mb-3 rounded ">
+					<a class="text-white" href="https://www.livesomo.com">
+						<img src="images/somo-thumbnail.jpg" class="img-fluid rounded mb-3">
+						<br>SOMO</a>
+				</div>
+				<div class="col-lg-3 mx-auto text-center mb-3 rounded ">
+					<a class="text-white" href="https://www.hparkestates.com">
+						<img src="images/HPE-thumbnail.jpg" class="img-fluid rounded mb-3">
+						<br>Highland Park Estates</a>
+				</div>
+				<div class="col-lg-3 mx-auto text-center mb-3 rounded ">
+					<a class="text-white" href="https://www.wickliving.com">
+						<img src="images/wick-thumbnail.jpg" class="img-fluid rounded mb-3">
+						<br>Lifestyle Apartments</a>
+				</div>
+			</div>
+			<div class="border-top copyright">
+				<div class="row pt-4">
+					<div class="col-lg-12">
+						<p class="mx-auto text-center">
+							Copyright &copy;
+							<script>
+								document.write(new Date().getFullYear());
+							</script>
+							All Rights Reserved. <br /><a class="text-white"
+								href="https://unshiftedbitdev.com">Developed by Unshifted
+								Bit Development</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer Section -->
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/tiny-slider.js"></script>
+	<script src="js/custom.js"></script>
+	<script>
+		var currentTab = 0; // Current tab is set to be the first tab (0)
+		showTab(currentTab); // Display the current tab
 
-          <!-- Start of tab 1 -->
-          <div class="tab bg-gradient rounded mt-4">
-            <div class="row bg-white rounded shadow-1">
-              <div class="col-12">
-                <!-- Title -->
-                <h4 class="p-3 m-4 bg-dark text-white text-center rounded">Submit Request</h4>
-              </div>
+		function showTab(n) {
+			// This function will display the specified tab of the form...
+			var x = document.getElementsByClassName("tab");
+			x[n].style.display = "block";
+			//... and fix the Previous/Next buttons:
+			if (n == 0) {
+				document.getElementById("prevBtn").style.display = "none";
+			} else {
+				document.getElementById("prevBtn").style.display = "inline";
+			}
+			if (n == (x.length - 1)) {
+				document.getElementById("nextBtn").innerHTML = "Submit";
+			} else {
+				document.getElementById("nextBtn").innerHTML = "Next";
+			}
+			//... and run a function that will display the correct step indicator:
+			fixStepIndicator(n)
+		}
 
-            </div>
-            <!-- Buttons -->
-            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-              <button type="button" id="nextBtn" class="rounded" onclick="">Submit</button>
-            </div>
-          </div>
-          <!-- End of tab 1 -->
+		function nextPrev(n) {
+			// This function will figure out which tab to display
+			var x = document.getElementsByClassName("tab");
+			// Exit the function if any field in the current tab is invalid:
+			if (n == 1 && !validateForm()) return false;
+			// Hide the current tab:
+			x[currentTab].style.display = "none";
+			// Increase or decrease the current tab by 1:
+			currentTab = currentTab + n;
+			// if you have reached the end of the form...
+			if (currentTab >= x.length) {
+				// ... the form gets submitted:
+				document.getElementById("regForm").submit();
+				return false;
+			}
+			// Otherwise, display the correct tab:
+			showTab(currentTab);
+		}
 
+		function validateForm() {
+			// This function deals with validation of the form fields
+			var x, y, i, valid = true;
+			x = document.getElementsByClassName("tab");
+			y = x[currentTab].getElementsByTagName("input");
+			// A loop that checks every input field in the current tab:
+			for (i = 0; i < y.length; i++) {
+				// If a field is empty...
+				if (y[i].value == "") {
+					// add an "invalid" class to the field:
+					y[i].className += " invalid";
+					// and set the current valid status to false
+					valid = false;
+				}
+			}
+			// If the valid status is true, mark the step as finished and valid:
+			if (valid) {
+				document.getElementsByClassName("step")[currentTab].className += " finish";
+			}
+			return valid; // return the valid status
+		}
 
-
-          <!-- Circles which indicates the steps of the form: -->
-          <div style="text-align:center;margin-top:40px;">
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-            <span class="step"></span>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <!-- Start Footer Section -->
-  <footer class="footer-section text-center">
-    <div class="container relative">
-      <div class="row mb-5">
-        <div class="col-lg-12">
-          <div class="footer-logo-wrap">
-            <img src="images/westcott-logo.png" alt="" class="img-fluid text-center rounded" style="height: 165px;" />
-          </div>
-
-        </div>
-      </div>
-      <!-- Other Products -->
-      <div class="row justify-content-between align-items-center rounded pb-3 mt-3 mb-3">
-        <h5 class="mb-3">Our other custom built neighborhoods</h5>
-        <div class="col-lg-3 mx-auto text-center mb-3 rounded ">
-          <a class="text-white" href="https://www.livesomo.com">
-            <img src="images/somo-thumbnail.jpg" class="img-fluid rounded mb-3">
-            <br>SOMO</a>
-        </div>
-        <div class="col-lg-3 mx-auto text-center mb-3 rounded ">
-          <a class="text-white" href="https://www.hparkestates.com">
-            <img src="images/HPE-thumbnail.jpg" class="img-fluid rounded mb-3">
-            <br>Highland Park Estates</a>
-        </div>
-        <div class="col-lg-3 mx-auto text-center mb-3 rounded ">
-          <a class="text-white" href="https://www.wickliving.com">
-            <img src="images/wick-thumbnail.jpg" class="img-fluid rounded mb-3">
-            <br>Lifestyle Apartments</a>
-        </div>
-      </div>
-      <div class="border-top copyright">
-        <div class="row pt-4">
-          <div class="col-lg-12">
-            <p class="mx-auto text-center">
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              All Rights Reserved. <br /><a class="text-white" href="https://unshiftedbitdev.com">Developed by Unshifted
-                Bit Development</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- End Footer Section -->
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/tiny-slider.js"></script>
-  <script src="js/custom.js"></script>
-  <script>
-    var currentTab = 0; // Current tab is set to be the first tab (0)
-    showTab(currentTab); // Display the current tab
-
-    function showTab(n) {
-      // This function will display the specified tab of the form...
-      var x = document.getElementsByClassName("tab");
-      x[n].style.display = "block";
-      //... and fix the Previous/Next buttons:
-      if (n == 0) {
-        document.getElementById("prevBtn").style.display = "none";
-      } else {
-        document.getElementById("prevBtn").style.display = "inline";
-      }
-      if (n == (x.length - 1)) {
-        document.getElementById("nextBtn").innerHTML = "Submit";
-      } else {
-        document.getElementById("nextBtn").innerHTML = "Next";
-      }
-      //... and run a function that will display the correct step indicator:
-      fixStepIndicator(n)
-    }
-
-    function nextPrev(n) {
-      // This function will figure out which tab to display
-      var x = document.getElementsByClassName("tab");
-      // Exit the function if any field in the current tab is invalid:
-      if (n == 1 && !validateForm()) return false;
-      // Hide the current tab:
-      x[currentTab].style.display = "none";
-      // Increase or decrease the current tab by 1:
-      currentTab = currentTab + n;
-      // if you have reached the end of the form...
-      if (currentTab >= x.length) {
-        // ... the form gets submitted:
-        document.getElementById("regForm").submit();
-        return false;
-      }
-      // Otherwise, display the correct tab:
-      showTab(currentTab);
-    }
-
-    function validateForm() {
-      // This function deals with validation of the form fields
-      var x, y, i, valid = true;
-      x = document.getElementsByClassName("tab");
-      y = x[currentTab].getElementsByTagName("input");
-      // A loop that checks every input field in the current tab:
-      for (i = 0; i < y.length; i++) {
-        // If a field is empty...
-        if (y[i].value == "") {
-          // add an "invalid" class to the field:
-          y[i].className += " invalid";
-          // and set the current valid status to false
-          valid = false;
-        }
-      }
-      // If the valid status is true, mark the step as finished and valid:
-      if (valid) {
-        document.getElementsByClassName("step")[currentTab].className += " finish";
-      }
-      return valid; // return the valid status
-    }
-
-    function fixStepIndicator(n) {
-      // This function removes the "active" class of all steps...
-      var i, x = document.getElementsByClassName("step");
-      for (i = 0; i < x.length; i++) {
-        x[i].className = x[i].className.replace(" active", "");
-      }
-      //... and adds the "active" class on the current step:
-      x[n].className += " active";
-    }
-  </script>
+		function fixStepIndicator(n) {
+			// This function removes the "active" class of all steps...
+			var i, x = document.getElementsByClassName("step");
+			for (i = 0; i < x.length; i++) {
+				x[i].className = x[i].className.replace(" active", "");
+			}
+			//... and adds the "active" class on the current step:
+			x[n].className += " active";
+		}
+	</script>
 </body>
 
 </html>
