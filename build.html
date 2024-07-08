@@ -143,10 +143,10 @@
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 mx-auto text-black">
-        <form class="rounded  m-1" id="regForm" action="">
+        <form class="rounded m-1" id="regForm" action="">
           <!--Start tab-->
           <div class="tab bg-dark rounded text-center mt-4">
             <h1 class="section-title pt-5 pb-5 text-white ">Westcott Home Builder</h1>
@@ -395,7 +395,7 @@
 										<li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
 											"Cityscape"</li>
 									</ul>
-									<div class="card-body bg-dark"><button id="" class="btn rounded"
+									<div class="card-body"><button id="" class="btn rounded"
 											onclick="nextPrev(1)">Select
 										</button>
 									</div>
@@ -426,7 +426,7 @@
 										<li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
 											"Cityscape"</li>
 									</ul>
-									<div class="card-body bg-dark"><button id="" class="btn rounded"
+									<div class="card-body"><button id="" class="btn rounded"
 											onclick="nextPrev(1)">Select
 										</button>
 									</div>
@@ -458,7 +458,7 @@
 										<li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
 											"Cityscape"</li>
 									</ul>
-									<div class="card-body bg-dark"><button id="" class="btn rounded"
+									<div class="card-body"><button id="" class="btn rounded"
 											onclick="nextPrev(1)">Select
 										</button>
 									</div>
@@ -490,7 +490,7 @@
 										<li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
 											"Cityscape"</li>
 									</ul>
-									<div class="card-body bg-dark"><button id="" class="btn rounded"
+									<div class="card-body"><button id="" class="btn rounded"
 											onclick="nextPrev(1)">Select
 										</button>
 									</div>
@@ -555,7 +555,7 @@
                 </h4>
               </div>
               <!-- Start Package #1 -->
-              <div class="col-lg-5 col-md-12 mb-4 mx-auto text-center">
+              <div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
                 <div class="card bg-green mx-auto shadow-1" style="max-width: 25rem;">
                   <div class="card-body">
                     <h5 class="card-title">Package #1</h5>
@@ -594,7 +594,7 @@
                 </div>
               </div>
               <!-- Start Package #2 -->
-              <div class="col-lg-5 col-md-12 mb-4 mx-auto text-center">
+              <div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
                 <div class="card bg-green mx-auto shadow-1" style="max-width: 25rem;">
                   <div class="card-body">
                     <h5 class="card-title ">Package #2</h5>
@@ -635,7 +635,7 @@
               </div>
 
               <!-- Start Package #3 -->
-              <div class="col-lg-5 col-md-12 mb-4 mx-auto text-center">
+              <div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
                 <div class="card bg-green mx-auto shadow-1" style="max-width: 25rem;">
                   <div class="card-body">
                     <h5 class="card-title ">Package #3</h5>
@@ -676,7 +676,7 @@
               </div>
 
               <!-- Start Package #4 -->
-              <div class="col-lg-5 col-md-12 mb-4 mx-auto text-center">
+              <div class="col-lg-4 col-md-12 mb-4 ml-auto text-center">
                 <div class="card bg-green mx-auto shadow-1" style="max-width: 25rem;">
                   <div class="card-body">
                     <h5 class="card-title ">Package #4</h5>
@@ -717,7 +717,7 @@
               </div>
 
               <!-- Start Package #5 -->
-              <div class="col-lg-5 col-md-12 mb-4 mx-auto text-center">
+              <div class="col-lg-4 col-md-12 mb-4 ml-auto text-center">
                 <div class="card bg-green mx-auto shadow-1" style="max-width: 25rem;">
                   <div class="card-body">
                     <h5 class="card-title ">Package #5</h5>
@@ -882,6 +882,7 @@
         return false;
       }
       // Otherwise, display the correct tab:
+      window.scroll(0, 0);
       showTab(currentTab);
     }
 
