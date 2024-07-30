@@ -14,6 +14,7 @@
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link href="css/tiny-slider.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
 
@@ -173,11 +174,12 @@
                 <p class="bg-dark text-white text-center pt-2">Please enter your contact information below so that we
                   can reach out to you once you place your build request.</p>
               </div>
+
               <!-- Name Input -->
               <div class="col-7 mt-4 mx-auto">
                 <label for="inputName" class="form-label">Name</label>
                 <div class="input-group mb-3 pb-3">
-                  <input type="text" class="form-control bg-light" aria-label=""
+                  <input type="text" name="name" class="form-control bg-light" aria-label=""
                     aria-describedby="inputGroup-sizing-default" placeholder="" required>
                 </div>
               </div>
@@ -193,8 +195,7 @@
               <div class="col-7 mx-auto">
                 <label for="inputPhone" class="form-label">Phone Number</label>
                 <div class="input-group mb-3 pb-3">
-                  <input type="tel" id="phone" name="phone" class="form-control bg-light"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                  <input type="tel" id="phone" name="phone" class="form-control bg-light" pattern="" required />
                 </div>
               </div>
               <!-- Buttons -->
@@ -234,7 +235,8 @@
                     <li class="list-group-item text-black"><b>Base Price</b><br>$249,000.00</li>
                   </ul>
                   <div class="card-body">
-                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                    <button id="townSingle" class="btn rounded"
+                      onclick="nextPrev(1); setFloorplanVar('Townhome (Single)')">Select</button>
                   </div>
                 </div>
               </div>
@@ -257,7 +259,8 @@
                     <li class="list-group-item text-black"><b>Base Price</b><br> $267,000.00</li>
                   </ul>
                   <div class="card-body">
-                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                    <button id="smRanchSingle" class="btn rounded"
+                      onclick="nextPrev(1); setFloorplanVar('Small Ranch (Single)')">Select</button>
                   </div>
                 </div>
               </div>
@@ -279,7 +282,8 @@
                     <li class="list-group-item text-black"><b>Base Price</b><br> $327,000.00</li>
                   </ul>
                   <div class="card-body">
-                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                    <button id="lgRanchSingle" class="btn rounded"
+                      onclick="nextPrev(1); setFloorplanVar('Large Ranch (Single)')">Select</button>
                   </div>
                 </div>
               </div>
@@ -306,7 +310,8 @@
                   </ul>
 
                   <div class="card-body">
-                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                    <button id="townPair" class="btn rounded"
+                      onclick="nextPrev(1); setFloorplanVar('Townhome (Pair)')">Select</button>
                   </div>
                 </div>
               </div>
@@ -331,7 +336,8 @@
                   </ul>
 
                   <div class="card-body">
-                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                    <button id="smRanchPair" class="btn rounded"
+                      onclick="nextPrev(1); setFloorplanVar('Small Ranch (Pair)')">Select</button>
                   </div>
                 </div>
               </div>
@@ -356,7 +362,8 @@
                   </ul>
 
                   <div class="card-body">
-                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                    <button id="lgRanchPair" class="btn rounded"
+                      onclick="nextPrev(1); setFloorplanVar('Large Ranch (Pair)')">Select</button>
                   </div>
                 </div>
               </div>
@@ -405,7 +412,7 @@
                     <li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
                       "Cityscape"</li>
                   </ul>
-                  <div class="card-body"><button id="" class="btn rounded" onclick="nextPrev(1)">Select
+                  <div class="card-body"><button id="" class="btn rounded" onclick="nextPrev(1); setExteriorVar('Exterior Package #1')">Select
                     </button>
                   </div>
                 </div>
@@ -435,7 +442,7 @@
                     <li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
                       "Cityscape"</li>
                   </ul>
-                  <div class="card-body"><button id="" class="btn rounded" onclick="nextPrev(1)">Select
+                  <div class="card-body"><button id="" class="btn rounded" onclick="nextPrev(1); setExteriorVar('Exterior Package #2')">Select
                     </button>
                   </div>
                 </div>
@@ -465,7 +472,7 @@
                     <li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
                       "Cityscape"</li>
                   </ul>
-                  <div class="card-body"><button id="" class="btn rounded" onclick="nextPrev(1)">Select
+                  <div class="card-body"><button id="" class="btn rounded" onclick="nextPrev(1); setExteriorVar('Exterior Package #3')">Select
                     </button>
                   </div>
                 </div>
@@ -495,7 +502,7 @@
                     <li class="list-group-item text-black"><b>Front Door Color</b><br>SW 7067
                       "Cityscape"</li>
                   </ul>
-                  <div class="card-body"><button id="" class="btn rounded" onclick="nextPrev(1)">Select
+                  <div class="card-body"><button id="" class="btn rounded" onclick="nextPrev(1); setExteriorVar('Exterior Package #4')">Select
                     </button>
                   </div>
                 </div>
@@ -526,7 +533,7 @@
                     <li class="list-group-item text-black"><b>Front Door Color</b><br>SW
                       7067 "Cityscape"</li>
                   </ul>
-                  <div class="card-body"><button id="" class="btn rounded" onclick="nextPrev(1)">Select
+                  <div class="card-body"><button id="" class="btn rounded" onclick="nextPrev(1); setExteriorVar('Exterior Package #5')">Select
                     </button>
                   </div>
                 </div>
@@ -588,7 +595,7 @@
                     </li>
                   </ul>
                   <div class="card-body">
-                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                    <button id="" class="btn rounded" onclick="nextPrev(1); setInteriorVar('Interior Package #1')">Select</button>
                   </div>
                 </div>
               </div>
@@ -628,7 +635,7 @@
                     </li>
                   </ul>
                   <div class="card-body">
-                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                    <button id="" class="btn rounded" onclick="nextPrev(1); setInteriorVar('Interior Package #2')">Select</button>
                   </div>
                 </div>
               </div>
@@ -669,7 +676,7 @@
                     </li>
                   </ul>
                   <div class="card-body">
-                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                    <button id="" class="btn rounded" onclick="nextPrev(1); setInteriorVar('Interior Package #3')">Select</button>
                   </div>
                 </div>
               </div>
@@ -710,7 +717,7 @@
                     </li>
                   </ul>
                   <div class="card-body">
-                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                    <button id="" class="btn rounded" onclick="nextPrev(1); setInteriorVar('Interior Package #4')">Select</button>
                   </div>
                 </div>
               </div>
@@ -751,7 +758,7 @@
                     </li>
                   </ul>
                   <div class="card-body">
-                    <button id="" class="btn rounded" onclick="nextPrev(1)">Select</button>
+                    <button id="" class="btn rounded" onclick="nextPrev(1); setInteriorVar('Interior Package #5')">Select</button>
                   </div>
                 </div>
               </div>
@@ -867,8 +874,9 @@
             <!-- Buttons -->
             <div class="mt-5 mb-5 text-center" style="overflow:auto;">
               <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Back</button>
-              <button type="button" id="nextBtn" class="rounded mb-5" onclick="nextPrev(1)">Submit
-                Request</button>
+              <!-- <button type="button" id="nextBtn" class="rounded mb-5" onclick="nextPrev(1)">Submit
+                Request</button> -->
+              <button type="button" class="rounded" onclick="submitForm()">Submit Form</button>
             </div>
           </div>
           <!-- End of confirmation tab -->
@@ -937,6 +945,7 @@
   <script src="js/tiny-slider.js"></script>
   <script src="js/custom.js"></script>
   <script>
+    //  Variables for tab navigation
     var currentTab = 0; // Current tab is set to be the first tab (0)
     showTab(currentTab); // Display the current tab
 
@@ -1009,6 +1018,46 @@
       }
       //... and adds the "active" class on the current step:
       x[n].className += " active";
+    }
+
+    // Variables for form submission
+    var floorplanVar, exteriorVar, interiorVar;
+
+    // This function sets form variables
+    function setFloorplanVar(x) {
+      floorplanVar = x;
+      console.log(floorplanVar);
+    }
+
+      // This function sets form variables
+      function setExteriorVar(x) {
+      exteriorVar = x;
+      console.log(exteriorVar);
+    }
+
+      // This function sets form variables
+      function setInteriorVar(x) {
+      interiorVar = x;
+      console.log(interiorVar);
+    }
+
+    //AJAX call for PHP Post
+    function submitForm() {
+      var nameVar, emailVar, phoneVar;
+      nameVar = document.getElementsByName("name")[0].value;
+      emailVar = document.getElementsByName("email")[0].value;
+      phoneVar = document.getElementsByName("phone")[0].value;
+      console.log(floorplanVar);
+      console.log(exteriorVar);
+      console.log(interiorVar);
+      $.ajax({
+        url: "test.php",
+        type: "post",
+        data: { name: nameVar, email: emailVar, phone: phoneVar, floorplan: floorplanVar, exterior: exteriorVar, interior: interiorVar},
+        success: function (result) {
+          console.log("success");
+        }
+      });
     }
   </script>
 </body>
