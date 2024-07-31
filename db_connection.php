@@ -1,6 +1,6 @@
 <?php
 
-	$servername = "localhost";
+	$servername = "82.197.82.43";
 	$database = "u269232858_homebuilder";
 	$username = "u269232858_user";
 	$password = "Winingerdb123";
