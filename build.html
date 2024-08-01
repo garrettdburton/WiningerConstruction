@@ -1012,7 +1012,7 @@
         console.log(exteriorVar);
         console.log(interiorVar);
         $.ajax({
-          url: "/test.php",
+          url: "/submit.php",
           type: "post",
           data: { name: nameVar, email: emailVar, phone: phoneVar, floorplan: floorplanVar, exterior: exteriorVar, interior: interiorVar },
           success: function (result) {
