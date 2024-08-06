@@ -77,7 +77,6 @@
 		}
 
 		.card:hover {
-			border: 2px solid darkslategrey;
 			opacity: .8;
 		}
 
@@ -110,9 +109,7 @@
 			min-height: 700px;
 		}
 
-		.tab {
-			min-height: 700px;
-		}
+		.tab {}
 
 		.tab input {
 			height: 40px;
@@ -148,22 +145,53 @@
 		</div>
 	</nav>
 
-	<div class="container">
+	<div class="container pb-3">
 		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 mx-auto text-black p-5">
-				<!-- Start of thank you tab -->
-				<div class="tab bg-dark rounded text-center p-5">
-					<h1 class="section-title pt-5 pb-5 text-white m-5">Thank you for using <br> Westcott Home Builder</h1>
-
-					<p class="text-white p-3">We will reach out to you immediately to finalize your home. <br> If you have any questions please contact us <br> <a class="text-white text-bold" href="contact.html">Here</a></p>
-				
-					<a href="index.html"><button type="button" class="mt-5 mb-3 shadow-lg rounded">Go Home</button></a>
+			<!-- Start of confirmation tab -->
+			<div class="tab bg-white rounded mt-4">
+				<div class="row rounded text-center">
+					<div class="col-md-12 col-sm-12 p-4 bg-dark text-center">
+						<!-- Title -->
+						<h2 class="text-white text-center">Confirm your build request selections</h2>
+						<p class="text-white text-center">Please confirm that you have made the correct
+							selections and submit the request below. <br> One of our representatives will get back
+							to you
+							soon.</p>
+					</div>
+					<!-- Start Package #4 -->
+					<div class="col-lg-3 col-md-7 col-sm-12 p-4 mx-auto">
+						<div class="card mx-auto">
+							<div class="card-body">
+								<h5 class="card-title" id="floorplanSelected">Test</h5>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-7 col-sm-12 p-4 mx-auto">
+						<div class="card mx-auto">
+							<div class="card-body">
+								<h5 class="card-title" id="exteriorSelected">Test</h5>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-7 col-sm-12 p-4 mx-auto">
+						<div class="card mx-auto">
+							<div class="card-body">
+								<h5 class="card-title" id="interiorSelected">Test</h5>
+							</div>
+						</div>
+					</div>
 				</div>
-				<!-- End of thank you tab -->
 
-				<!-- Circles which indicates the steps of the form: -->
-
+				<!-- Buttons -->
+				<div class="mt-5 mb-5 text-center" style="overflow:auto;">
+					<button type="button" id="prevBtn" class="rounded m-3" onclick="nextPrev(-1)">Back</button>
+					<button type="button" class="rounded m-3" onclick="submitForm();nextPrev(1) ">Submit
+						Request</button>
+				</div>
 			</div>
+			<!-- End of confirmation tab -->
+			<!-- Circles which indicates the steps of the form: -->
+
 		</div>
 	</div>
 	<!-- Start Footer Section -->
@@ -295,12 +323,18 @@
 		}
 
 		// Variables for form submission
-		var floorplanVar, exteriorVar, interiorVar;
+		var floorplanName, exteriorVar, interiorVar;
 
-		// This function sets form variables
-		function setFloorplanVar(x) {
-			floorplanVar = x;
-			console.log(floorplanVar);
+		// This function sets form variables (name, bed, bath, floors, garage, features)
+		function setFloorplan(name, bed, bath, floor, garage, features) {
+			floorplanName = name;
+			let floorplanBed = bed;
+			let floorplanBath = bath;
+			let floorplanFloor = floor;
+			let floorplanGarage = garage;
+			let floorplanFeat = features;
+			let floorplanName = name;
+			console.log(floorplanName, floorplanBed, floorplanBath, floorplanFloor, floorplanGarage, floorplanFeat);
 		}
 
 		// This function sets form variables
@@ -327,7 +361,7 @@
 			$.ajax({
 				url: "/test.php",
 				type: "post",
-				data: { name: nameVar, email: emailVar, phone: phoneVar, floorplan: floorplanVar, exterior: exteriorVar, interior: interiorVar },
+				data: { name: nameVar, email: emailVar, phone: phoneVar, floorplan: floorplanName, exterior: exteriorVar, interior: interiorVar },
 				success: function (result) {
 					console.log("success");
 				}
