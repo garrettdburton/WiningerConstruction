@@ -150,38 +150,117 @@
 			<!-- Start of confirmation tab -->
 			<div class="tab bg-white rounded mt-4">
 				<div class="row rounded text-center">
-					<div class="col-md-12 col-sm-12 p-4 bg-dark text-center">
+					<div class="col-12 bg-dark p-5 mb-4 text-center">
 						<!-- Title -->
-						<h2 class="text-white text-center">Confirm your build request selections</h2>
-						<p class="text-white text-center">Please confirm that you have made the correct
-							selections and submit the request below. <br> One of our representatives will get back
-							to you
+						<h2 class="bg-dark text-white text-center p-2">Confirm your build request selections</h2>
+						<p class="bg-dark text-white text-center p-2">Please confirm that you have made the correct
+							selections and submit the request below. <br> One of our representatives will get back to
+							you
 							soon.</p>
 					</div>
-					<!-- Start Package #4 -->
-					<div class="col-lg-3 col-md-7 col-sm-12 p-4 mx-auto">
-						<div class="card mx-auto">
+					<!-- Start Selected Floorplan-->
+					<div class="col-lg-3 col-md-12 col-sm-12 m-4 mx-auto text-center p-3">
+						<div class="card mx-auto shadow-1">
+							<img id="floorplanImageSelected" src="" class="card-img-top" alt="...">
 							<div class="card-body">
-								<h5 class="card-title" id="floorplanSelected">Test</h5>
+								<h5 class="card-title" id="floorplanNameSelected"></h5>
 							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item text-black"><b>Beds</b><br>
+									<p id="floorplanBedSelected"></p>
+								</li>
+								<li class="list-group-item text-black"><b>Baths</b><br>
+									<p id="floorplanBathSelected"></p>
+								</li>
+								<li class="list-group-item text-black"><b>Floors</b><br>
+									<p id="floorplanFloorSelected"></p>
+								</li>
+								<li class="list-group-item text-black"><b>Garages</b><br>
+									<p id="floorplanGarageSelected">
+								</li>
+								<li class="list-group-item text-black text-left"><b>Features</b><br>
+									<p id="floorplanFeatSelected"><br /><br />
+								</li>
+								<li class="list-group-item text-black"><b>Living Space</b><br>
+									<p id="floorplanSpaceSelected">
+								</li>
+								<li class="list-group-item text-black"><b>Base Price</b><br>
+									<p id="floorplanPriceSelected"></p>
+								</li>
+							</ul>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-7 col-sm-12 p-4 mx-auto">
-						<div class="card mx-auto">
+					<!--Start Selected Exterior-->
+					<div class="col-lg-3 col-md-12 m-4 mx-auto text-center p-3">
+						<div class="card mx-auto shadow-1">
+							<img id="exteriorImageSelected" src="" class="rounded mx-auto d-block mt-1" alt="..."
+								style="height: 200px; width: auto;">
 							<div class="card-body">
-								<h5 class="card-title" id="exteriorSelected">Test</h5>
+								<h5 class="card-title" id="exteriorNameSelected"></h5>
 							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item text-black"><b>Shingles</b>
+									<p id="exteriorShingleSelected"></p><img id="exteriorShingleImageSelected"
+										class="rounded mx-auto d-block" style="height: 75px;" src="">
+								</li>
+								<li class="list-group-item text-black"><b>Siding</b>
+									<p id="exteriorSidingSelected"></p><img id="exteriorSidingImageSelected"
+										class="rounded mx-auto d-block" style="height: 75px;" src="">
+								</li>
+								<li class="list-group-item text-black"><b>Accent Color</b>
+									<p id="exteriorColorSelected"></p><img id="exteriorColorImageSelected"
+										class="rounded mx-auto d-block" style="height: 75px;" src="">
+								</li>
+								<li class="list-group-item text-black"><b>Stone</b>
+									<p id="exteriorStoneSelected"></p><img id="exteriorStoneImageSelected"
+										class="rounded mx-auto d-block" style="height: 75px;" src="">
+								</li>
+								<li class="list-group-item text-black"><b>Front Door Color</b>
+									<p id="exteriorDoorSelected"></p>
+								</li>
+							</ul>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-7 col-sm-12 p-4 mx-auto">
-						<div class="card mx-auto">
+					<!--Start Selected Interior-->
+					<div class="col-lg-3 col-md-12 m-4 mx-auto text-center p-3">
+						<div class="card bg-green mx-auto shadow-1">
+							<img id="interiorImageSelected" class="rounded mx-auto d-block mt-1"
+								style="height: 200px; width: auto" src="">
 							<div class="card-body">
-								<h5 class="card-title" id="interiorSelected">Test</h5>
+								<h5 class="card-title" id="interiorNameSelected"></h5>
 							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item text-black"><b>Cabinets</b><br>
+									<p id="interiorCabinetTopSelected"></p><img id="interiorCabinetTopImageSelected"
+										class="rounded mx-auto d-block" style="height: 75px;" src="">
+									<br>
+									<p id="interiorCabinetBottomSelected"></p><img
+										id="interiorCabinetBottomImageSelected" class="rounded mx-auto d-block"
+										style="height: 75px;" src="">
+								</li>
+								<li class="list-group-item text-black"><b>Countertops</b>
+									<p id="interiorCounterSelected"></p><img id="interiorCounterImageSelected"
+										class="rounded mx-auto d-block" style="height: 75px;" src="">
+								</li>
+								<li class="list-group-item text-black"><b>Handles</b>
+									<p id="interiorHandleSelected">
+								</li>
+								<li class="list-group-item text-black"><b>Laminate</b>
+									<p id="interiorLaminateSelected"></p><img id="interiorLaminateImageSelected"
+										class="rounded mx-auto d-block" style="height: 75px;" src="">
+								</li>
+								<li class="list-group-item text-black"><b>Carpet</b>
+									<p id="interiorCarpetSelected"></p><img id="interiorCarpetImageSelected"
+										class="rounded mx-auto d-block" style="height: 75px;" src="">
+								</li>
+								<li class="list-group-item text-black"><b>Paint</b>
+									<p id="interiorPaintSelected"></p><img id="interiorPaintImageSelected"
+										class="rounded mx-auto d-block" style="height: 75px;" src="">
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
-
 				<!-- Buttons -->
 				<div class="mt-5 mb-5 text-center" style="overflow:auto;">
 					<button type="button" id="prevBtn" class="rounded m-3" onclick="nextPrev(-1)">Back</button>
