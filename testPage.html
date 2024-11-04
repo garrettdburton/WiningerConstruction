@@ -32,38 +32,9 @@
       background-color: #f1f1f1;
     }
 
-    img {
-      transition: transform .6s;
-    }
-
-
-    h1 {
-      text-align: center;
-    }
-
-    input {
-      padding: 10px;
-      width: 100%;
-      font-size: 17px;
-      border: 1px solid #aaaaaa;
-    }
-
-    /* Mark input boxes that gets an error on validation: */
-    input.invalid {
-      background-color: #ffdddd;
-    }
-
-    /* Hide all steps by default: */
-    .tab {
-      display: none;
-    }
-
-    .carousel-control-prev-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-    }
-
-    .carousel-control-next-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+    .bg-green {
+      background: #3b5d50;
+      color: white;
     }
 
     .carousel-control-prev,
@@ -81,6 +52,31 @@
     }
 
 
+    h1 {
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      width: 100%;
+      font-size: 17px;
+      border: 1px solid #aaaaaa;
+    }
+
+    /* .card-img-top {
+      min-height: 700px;
+    } */
+
+    /* Mark input boxes that gets an error on validation: */
+    input.invalid {
+      background-color: #ffdddd;
+    }
+
+    /* Hide all steps by default: */
+    .tab {
+      display: none;
+    }
+
     button {
       background-color: #04AA6D;
       color: #ffffff;
@@ -94,14 +90,17 @@
       opacity: 0.8;
     }
 
+
+
+
     #prevBtn {
       background-color: #bbbbbb;
     }
 
     /* Make circles that indicate the steps of the form: */
     .step {
-      height: 15px;
-      width: 15px;
+      height: 0px;
+      width: 0px;
       margin: 0 2px;
       background-color: #bbbbbb;
       border: none;
@@ -112,7 +111,7 @@
     }
 
     .step.active {
-      opacity: 1;
+      opacity: 0;
     }
 
     /* Mark the steps that are finished and valid: */
@@ -120,19 +119,9 @@
       background-color: #04AA6D;
     }
 
-    #regForm {
-      min-height: 700px;
-    }
-
     .tab input {
       height: 40px;
     }
-
-    .bg-green {
-      background: #3b5d50;
-      color: white;
-    }
-
   </style>
 </head>
 
@@ -164,16 +153,73 @@
     </div>
   </nav>
 
-  <div class="container-fluid mt-3 rounded">
+  <div class="container mt-3 rounded">
     <div class="row">
-      <div class="col-xl-9 col-lg-11 col-md-11 col-sm-12 mx-auto text-black">
+      <div class="col-xl-8 col-lg-10 col-md-11 col-sm-12 mx-auto text-black">
         <form class="rounded" id="regForm" action="">
+          <!--Start tab-->
+          <div class="tab bg-dark rounded text-center"
+            style="background: url('images/build-welcome.jpg'); background-repeat: no-repeat;">
+            <h2 class="section-title pt-5 pb-2 text-white">Wininger Home Builder</h2>
+            <img src="images/westcott-logo.png" alt="" class="img-fluid rounded my-auto p-4 mt-3 mb-3"
+              style="height: 200px; --bs-bg-opacity: .8;" />
+
+            <p class="text-white p-3">Welcome to the premier home building application designed to turn your dream home
+              into reality. With our user-friendly platform, you can effortlessly design, budget, and build your new
+              home, all with the support of Westcott’s expert team. Start your journey to a beautifully crafted home
+              today with Westcott.</p>
+
+            <button type="button" class="mt-3 mb-3 shadow-lg rounded" id="" onclick="nextPrev(1)">Start
+              Building</button>
+          </div>
+
+          <!-- Start of information tab -->
+          <div class="tab">
+            <div class="row bg-white rounded shadow-1 mx-auto">
+              <div class="col-12 bg-dark p-5">
+                <!-- Title -->
+                <h4 class="bg-dark text-white text-center p-2">Who are we working with?</h4>
+                <p class="bg-dark text-white text-center pt-2">Please enter your contact information below so that we
+                  can reach out to you once you place your build request.</p>
+              </div>
+
+              <!-- Name Input -->
+              <div class="col-7 mt-4 mx-auto">
+                <label for="inputName" class="form-label">Name</label>
+                <div class="input-group mb-3 pb-3">
+                  <input type="text" name="name" class="form-control bg-light" aria-label=""
+                    aria-describedby="inputGroup-sizing-default" placeholder="" required>
+                </div>
+              </div>
+              <!-- Email Input -->
+              <div class="col-7 mx-auto">
+                <label for="inputEmail" class="form-label">Email</label>
+                <div class="input-group mb-3 pb-3">
+                  <input type="email" name="email" class="form-control bg-light" aria-label=""
+                    aria-describedby="inputGroup-sizing-default" placeholder="" required>
+                </div>
+              </div>
+              <!-- Phone Input -->
+              <div class="col-7 mx-auto">
+                <label for="inputPhone" class="form-label">Phone Number</label>
+                <div class="input-group mb-3 pb-3">
+                  <input type="tel" id="phone" name="phone" class="form-control bg-light" pattern="" required />
+                </div>
+              </div>
+              <!-- Buttons -->
+              <div class="mt-3 mb-3 text-center" style="overflow:auto;">
+                <button type="button" id="nextBtn" class="rounded" onclick="nextPrev(1)">Next</button>
+              </div>
+            </div>
+          </div>
+          <!-- End of information tab -->
+
           <!-- Start of floor plan tab-->
-          <!-- <div class="tab">
+          <div class="tab">
             <div class="row bg-light text-center rounded shadow-1 text-black" id="floorplans">
-              <div class="col-12 bg-dark p-5 mb-4 text-center"> -->
-          <!-- Title -->
-          <!-- <h4 class="bg-dark text-white text-center p-2">Select Floorplan</h4>
+              <div class="col-12 bg-dark p-5 mb-4 text-center">
+                <!-- Title -->
+                <h4 class="bg-dark text-white text-center p-2">Select Floorplan</h4>
                 <p class="bg-dark text-white text-center p-2">Choose below from our six avaliable floor
                   plans</p>
               </div>
@@ -181,9 +227,9 @@
                 <div class="card mx-auto bg-dark text-white shadow-1" style="max-width: 30rem;">
                   <img src="images/floorplans/townhome-plan-a.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h4 class="card-title">Townhome &#40;Single&#41;</h4> -->
+                    <h4 class="card-title">Townhome &#40;Single&#41;</h4>
 
-          <!-- <ul class="list-group list-group-flush">
+                    <!-- <ul class="list-group list-group-flush">
                     <li class="list-group-item text-black"><b>Beds</b><br>3</li>
                     <li class="list-group-item text-black"><b>Baths</b><br>2.5</li>
                     <li class="list-group-item text-black"><b>Floors</b><br>2</li>
@@ -195,8 +241,8 @@
                     </li>
                     <li class="list-group-item text-black"><b>Base Price</b><br>$249,000.00</li>
                   </ul> -->
-          <!-- <a href="pdfs/Westcott_Townhome-Plan.pdf" download="Westcott Townhome"><button id=""
-                    class="btn bg-secondary rounded m-2" onclick="">Download PDF</button> </a> <br>
+                    <a href="pdfs/Westcott_Townhome-Plan.pdf" download="Westcott Townhome"><button id=""
+                        class="btn bg-secondary rounded m-2" onclick="">Download PDF</button> </a> <br>
                     <button id="townSingle" class="btn bg-green rounded"
                       onclick="nextPrev(1); setFloorplan('images/floorplans/townhome-plan-a.jpg','Townhome (Single)', '3', '2.5', '2', '1','Covered Porch, Outdoor Patio, Designed Kitchen & Bath','1440-1478 sq ft', '$249,000.00')">Select</button>
                   </div>
@@ -206,9 +252,9 @@
                 <div class="card mx-auto bg-dark text-white shadow-1" style="max-width: 30rem;">
                   <img src="images/floorplans/sm_ranch.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h4 class="card-title">Small Ranch &#40;Single&#41;</h4> -->
+                    <h4 class="card-title">Small Ranch &#40;Single&#41;</h4>
 
-          <!-- <ul class="list-group list-group-flush">
+                    <!-- <ul class="list-group list-group-flush">
                     <li class="list-group-item text-black"><b>Beds</b><br>3</li>
                     <li class="list-group-item text-black"><b>Baths</b><br>2</li>
                     <li class="list-group-item text-black"><b>Floors</b><br>1</li>
@@ -219,8 +265,8 @@
                     <li class="list-group-item text-black"><b>Living Space</b><br>1206 sq ft</li>
                     <li class="list-group-item text-black"><b>Base Price</b><br> $267,000.00</li>
                   </ul> -->
-          <!-- <a href="pdfs/Westcott_Ranch-B-Plan.pdf" download="Westcott Ranch B"><button id=""
-                    class="btn bg-secondary rounded m-2" onclick="">Download PDF</button> </a> <br>
+                    <a href="pdfs/Westcott_Ranch-B-Plan.pdf" download="Westcott Ranch B"><button id=""
+                        class="btn bg-secondary rounded m-2" onclick="">Download PDF</button> </a> <br>
                     <button id="smRanchSingle" class="btn bg-green rounded"
                       onclick="nextPrev(1); setFloorplan('images/floorplans/sm_ranch.jpg','Small Ranch (Single)', '3', '2', '1', '1','Modern Finishes, Covered Porch, Outdoor Patio, Designed Kitchen & Bath','1206 sq ft', '$267,000.00')">Select</button>
                   </div>
@@ -230,9 +276,9 @@
                 <div class="card mx-auto bg-dark text-white shadow-1" style="max-width: 30rem;">
                   <img src="images/floorplans/lg_ranch.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h4 class="card-title">Large Ranch &#40;Single&#41;</h4> -->
+                    <h4 class="card-title">Large Ranch &#40;Single&#41;</h4>
 
-          <!-- <ul class="list-group list-group-flush">
+                    <!-- <ul class="list-group list-group-flush">
                     <li class="list-group-item text-black"><b>Beds</b><br>3</li>
                     <li class="list-group-item text-black"><b>Baths</b><br>2</li>
                     <li class="list-group-item text-black"><b>Floors</b><br>1</li>
@@ -243,21 +289,21 @@
                     <li class="list-group-item text-black"><b>Living Space</b><br>1737 sq ft</li>
                     <li class="list-group-item text-black"><b>Base Price</b><br> $327,000.00</li>
                   </ul> -->
-          <!-- <a href="pdfs/Westcott_Ranch-A-Plan.pdf" download="Westcott Ranch A"><button id=""
-                    class="btn bg-secondary rounded m-2" onclick="">Download PDF</button> </a> <br>
+                    <a href="pdfs/Westcott_Ranch-A-Plan.pdf" download="Westcott Ranch A"><button id=""
+                        class="btn bg-secondary rounded m-2" onclick="">Download PDF</button> </a> <br>
                     <button id="lgRanchSingle" class="btn bg-green rounded"
                       onclick="nextPrev(1); setFloorplan('images/floorplans/lg_ranch.jpg','Large Ranch (Single)', '3', '2', '1', '2','Modern Finishes, Covered Porch, Outdoor Patio, Designed Kitchen & Bath','1737 sq ft', '$327,000.00')">Select</button>
                   </div>
                 </div>
-              </div> -->
-          <!-- Pair Units -->
-          <!-- <div class="col-lg-6 col-md-12 mb-4 mx-auto text-center">
+              </div>
+              <!-- Pair Units -->
+              <div class="col-lg-6 col-md-12 mb-4 mx-auto text-center">
                 <div class="card mx-auto bg-dark text-white shadow-1" style="max-width: 30rem;">
                   <img src="images/floorplans/westcott-townhome-plan-b.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h4 class="card-title">Townhome &#40;Pair&#41;</h4> -->
+                    <h4 class="card-title">Townhome &#40;Pair&#41;</h4>
 
-          <!-- <ul class="list-group list-group-flush">
+                    <!-- <ul class="list-group list-group-flush">
                     <li class="list-group-item text-black"><b>Beds</b><br>3</li>
                     <li class="list-group-item text-black"><b>Baths</b><br>2.5</li>
                     <li class="list-group-item text-black"><b>Floors</b><br>1</li>
@@ -271,8 +317,8 @@
                       $243,500.00</li>
                   </ul> -->
 
-          <!-- <a href="pdfs/Westcott_Townhome-Pair.pdf" download="Westcott Townhome Pair"><button id=""
-                    class="btn bg-secondary rounded m-2" onclick="">Download PDF</button> </a> <br>
+                    <a href="pdfs/Westcott_Townhome-Pair.pdf" download="Westcott Townhome Pair"><button id=""
+                        class="btn bg-secondary rounded m-2" onclick="">Download PDF</button> </a> <br>
                     <button id="townPair" class="btn bg-green rounded"
                       onclick="nextPrev(1); setFloorplan('images/floorplans/westcott-townhome-plan-b.jpg','Townhome (Pair)', '3', '2.5', '1', '2','Covered Porch, Outdoor Patio, Designed Kitchen & Bath','1440-1478 sq ft', '$243,500.00 per side')">Select</button>
                   </div>
@@ -282,9 +328,9 @@
                 <div class="card mx-auto bg-dark text-white shadow-1" style="max-width: 30rem;">
                   <img src="images/floorplans/westcott-ranch-b.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h4 class="card-title">Small Ranch &#40;Pair&#41;</h4> -->
+                    <h4 class="card-title">Small Ranch &#40;Pair&#41;</h4>
 
-          <!-- <ul class="list-group list-group-flush">
+                    <!-- <ul class="list-group list-group-flush">
                     <li class="list-group-item text-black"><b>Beds</b><br>3</li>
                     <li class="list-group-item text-black"><b>Baths</b><br>2</li>
                     <li class="list-group-item text-black"><b>Floors</b><br>1</li>
@@ -297,8 +343,8 @@
                       $247,000.00</li>
                   </ul> -->
 
-          <!-- <a href="pdfs/Westcott_Ranch-B-Pair.pdf" download="Westcott Ranch B"><button id=""
-                    class="btn bg-secondary rounded m-2" onclick="">Download PDF</button> </a> <br>
+                    <a href="pdfs/Westcott_Ranch-B-Pair.pdf" download="Westcott Ranch B"><button id=""
+                        class="btn bg-secondary rounded m-2" onclick="">Download PDF</button> </a> <br>
                     <button id="smRanchPair" class="btn bg-green rounded"
                       onclick="nextPrev(1); setFloorplan('images/floorplans/westcott-ranch-b.jpg','Small Ranch (Pair)', '3', '2', '1', '1','Modern Finishes, Covered Porch, Outdoor Patio, Designed Kitchen & Bath','1206 sq ft', '$247,000.00 per side')">Select</button>
                   </div>
@@ -308,9 +354,9 @@
                 <div class="card mx-auto bg-dark text-white shadow-1" style="max-width: 30rem;">
                   <img src="images/floorplans/lg_ranch_pair.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h4 class="card-title">Large Ranch &#40;Pair&#41;</h4> -->
+                    <h4 class="card-title">Large Ranch &#40;Pair&#41;</h4>
 
-          <!-- <ul class="list-group list-group-flush">
+                    <!-- <ul class="list-group list-group-flush">
                     <li class="list-group-item text-black"><b>Beds</b><br>3</li>
                     <li class="list-group-item text-black"><b>Baths</b><br>2</li>
                     <li class="list-group-item text-black"><b>Floors</b><br>1</li>
@@ -323,20 +369,20 @@
                       $298,000.00</li>
                   </ul> -->
 
-          <!-- <a href="pdfs/Westcott_Ranch-A-Pair.pdf" download="Westcott Ranch A"><button id=""
-                    class="btn bg-secondary rounded m-2" onclick="">Download PDF</button> </a> <br>
+                    <a href="pdfs/Westcott_Ranch-A-Pair.pdf" download="Westcott Ranch A"><button id=""
+                        class="btn bg-secondary rounded m-2" onclick="">Download PDF</button> </a> <br>
                     <button id="lgRanchPair" class="btn bg-green rounded"
                       onclick="nextPrev(1); setFloorplan('images/floorplans/lg_ranch_pair.jpg','Large Ranch (Pair)', '3', '2', '1', '2','Modern Finishes, Covered Porch, Outdoor Patio, Designed Kitchen & Bath','1737 sq ft', '$298,000.00 per side')">Select</button>
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
 
-          <!-- Buttons -->
-          <!-- <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+            <!-- Buttons -->
+            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
               <button type="button" id="prevBtn" class="btn rounded" onclick="nextPrev(-1)">Back</button>
             </div>
-          </div> -->
+          </div>
 
           <!-- End of floorplan tab -->
 
@@ -516,7 +562,7 @@
                             <li class="list-group-item text-black"><b>Accent Color</b><br>Marine Blue<br><img
                                 class="rounded mx-auto d-block" style="height: 50px;"
                                 src="images/exteriors/exterior-package-5/marineblue.jpg"></li>
-                            <li class="list-group-item text-black"><b>Stone</b><br>Black Birch
+                            <li class="list-group-item text-black"><b>Stone</b><br>Birch
                               Summit Ledge<br><img class="rounded mx-auto d-block" style="height: 50px;"
                                 src="images/exteriors/exterior-package-5/blackbirchsummitledge.jpg">
                             </li>
@@ -533,9 +579,9 @@
 
 
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                <button class="carousel-control-prev mt-3" type="button" data-bs-target="#carouselExample"
                   data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="carousel-control-prev-icon mt-3" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
@@ -546,8 +592,12 @@
               </div>
 
               <!-- End of tab 1 -->
-
+              <!-- Buttons -->
+              <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+                <button type="button" id="prevBtn" class="btn rounded" onclick="nextPrev(-1)">Back</button>
+              </div>
             </div>
+
           </div>
           <!-- End of exterior tab -->
 
