@@ -18,6 +18,8 @@
   <link href="css/tiny-slider.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
 
+  
+
   <!-- Animate on Scroll -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
@@ -40,15 +42,9 @@
     .carousel-control-prev,
     .carousel-control-next {
       align-items: flex-start;
+      background-color: black;
       ;
       /* Aligns it at the top */
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-      align-items: flex-end;
-      ;
-      /* Aligns it at the bottom */
     }
 
 
@@ -127,7 +123,7 @@
   </style>
 </head>
 
-<body class="bg-green">
+<body class="" style="background-image: url(images/background-1.jpg);">
   <!-- Start Header/Navigation -->
   <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
     <div class="container">
@@ -155,9 +151,9 @@
     </div>
   </nav>
 
-  <div class="container mt-3 rounded">
+  <div class="container-fluid mt-3 rounded">
     <div class="row">
-      <div class="col-xl-8 col-lg-10 col-md-11 col-sm-12 mx-auto text-black">
+      <div class="col-xl-10 col-lg-10 col-md-11 col-sm-12 mx-auto text-black">
         <form class="rounded" id="regForm" action="">
 
 
@@ -170,6 +166,14 @@
                   you interested in?</h4>
                 <p class="bg-dark text-white text-center p-2">Choose below from our five avaliable interior
                   packages</p>
+                 
+              </div>
+              <div class="col-12 text-center p-2">
+                  <a class="col-2 text-white m-3" data-bs-target="#carouselExample2" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">1</a>
+                  <a class="col-2 text-white m-3" data-bs-target="#carouselExample2" data-bs-slide-to="1" aria-label="Slide 2">2</a>
+                  <a class="col-2 text-white m-3" data-bs-target="#carouselExample2" data-bs-slide-to="2" aria-label="Slide 3">3</a>
+                  <a class="col-2 text-white m-3" data-bs-target="#carouselExample2" data-bs-slide-to="3" aria-current="true" aria-label="Slide 4">4</a>
+                  <a class="col-2 text-white m-3" data-bs-target="#carouselExample2" data-bs-slide-to="4" aria-label="Slide 5">5</a>
               </div>
               <div id="carouselExample2" class="carousel slide rounded" data-bs-interval="false">
                 <div class="carousel-inner">
@@ -421,7 +425,7 @@
                       </div>
                     </div>
                   </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2"
+                  <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2"
                     data-bs-slide="prev">
                     <span id="scroll" class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
@@ -430,7 +434,7 @@
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
-                  </button>
+                  </button> -->
                 </div>
               </div>
               <!-- Buttons -->
