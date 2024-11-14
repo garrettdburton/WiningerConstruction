@@ -1,15 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 /* Custom */
 
-.bgimage {
-  width: 100%;
-  height: 50%;
-  
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 .bg-green {
   background: #3b5d50;
   color: white;
