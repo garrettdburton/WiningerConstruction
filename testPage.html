@@ -9,17 +9,14 @@
   <link rel="apple-touch-icon" sizes="128x128" href="icon.png">
 
   <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/font-awesome6.css" rel="stylesheet" />
-  <script src="js/jquery37.js"></script>
-  <!-- <link href="css/tiny-slider.css" rel="stylesheet" /> -->
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/modal.css" rel="stylesheet" />
-
-
+  <link href="css/buildApp.css" rel="stylesheet" />
 
   <!-- Animate on Scroll -->
   <link rel="stylesheet" href="css/aos.css" />
@@ -27,22 +24,23 @@
   <title>Westcott: Paired Lifestyle Homes by Wininger Construction</title>
 
   <style>
+
   </style>
 </head>
 
 <body class="bg-green">
   <!-- Start Header/Navigation -->
-  <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+  <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="navigation bar">
     <div class="container">
       <a class="navbar-brand" href="index.html"><img class="rounded float-start" src="images/wininger-logo.png"
           style="height: 65px;"></a>
 
-      <button class="navbar-toggler mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
-        aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler mt-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+        aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarsFurni">
+      <div class="collapse navbar-collapse" id="navbar">
         <ul class="text-center custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
@@ -58,88 +56,100 @@
     </div>
   </nav>
 
-  <div class="container-fluid mt-3 rounded">
+  <div class="container mt-3 rounded">
     <div class="row">
-      <div class="col-xl-10 col-lg-10 col-md-11 col-sm-12 mx-auto text-black">
+      <div class="col-xl-8 col-lg-10 col-md-11 col-sm-12 mx-auto text-black">
         <form class="rounded" id="regForm" action="">
-
-
-
-
-          <!-- Start of interior tab -->
+          <!-- Start of floor plan tab-->
           <div class="tab">
-            <div class="row bg-dark rounded shadow-1 p-3">
-              <div class="col-12 bg-dark p-2 text-center">
+            <div class="row bg-light text-center rounded shadow-1 text-black" id="floorplans">
+              <div class="col-12 bg-dark p-3 mb-2 text-center">
                 <!-- Title -->
-                <h3 class="bg-dark text-white text-center p-2">Which interior package are
-                  you interested in?</h3>
-                <h5 class="bg-dark text-white text-center p-2">Choose below from our five avaliable interior
-                  packages</h5>
+                <h4 class="bg-dark text-white text-center p-1">Upgrade Options</h4>
+                <p class="bg-dark text-white text-center p-1">Choose below from our additional upgrade options</p>
               </div>
-              <div class="col-12 text-center p-2">
-                <a class="col-2 text-white m-3" data-bs-target="#carouselExample2" data-bs-slide-to="0"
-                  aria-current="true" aria-label="Slide 1">1</a>
-                <a class="col-2 text-white m-3" data-bs-target="#carouselExample2" data-bs-slide-to="1"
-                  aria-label="Slide 2">2</a>
-                <a class="col-2 text-white m-3" data-bs-target="#carouselExample2" data-bs-slide-to="2"
-                  aria-label="Slide 3">3</a>
-                <a class="col-2 text-white m-3" data-bs-target="#carouselExample2" data-bs-slide-to="3"
-                  aria-current="true" aria-label="Slide 4">4</a>
-                <a class="col-2 text-white m-3" data-bs-target="#carouselExample2" data-bs-slide-to="4"
-                  aria-label="Slide 5">5</a>
-              </div>
-              <div id="carouselExample2" class="carousel slide rounded" data-bs-interval="false">
-                <div class="carousel-inner">
-                  <!-- Start Package #1 -->
-                  <div class="carousel-item active">
-                    <div class="row mx-auto rounded shadow-1 mb-5 bg-light border">
-                      <div class="col-lg-12 text-center">
-                        <h5 class="card-title text-bold m-2 text-dark pt-2 pb-2 section-title">Interior Package 1</h5>
-                      </div>
-                      <div class="col-lg-12 col-md-12 mb-4 text-center">
+              <div class="col-lg-7 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                <div class="card mx-auto bg-dark text-white shadow-1" style="max-width: 30rem;">
+                  <img src="images/build/blackAccessory.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h4 class="card-title">Bathroom Accessories (Matte Black)</h4>
 
-                        <!-- Main Image -->
-                        <img class="rounded img-fluid mx-auto m-2" id="myImg"
-                          src="images/interiors/interior-package-1/interior-render-1.png" alt="" onclick="launchModal('myImg')">
-
-                        <div class="col-4">
-                          <img class="rounded img-fluid m-2" id="myImg02"
-                            src="images/interiors/interior-package-1/interior-1-masterbed.png" onclick="launchModal('myImg02')">
-                        </div>
-                        <!-- The Modal -->
-                        <div id="myModal" class="modal">
-
-                          <!-- The Close Button -->
-                          <span class="close">&times;</span>
-
-                          <!-- Modal Content (The Image) -->
-                          <img class="modal-content" id="img01">
-
-                          <!-- End Modal -->
-
-                        </div>
-                      </div>
-
-                    </div>
+                    <!-- <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-black"><b>Beds</b><br>3</li>
+                    <li class="list-group-item text-black"><b>Baths</b><br>2.5</li>
+                    <li class="list-group-item text-black"><b>Floors</b><br>2</li>
+                    <li class="list-group-item text-black"><b>Garages</b><br>1 car</li>
+                    <li class="list-group-item text-black text-left"><b>Features</b><br>Covered
+                      Porch<br>Outdoor
+                      Living Patios<br>Designer Kitchen and Baths<br /><br /></li>
+                    <li class="list-group-item text-black"><b>Living Space</b><br>1440-1478 sq ft
+                    </li>
+                    <li class="list-group-item text-black"><b>Base Price</b><br>$249,000.00</li>
+                  </ul> -->
+                    
+                    <button id="townSingle" class="btn bg-green rounded"
+                      onclick="nextPrev(1); setFloorplan('images/floorplans/townhome-plan-a.jpg','Townhome (Single)', '3', '2.5', '2', '1','Covered Porch, Outdoor Patio, Designed Kitchen & Bath','1440-1478 sq ft', '$249,000.00')">Select</button>
                   </div>
                 </div>
               </div>
+              <div class="col-lg-7 col-md-12 mb-4 mx-auto text-center">
+                <div class="card mx-auto bg-dark text-white shadow-1" style="max-width: 30rem;">
+                  <img src="images/build/lightPackage.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h4 class="card-title">Light Fixtures (Matte Black)</h4>
+
+                    <!-- <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-black"><b>Beds</b><br>3</li>
+                    <li class="list-group-item text-black"><b>Baths</b><br>2</li>
+                    <li class="list-group-item text-black"><b>Floors</b><br>1</li>
+                    <li class="list-group-item text-black"><b>Garages</b><br>1 car</li>
+                    <li class="list-group-item text-black"><b>Features</b><br>Modern
+                      Finishes<br>Covered
+                      Porch<br>Outdoor Living Patios<br>Designer Kitchen and Baths</li>
+                    <li class="list-group-item text-black"><b>Living Space</b><br>1206 sq ft</li>
+                    <li class="list-group-item text-black"><b>Base Price</b><br> $267,000.00</li>
+                  </ul> -->
+                    
+                    <button id="smRanchSingle" class="btn bg-green rounded"
+                      onclick="nextPrev(1); setFloorplan('images/floorplans/sm_ranch.jpg','Small Ranch (Single)', '3', '2', '1', '1','Modern Finishes, Covered Porch, Outdoor Patio, Designed Kitchen & Bath','1206 sq ft', '$267,000.00')">Select</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7 col-md-12 mb-4 mx-auto text-center">
+                <div class="card mx-auto bg-dark text-white shadow-1" style="max-width: 30rem;">
+                  <img src="images/build/backsplash.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h4 class="card-title">Kitchen Tile Splash using traditional white subway tiles</h4>
+
+                    <!-- <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-black"><b>Beds</b><br>3</li>
+                    <li class="list-group-item text-black"><b>Baths</b><br>2</li>
+                    <li class="list-group-item text-black"><b>Floors</b><br>1</li>
+                    <li class="list-group-item text-black"><b>Garages</b><br>2 car</li>
+                    <li class="list-group-item text-black"><b>Features</b><br>Modern
+                      Finishes<br>Covered
+                      Porch<br>Outdoor Living Patios<br>Designer Kitchen and Baths</li>
+                    <li class="list-group-item text-black"><b>Living Space</b><br>1737 sq ft</li>
+                    <li class="list-group-item text-black"><b>Base Price</b><br> $327,000.00</li>
+                  </ul> -->
+                    
+                    <button id="lgRanchSingle" class="btn bg-green rounded"
+                      onclick="nextPrev(1); setFloorplan('images/floorplans/lg_ranch.jpg','Large Ranch (Single)', '3', '2', '1', '2','Modern Finishes, Covered Porch, Outdoor Patio, Designed Kitchen & Bath','1737 sq ft', '$327,000.00')">Select</button>
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+
+            <!-- Buttons -->
+            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+              <button type="button" id="prevBtn" class="btn rounded" onclick="nextPrev(-1)">Back</button>
             </div>
           </div>
-          <!-- End of interior tab -->
-          <!-- Start of thank you tab -->
-          <div class="tab bg-dark rounded text-center p-5">
-            <img src="images/check.png">
 
-            <h1 class="section-title pt-5 pb-1 text-white text-bold">Thank you!</h1>
+          <!-- End of floorplan tab -->
 
-            <p class="text-white p-3">We will reach out to you immediately to finalize your home. <br> If you
-              have any questions please <a class="text-white text-bold" href="contact.html">contact us </a></p>
-
-            <a href="index.html"><button type="button" class="mt-5 mb-1 shadow-lg rounded">Go Home</button></a>
-          </div>
-          <!-- End of thank you tab -->
-
+         
           <!-- Circles which indicates the steps of the form: -->
           <div style="text-align:center;margin:0px;">
             <span class="step"></span>
@@ -154,7 +164,6 @@
       </form>
     </div>
   </div>
-
   <!-- Start Footer Section -->
   <footer class="footer-section text-center">
     <div class="container relative">
@@ -202,17 +211,15 @@
       </div>
     </div>
   </footer>
+
   <!-- End Footer Section -->
+  <script src="js/jquery37.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
-  <!-- <script src="js/tiny-slider.js"></script> -->
   <script src="js/custom.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/buildApp.js"></script>
   <script>
 
-
-
-    
   </script>
 </body>
 
