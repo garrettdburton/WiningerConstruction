@@ -24,7 +24,96 @@
   <title>Westcott: Paired Lifestyle Homes by Wininger Construction</title>
 
   <style>
+    :root {
+      --form-control-color: #3b5d50;
+      --form-control-disabled: #959495;
+    }
 
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    form {
+      display: grid;
+      place-content: center;
+      min-height: 100vh;
+    }
+
+    .form-control {
+      font-family: system-ui, sans-serif;
+      font-size: 1.25rem;
+      font-weight: bold;
+      line-height: 1.5;
+      display: grid;
+      grid-template-columns: 1.5em auto;
+      gap: 0.5em;
+
+    }
+
+    .form-control+.form-control {
+      margin-top: 1em;
+    }
+
+    .form-control--disabled {
+      color: var(--form-control-disabled);
+      cursor: not-allowed;
+    }
+
+    input[type="checkbox"] {
+      /* Add if not using autoprefixer */
+      -webkit-appearance: none;
+      /* Remove most all native input styles */
+      appearance: none;
+      /* For iOS < 15 */
+      background-color: var(--form-background);
+      /* Not removed via appearance */
+      margin-left: 24.5rem;
+      font: inherit;
+      color: currentColor;
+      width: 1.5em;
+      height: 1.5em;
+      border: 0.15em solid currentColor;
+      border-radius: 0.15em;
+      transform: translateY(-0.075em);
+      margin-top: .25em;
+      display: grid;
+      place-content: center;
+    }
+
+    input[type="checkbox"]::before {
+      content: "";
+      width: 0.65em;
+      height: 0.65em;
+      clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      transform: scale(0);
+      transform-origin: bottom left;
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 1em var(--form-control-color);
+      /* Windows High Contrast Mode */
+      background-color: CanvasText;
+    }
+
+    input[type="checkbox"]:checked::before {
+      transform: scale(1);
+    }
+
+    input[type="checkbox"]:focus {
+      outline: max(2px, 0.15em) solid currentColor;
+      outline-offset: max(2px, 0.15em);
+    }
+
+    input[type="checkbox"]:disabled {
+      --form-control-color: var(--form-control-disabled);
+
+      color: var(--form-control-disabled);
+      cursor: not-allowed;
+    }
   </style>
 </head>
 
@@ -58,7 +147,7 @@
 
   <div class="container mt-3 rounded">
     <div class="row">
-      <div class="col-xl-8 col-lg-10 col-md-11 col-sm-12 mx-auto text-black">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mx-auto text-black">
         <form class="rounded" id="regForm" action="">
           <!-- Start of floor plan tab-->
           <div class="tab">
@@ -68,31 +157,31 @@
                 <h4 class="bg-dark text-white text-center p-1">Upgrade Options</h4>
                 <p class="bg-dark text-white text-center p-1">Choose below from our additional upgrade options</p>
               </div>
-              <div class="col-lg-7 col-md-12 col-sm-12 mb-4 mx-auto text-center">
-                <div class="card mx-auto bg-dark text-white shadow-1" style="max-width: 30rem;">
-                  <img src="images/build/blackAccessory.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h4 class="card-title">Bathroom Accessories (Matte Black)</h4>
 
-                    <!-- <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-black"><b>Beds</b><br>3</li>
-                    <li class="list-group-item text-black"><b>Baths</b><br>2.5</li>
-                    <li class="list-group-item text-black"><b>Floors</b><br>2</li>
-                    <li class="list-group-item text-black"><b>Garages</b><br>1 car</li>
-                    <li class="list-group-item text-black text-left"><b>Features</b><br>Covered
-                      Porch<br>Outdoor
-                      Living Patios<br>Designer Kitchen and Baths<br /><br /></li>
-                    <li class="list-group-item text-black"><b>Living Space</b><br>1440-1478 sq ft
-                    </li>
-                    <li class="list-group-item text-black"><b>Base Price</b><br>$249,000.00</li>
-                  </ul> -->
-                    
-                    <button id="townSingle" class="btn bg-green rounded"
-                      onclick="nextPrev(1); setFloorplan('images/floorplans/townhome-plan-a.jpg','Townhome (Single)', '3', '2.5', '2', '1','Covered Porch, Outdoor Patio, Designed Kitchen & Bath','1440-1478 sq ft', '$249,000.00')">Select</button>
+              <!-- Start Accessory #1 -->
+              <div class="col-12 p-3">
+                <div class="row bg-white p-3 rounded shadow-1 m-3">
+                  <div class="col-lg-6 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                    <img src="images/build/blackAccessory.jpg" class="img-thumbnail" alt="...">
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                    <div class="card-body">
+                      <h3 class="card-title">Bathroom Accessories <br>(Matte Black)</h3>
+                      <p>Upgrade your bathroom with matt black accessories</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-6"></div>
+                  <div class="col-lg-6">
+                    <form action="">
+                      <label class="form-control">Include
+                        <input type="checkbox" name="checkbox" />
+                      </label>
+                    </form>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-7 col-md-12 mb-4 mx-auto text-center">
+              <!-- End Accessory #1 -->
+              <div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
                 <div class="card mx-auto bg-dark text-white shadow-1" style="max-width: 30rem;">
                   <img src="images/build/lightPackage.png" class="card-img-top" alt="...">
                   <div class="card-body">
@@ -109,17 +198,17 @@
                     <li class="list-group-item text-black"><b>Living Space</b><br>1206 sq ft</li>
                     <li class="list-group-item text-black"><b>Base Price</b><br> $267,000.00</li>
                   </ul> -->
-                    
+
                     <button id="smRanchSingle" class="btn bg-green rounded"
                       onclick="nextPrev(1); setFloorplan('images/floorplans/sm_ranch.jpg','Small Ranch (Single)', '3', '2', '1', '1','Modern Finishes, Covered Porch, Outdoor Patio, Designed Kitchen & Bath','1206 sq ft', '$267,000.00')">Select</button>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-7 col-md-12 mb-4 mx-auto text-center">
+              <div class="col-lg-4 col-md-12 mb-4 mx-auto text-center">
                 <div class="card mx-auto bg-dark text-white shadow-1" style="max-width: 30rem;">
                   <img src="images/build/backsplash.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h4 class="card-title">Kitchen Tile Splash using traditional white subway tiles</h4>
+                    <h4 class="card-title">Kitchen Tile Splash (Traditional White Subway Tiles)</h4>
 
                     <!-- <ul class="list-group list-group-flush">
                     <li class="list-group-item text-black"><b>Beds</b><br>3</li>
@@ -132,13 +221,13 @@
                     <li class="list-group-item text-black"><b>Living Space</b><br>1737 sq ft</li>
                     <li class="list-group-item text-black"><b>Base Price</b><br> $327,000.00</li>
                   </ul> -->
-                    
+
                     <button id="lgRanchSingle" class="btn bg-green rounded"
                       onclick="nextPrev(1); setFloorplan('images/floorplans/lg_ranch.jpg','Large Ranch (Single)', '3', '2', '1', '2','Modern Finishes, Covered Porch, Outdoor Patio, Designed Kitchen & Bath','1737 sq ft', '$327,000.00')">Select</button>
                   </div>
                 </div>
               </div>
-             
+
             </div>
 
             <!-- Buttons -->
@@ -149,7 +238,7 @@
 
           <!-- End of floorplan tab -->
 
-         
+
           <!-- Circles which indicates the steps of the form: -->
           <div style="text-align:center;margin:0px;">
             <span class="step"></span>
