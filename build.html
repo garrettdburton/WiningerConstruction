@@ -858,7 +858,84 @@
             </div>
           </div>
           <!-- End of interior tab -->
+          <!-- Start of accessories tab-->
+          <div class="tab">
+            <div class="row bg-light text-center rounded shadow-1 text-black" id="floorplans">
+              <div class="col-12 bg-dark p-3 mb-2 text-center">
+                <!-- Title -->
+                <h4 class="bg-dark text-white text-center p-1">Upgrade Options</h4>
+                <p class="bg-dark text-white text-center p-1">Choose below from our additional upgrade options</p>
+              </div>
 
+              <!-- Start Accessory #1 -->
+              <div class="col-lg-4 p-3">
+                <div class="row bg-white p-3 rounded shadow-1 m-3">
+                  <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                    <img src="images/build/blackAccessory.jpg" class="img-thumbnail" alt="...">
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                    <h3 class="">Matte Black <br> Bathroom Accessories</h3>
+                  </div>
+                  <div class="col-lg-6"></div>
+                  <div class="col-lg-12">
+                    <h5 class="text-bold">Include Package</h5>
+                    <label class="border-0 form-controlAcc">
+                      <input class="mx-auto" type="checkbox" name="checkbox" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- End Accessory #1 -->
+
+              <!-- Start Accessory #2 -->
+              <div class="col-lg-4 p-3">
+                <div class="row bg-white p-3 rounded shadow-1 m-3">
+                  <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                    <img src="images/build/lightPackage.png" class="img-thumbnail" alt="...">
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                    <h3 class="">Matte Black <br> Light Fixtures</h3>
+                  </div>
+                  <div class="col-lg-6"></div>
+                  <div class="col-lg-12">
+                    <h5>Include Package</h5>
+                    <label class="border-0 form-controlAcc">
+                      <input class="mx-auto" type="checkbox" name="checkbox" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- End Accessory #2 -->
+
+              <!-- Start Accessory #3 -->
+              <div class="col-lg-4 p-3">
+                <div class="row bg-white p-3 rounded shadow-1 m-3">
+                  <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                    <img src="images/build/backsplash.jpg" class="img-thumbnail" alt="...">
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                    <h3 class="">Kitchen Tile BackSplash</h3>
+                  </div>
+                  <div class="col-lg-6"></div>
+                  <div class="col-lg-12">
+                    <h5>Include Package</h5>
+                    <label class="border-0 form-controlAcc">
+                      <input class="mx-auto" type="checkbox" name="checkbox" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- End Accessory #3 -->
+            </div>
+
+            <!-- Buttons -->
+            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+              <button type="button" id="prevBtn" class="btn rounded" onclick="nextPrev(-1)">Back</button>
+              <button id="" class="btn rounded" onclick="nextPrev(1);">Select</button>
+            </div>
+          </div>
+
+          <!-- End of accessories tab -->
           <!-- Start of confirmation tab -->
           <div class="tab">
             <div class="row bg-dark rounded shadow-1 p-3">
@@ -991,6 +1068,7 @@
 
           <!-- Circles which indicates the steps of the form: -->
           <div style="text-align:center;margin:0px;">
+            <span class="step"></span>
             <span class="step"></span>
             <span class="step"></span>
             <span class="step"></span>
