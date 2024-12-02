@@ -5775,7 +5775,7 @@ fieldset:disabled .btn {
 .carousel-control-next,
 .carousel-control-prev {
   position: absolute;
-  top: 0;
+  top: 10;
   bottom: 0;
   z-index: 1;
   margin: auto;
@@ -5787,9 +5787,9 @@ fieldset:disabled .btn {
   padding: auto;
   color: #fff;
   text-align: center;
-  background: black;
+  background: none;
   border: 0;
-  opacity: 0.5;
+  opacity: 1;
   transition: opacity 0.15s ease;
 }
 @media (prefers-reduced-motion: reduce) {
