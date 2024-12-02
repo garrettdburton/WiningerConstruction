@@ -428,24 +428,7 @@
 			console.log(interiorVar);
 		}
 
-		//AJAX call for PHP Post
-		function submitForm() {
-			var nameVar, emailVar, phoneVar;
-			nameVar = document.getElementsByName("name")[0].value;
-			emailVar = document.getElementsByName("email")[0].value;
-			phoneVar = document.getElementsByName("phone")[0].value;
-			console.log(floorplanVar);
-			console.log(exteriorVar);
-			console.log(interiorVar);
-			$.ajax({
-				url: "/test.php",
-				type: "post",
-				data: { name: nameVar, email: emailVar, phone: phoneVar, floorplan: floorplanName, exterior: exteriorVar, interior: interiorVar },
-				success: function (result) {
-					console.log("success");
-				}
-			});
-		}
+	
 	</script>
 </body>
 

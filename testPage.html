@@ -24,7 +24,7 @@
   <title>Westcott: Paired Lifestyle Homes by Wininger Construction</title>
 
   <style>
-    .form-control {
+    .form-controlAcc {
       font-family: system-ui, sans-serif;
       font-size: 1.25rem;
       font-weight: bold;
@@ -144,8 +144,8 @@
                   <div class="col-lg-6"></div>
                   <div class="col-lg-12">
                     <h5 class="text-bold">Include Package</h5>
-                    <label class="border-0 form-control">
-                      <input class="mx-auto" type="checkbox" name="checkbox" />
+                    <label class="border-0 form-controlAcc">
+                      <input id="accpackage1" class="mx-auto" type="checkbox" name="accpackage1" />
                     </label>
                   </div>
                 </div>
@@ -164,8 +164,8 @@
                   <div class="col-lg-6"></div>
                   <div class="col-lg-12">
                     <h5>Include Package</h5>
-                    <label class="border-0 form-control">
-                      <input class="mx-auto" type="checkbox" name="checkbox" />
+                    <label class="border-0 form-controlAcc">
+                      <input id="accpackage2" class="mx-auto" type="checkbox" name="accpackage2" />
                     </label>
                   </div>
                 </div>
@@ -184,8 +184,8 @@
                   <div class="col-lg-6"></div>
                   <div class="col-lg-12">
                     <h5>Include Package</h5>
-                    <label class="border-0 form-control">
-                      <input class="mx-auto" type="checkbox" name="checkbox" />
+                    <label class="border-0 form-controlAcc">
+                      <input id="accpackage3" class="mx-auto" type="checkbox" name="accpackage3" />
                     </label>
                   </div>
                 </div>
@@ -195,7 +195,10 @@
 
             <!-- Buttons -->
             <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-              <button type="button" id="prevBtn" class="btn rounded" onclick="nextPrev(-1)">Back</button>
+              <button id="nextBtn" class="btn rounded" onclick="selectedUpgrades();">Select</button>
+            </div>
+            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+              <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Back</button>
             </div>
           </div>
 
@@ -212,8 +215,35 @@
             <span class="step"></span>
             <span class="step"></span>
           </div>
-
         </form>
+
+        <!--Start Selected Upgrades-->
+        <div class="col-lg-7 col-md-12 mx-auto text-center p-3">
+
+          <!-- Bathroom Accessories -->
+          <div class="card mx-auto shadow-1">
+            <img id="upgradeBathroomAccImage" class="img-fluid rounded mx-auto d-block" src="">
+            <div class="card-body">
+              <h5 class="card-title" id="upgradeBathroomAccName"></h5>
+            </div>
+          </div>
+
+          <!-- Light Fixtures -->
+          <div class="card mx-auto shadow-1">
+            <img id="upgradeLightFixImage" class="img-fluid rounded mx-auto d-block" src="">
+            <div class="card-body">
+              <h5 class="card-title" id="upgradeLightFixName"></h5>
+            </div>
+          </div>
+
+          <!-- Kitchen Backsplash-->
+          <div class="card mx-auto shadow-1">
+            <img id="upgradeKitchenBackImage" class="img-fluid rounded mx-auto d-block" src="">
+            <div class="card-body">
+              <h5 class="card-title" id="upgradeKitchenBackName"></h5>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -272,7 +302,33 @@
   <script src="js/modal.js"></script>
   <script src="js/buildApp.js"></script>
   <script>
+    // This function sets which upgraded packages have been selected
+    function selectedUpgrades() {
+      var upgrade1;
+      var upgrade2;
+      var upgrade3;
 
+      if ($('#accpackage1').prop('checked')) {
+        upgrade1 = ["Matte Black Bathroom Accessories", "images/build/blackAccessory.jpg"];
+        $("#upgradeBathroomAccName").text(upgrade1[0]);
+        $("#upgradeBathroomAccImage").attr('src', upgrade1[1]);
+        console.log(upgrade1);
+      }
+
+      if ($('#accpackage2').prop('checked')) {
+        upgrade2 = ["Matte Black Light Fixtures", "images/build/lightPackage.png"];
+        $("#upgradeLightFixName").text(upgrade2[0]);
+        $("#upgradeLightFixImage").attr('src', upgrade2[1]);
+        console.log(upgrade2);
+      }
+
+      if ($('#accpackage3').prop('checked')) {
+        upgrade3 = ["Kitchen Tile BackSplash", "images/build/backsplash.jpg"];
+        $("#upgradeKitchenBackName").text(upgrade3[0]);
+        $("#upgradeKitchenBackImage").attr('src', upgrade3[1]);
+        console.log(upgrade3);
+      }
+    }
   </script>
 </body>
 

@@ -858,6 +858,8 @@
             </div>
           </div>
           <!-- End of interior tab -->
+
+
           <!-- Start of accessories tab-->
           <div class="tab">
             <div class="row bg-light text-center rounded shadow-1 text-black" id="floorplans">
@@ -880,7 +882,7 @@
                   <div class="col-lg-12">
                     <h5 class="text-bold">Include Package</h5>
                     <label class="border-0 form-controlAcc">
-                      <input class="mx-auto" type="checkbox" name="checkbox" />
+                      <input id="accpackage1" class="mx-auto" type="checkbox" name="accpackage1" />
                     </label>
                   </div>
                 </div>
@@ -900,7 +902,7 @@
                   <div class="col-lg-12">
                     <h5>Include Package</h5>
                     <label class="border-0 form-controlAcc">
-                      <input class="mx-auto" type="checkbox" name="checkbox" />
+                      <input id="accpackage2" class="mx-auto" type="checkbox" name="accpackage2" />
                     </label>
                   </div>
                 </div>
@@ -920,7 +922,7 @@
                   <div class="col-lg-12">
                     <h5>Include Package</h5>
                     <label class="border-0 form-controlAcc">
-                      <input class="mx-auto" type="checkbox" name="checkbox" />
+                      <input id="accpackage3" class="mx-auto" type="checkbox" name="accpackage3" />
                     </label>
                   </div>
                 </div>
@@ -930,12 +932,16 @@
 
             <!-- Buttons -->
             <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-              <button type="button" id="prevBtn" class="btn rounded" onclick="nextPrev(-1)">Back</button>
-              <button id="" class="btn rounded" onclick="nextPrev(1);">Select</button>
+              <button id="nextBtn" class="btn rounded" onclick="nextPrev(1); selectedUpgrades();">Select</button>
+            </div>
+            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+              <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Back</button>
             </div>
           </div>
 
           <!-- End of accessories tab -->
+
+
           <!-- Start of confirmation tab -->
           <div class="tab">
             <div class="row bg-dark rounded shadow-1 p-3">
@@ -953,29 +959,6 @@
                   <div class="card-body">
                     <h5 class="card-title" id="floorplanNameSelected"></h5>
                   </div>
-                  <!-- <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-black"><b>Beds</b><br>
-                      <p id="floorplanBedSelected"></p>
-                    </li>
-                    <li class="list-group-item text-black"><b>Baths</b><br>
-                      <p id="floorplanBathSelected"></p>
-                    </li>
-                    <li class="list-group-item text-black"><b>Floors</b><br>
-                      <p id="floorplanFloorSelected"></p>
-                    </li>
-                    <li class="list-group-item text-black"><b>Garages</b><br>
-                      <p id="floorplanGarageSelected">
-                    </li>
-                    <li class="list-group-item text-black text-left"><b>Features</b><br>
-                      <p id="floorplanFeatSelected"><br /><br />
-                    </li>
-                    <li class="list-group-item text-black"><b>Living Space</b><br>
-                      <p id="floorplanSpaceSelected">
-                    </li>
-                    <li class="list-group-item text-black"><b>Base Price</b><br>
-                      <p id="floorplanPriceSelected"></p>
-                    </li>
-                  </ul> -->
                 </div>
               </div>
               <!--Start Selected Exterior-->
@@ -985,27 +968,6 @@
                   <div class="card-body">
                     <h5 class="card-title" id="exteriorNameSelected"></h5>
                   </div>
-                  <!-- <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-black"><b>Shingles</b>
-                      <p id="exteriorShingleSelected"></p><img id="exteriorShingleImageSelected"
-                        class="rounded mx-auto d-block" style="height: 75px;" src="">
-                    </li>
-                    <li class="list-group-item text-black"><b>Siding</b>
-                      <p id="exteriorSidingSelected"></p><img id="exteriorSidingImageSelected"
-                        class="rounded mx-auto d-block" style="height: 75px;" src="">
-                    </li>
-                    <li class="list-group-item text-black"><b>Accent Color</b>
-                      <p id="exteriorColorSelected"></p><img id="exteriorColorImageSelected"
-                        class="rounded mx-auto d-block" style="height: 75px;" src="">
-                    </li>
-                    <li class="list-group-item text-black"><b>Stone</b>
-                      <p id="exteriorStoneSelected"></p><img id="exteriorStoneImageSelected"
-                        class="rounded mx-auto d-block" style="height: 75px;" src="">
-                    </li>
-                    <li class="list-group-item text-black"><b>Front Door Color</b>
-                      <p id="exteriorDoorSelected"></p>
-                    </li>
-                  </ul> -->
                 </div>
               </div>
               <!--Start Selected Interior-->
@@ -1015,34 +977,35 @@
                   <div class="card-body">
                     <h5 class="card-title" id="interiorNameSelected"></h5>
                   </div>
-                  <!-- <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-black"><b>Cabinets</b><br>
-                      <p id="interiorCabinetTopSelected"></p><img id="interiorCabinetTopImageSelected"
-                        class="rounded mx-auto d-block" style="height: 75px;" src="">
-                      <br>
-                      <p id="interiorCabinetBottomSelected"></p><img id="interiorCabinetBottomImageSelected"
-                        class="rounded mx-auto d-block" style="height: 75px;" src="">
-                    </li>
-                    <li class="list-group-item text-black"><b>Countertops</b>
-                      <p id="interiorCounterSelected"></p><img id="interiorCounterImageSelected"
-                        class="rounded mx-auto d-block" style="height: 75px;" src="">
-                    </li>
-                    <li class="list-group-item text-black"><b>Handles</b>
-                      <p id="interiorHandleSelected">
-                    </li>
-                    <li class="list-group-item text-black"><b>Laminate</b>
-                      <p id="interiorLaminateSelected"></p><img id="interiorLaminateImageSelected"
-                        class="rounded mx-auto d-block" style="height: 75px;" src="">
-                    </li>
-                    <li class="list-group-item text-black"><b>Carpet</b>
-                      <p id="interiorCarpetSelected"></p><img id="interiorCarpetImageSelected"
-                        class="rounded mx-auto d-block" style="height: 75px;" src="">
-                    </li>
-                    <li class="list-group-item text-black"><b>Paint</b>
-                      <p id="interiorPaintSelected"></p><img id="interiorPaintImageSelected"
-                        class="rounded mx-auto d-block" style="height: 75px;" src="">
-                    </li>
-                  </ul> -->
+                </div>
+              </div>
+              <!--Start Selected Upgrades-->
+
+              <!-- Bathroom Accessories -->
+              <div class="col-lg-7 col-md-12 mx-auto text-center p-3">
+                <div class="card mx-auto shadow-1">
+                  <img id="upgradeBathroomAccImage" class="img-fluid rounded mx-auto d-block" src="">
+                  <div class="card-body">
+                    <h5 class="card-title" id="upgradeBathroomAccName"></h5>
+                  </div>
+                </div>
+              </div>
+              <!-- Light Fixtures -->
+              <div class="col-lg-7 col-md-12 mx-auto text-center p-3">
+                <div class="card mx-auto shadow-1">
+                  <img id="upgradeLightFixImage" class="img-fluid rounded mx-auto d-block" src="">
+                  <div class="card-body">
+                    <h5 class="card-title" id="upgradeLightFixName"></h5>
+                  </div>
+                </div>
+              </div>
+              <!-- Kitchen Backsplash-->
+              <div class="col-lg-7 col-md-12 mx-auto text-center p-3">
+                <div class="card mx-auto shadow-1">
+                  <img id="upgradeKitchenBackImage" class="img-fluid rounded mx-auto d-block" src="">
+                  <div class="card-body">
+                    <h5 class="card-title" id="upgradeKitchenBackName"></h5>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1053,6 +1016,8 @@
             </div>
           </div>
           <!-- End of confirmation tab -->
+
+
           <!-- Start of thank you tab -->
           <div class="tab bg-dark rounded text-center p-5">
             <img src="images/check.png">
