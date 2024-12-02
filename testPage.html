@@ -24,6 +24,12 @@
   <title>Westcott: Paired Lifestyle Homes by Wininger Construction</title>
 
   <style>
+    a,
+    a label {
+      cursor: pointer;
+    }
+
+    /* Accessory Page */
     .form-controlAcc {
       font-family: system-ui, sans-serif;
       font-size: 1.25rem;
@@ -123,6 +129,8 @@
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mx-auto text-black">
         <form class="rounded" id="regForm" action="">
+
+
           <!-- Start of accessories tab-->
           <div class="tab">
             <div class="row bg-light text-center rounded shadow-1 text-black" id="floorplans">
@@ -191,12 +199,18 @@
                 </div>
               </div>
               <!-- End Accessory #3 -->
+              <div class="col-lg-12">
+                <h5>None</h5>
+                <label class="border-0 form-controlAcc">
+                  <input id="accpackage3" class="mx-auto" type="checkbox" name="accpackage3" />
+                </label>
+              </div>
+              <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+                <button id="nextBtn" class="btn rounded" onclick="nextPrev(1); selectedUpgrades();">Select</button>
+              </div>
             </div>
 
             <!-- Buttons -->
-            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-              <button id="nextBtn" class="btn rounded" onclick="selectedUpgrades();">Select</button>
-            </div>
             <div class="mt-5 mb-5 text-center" style="overflow:auto;">
               <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Back</button>
             </div>
@@ -214,86 +228,12 @@
             <span class="step"></span>
             <span class="step"></span>
             <span class="step"></span>
+            <span class="step"></span>
           </div>
-        </form>
-
-        <!--Start Selected Upgrades-->
-        <div class="col-lg-7 col-md-12 mx-auto text-center p-3">
-
-          <!-- Bathroom Accessories -->
-          <div class="card mx-auto shadow-1">
-            <img id="upgradeBathroomAccImage" class="img-fluid rounded mx-auto d-block" src="">
-            <div class="card-body">
-              <h5 class="card-title" id="upgradeBathroomAccName"></h5>
-            </div>
-          </div>
-
-          <!-- Light Fixtures -->
-          <div class="card mx-auto shadow-1">
-            <img id="upgradeLightFixImage" class="img-fluid rounded mx-auto d-block" src="">
-            <div class="card-body">
-              <h5 class="card-title" id="upgradeLightFixName"></h5>
-            </div>
-          </div>
-
-          <!-- Kitchen Backsplash-->
-          <div class="card mx-auto shadow-1">
-            <img id="upgradeKitchenBackImage" class="img-fluid rounded mx-auto d-block" src="">
-            <div class="card-body">
-              <h5 class="card-title" id="upgradeKitchenBackName"></h5>
-            </div>
-          </div>
-        </div>
       </div>
+      </form>
     </div>
   </div>
-  <!-- Start Footer Section -->
-  <footer class="footer-section text-center">
-    <div class="container relative">
-      <div class="row mb-5">
-        <div class="col-lg-12">
-          <div class="footer-logo-wrap">
-            <img src="images/westcott-logo.png" alt="" class="img-fluid text-center rounded" style="height: 165px;" />
-          </div>
-
-        </div>
-      </div>
-      <!-- Other Products -->
-      <div class="row justify-content-between align-items-center rounded pb-3 mt-3 mb-3">
-        <h5 class="mb-3">See our other custom built neighborhoods</h5>
-        <div class="col-md-3 mx-auto text-center mb-3 rounded ">
-          <a class="text-white" href="https://www.livesomo.com">
-            <img src="images/somo-thumbnail.jpg" class="img-fluid rounded mb-3">
-            <br><u>SOMO</u></a>
-        </div>
-        <div class="col-md-3 mx-auto text-center mb-3 rounded ">
-          <a class="text-white" href="https://www.hparkestates.com">
-            <img src="images/HPE-thumbnail.jpg" class="img-fluid rounded mb-3">
-            <br><u>Highland Park Estates</u></a>
-        </div>
-        <div class="col-md-3 mx-auto text-center mb-3 rounded ">
-          <a class="text-white text" href="https://www.wickliving.com">
-            <img src="images/wick-thumbnail.jpg" class="img-fluid rounded mb-3">
-            <br><u>WICK Lifestyle Apartments</u></a>
-        </div>
-      </div>
-      <div class="border-top copyright">
-        <div class="row pt-4">
-          <div class="col-lg-12">
-            <p class="mx-auto text-center">
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              All Rights Reserved. <br /><a class="text-white" href="https://unshiftedbitdev.com">Developed by
-                Unshifted
-                Bit Development</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <!-- End Footer Section -->
   <script src="js/jquery37.js"></script>
@@ -302,33 +242,6 @@
   <script src="js/modal.js"></script>
   <script src="js/buildApp.js"></script>
   <script>
-    // This function sets which upgraded packages have been selected
-    function selectedUpgrades() {
-      var upgrade1;
-      var upgrade2;
-      var upgrade3;
-
-      if ($('#accpackage1').prop('checked')) {
-        upgrade1 = ["Matte Black Bathroom Accessories", "images/build/blackAccessory.jpg"];
-        $("#upgradeBathroomAccName").text(upgrade1[0]);
-        $("#upgradeBathroomAccImage").attr('src', upgrade1[1]);
-        console.log(upgrade1);
-      }
-
-      if ($('#accpackage2').prop('checked')) {
-        upgrade2 = ["Matte Black Light Fixtures", "images/build/lightPackage.png"];
-        $("#upgradeLightFixName").text(upgrade2[0]);
-        $("#upgradeLightFixImage").attr('src', upgrade2[1]);
-        console.log(upgrade2);
-      }
-
-      if ($('#accpackage3').prop('checked')) {
-        upgrade3 = ["Kitchen Tile BackSplash", "images/build/backsplash.jpg"];
-        $("#upgradeKitchenBackName").text(upgrade3[0]);
-        $("#upgradeKitchenBackImage").attr('src', upgrade3[1]);
-        console.log(upgrade3);
-      }
-    }
   </script>
 </body>
 

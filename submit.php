@@ -6,10 +6,12 @@ $phone = $_POST['phone'];
 $floorplan = $_POST['floorplan'];
 $exterior = $_POST['exterior'];
 $interior = $_POST['interior'];
-
+$upgrade_bath_accessories = $_POST['upgrade_bath_accessories'];
+$upgrade_light_fixtures = $_POST['upgrade_light_fixtures'];
+$upgrade_kitchen_backsplash = $_POST['upgrade_kitchen_backsplash'];
 /*Insert Test*/
-$sql = "INSERT INTO customer (id, date, name, email, phone, floorplan, exterior, interior)
-VALUES (DEFAULT, Now(),'$name', '$email', '$phone', '$floorplan', '$exterior', '$interior')";
+$sql = "INSERT INTO customer (id, date, name, email, phone, floorplan, exterior, interior, upgrade_bath_accessories, upgrade_light_fixtures, upgrade_kitchen_backsplash)
+VALUES (DEFAULT, Now(),'$name', '$email', '$phone', '$floorplan', '$exterior', '$interior', '$upgrade_bath_accessories', '$upgrade_light_fixtures', '$upgrade_kitchen_backsplash')";
 
 if ($conn->query($sql) === TRUE) {
 	echo "New record created successfully <br>";

@@ -5778,14 +5778,16 @@ fieldset:disabled .btn {
   top: 0;
   bottom: 0;
   z-index: 1;
+  margin: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  width: 15%;
-  padding: 0;
+  height: 50px;
+  width: 75px;
+  padding: auto;
   color: #fff;
   text-align: center;
-  background: 0 0;
+  background: black;
   border: 0;
   opacity: 0.5;
   transition: opacity 0.15s ease;
@@ -5814,6 +5816,7 @@ fieldset:disabled .btn {
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   display: inline-block;
+  margin: auto;
   width: 2rem;
   height: 2rem;
   background-repeat: no-repeat;

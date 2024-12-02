@@ -28,6 +28,74 @@
     a label {
       cursor: pointer;
     }
+
+    /* Accessory Page */
+    .form-controlAcc {
+      font-family: system-ui, sans-serif;
+      font-size: 1.25rem;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    .form-control+.form-control {
+      margin-top: 1em;
+    }
+
+    .form-control--disabled {
+      color: var(--form-control-disabled);
+      cursor: not-allowed;
+    }
+
+    input[type="checkbox"] {
+      /* Add if not using autoprefixer */
+      -webkit-appearance: none;
+      /* Remove most all native input styles */
+      appearance: none;
+      /* For iOS < 15 */
+      background-color: var(--form-background);
+      /* Not removed via appearance */
+      font: inherit;
+      color: currentColor;
+      width: 1.5em;
+      height: 1.5em;
+      border: 0.15em solid currentColor;
+      border-radius: 0.15em;
+      transform: translateY(-0.075em);
+      margin-top: .25em;
+      display: grid;
+      place-content: center;
+    }
+
+    input[type="checkbox"]::before {
+      content: "";
+      width: 0.65em;
+      height: 0.65em;
+      clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      transform: scale(0);
+      transform-origin: bottom left;
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 1em var(--form-control-color);
+      /* Windows High Contrast Mode */
+      background-color: CanvasText;
+    }
+
+    input[type="checkbox"]:checked::before {
+      transform: scale(1);
+    }
+
+    input[type="checkbox"]:focus {
+      outline: max(2px, 0.15em) solid currentColor;
+      outline-offset: max(2px, 0.15em);
+    }
+
+    input[type="checkbox"]:disabled {
+      --form-control-color: var(--form-control-disabled);
+
+      color: var(--form-control-disabled);
+      cursor: not-allowed;
+    }
+
+    
   </style>
 </head>
 
@@ -98,7 +166,7 @@
                 <label for="inputName" class="form-label">Name</label>
                 <div class="input-group mb-3 pb-3">
                   <input type="text" name="name" class="form-control bg-light" aria-label=""
-                    aria-describedby="inputGroup-sizing-default" placeholder="" required>
+                    aria-describedby="inputGroup-sizing-default" placeholder="">
                 </div>
               </div>
               <!-- Email Input -->
@@ -106,14 +174,14 @@
                 <label for="inputEmail" class="form-label">Email</label>
                 <div class="input-group mb-3 pb-3">
                   <input type="email" name="email" class="form-control bg-light" aria-label=""
-                    aria-describedby="inputGroup-sizing-default" placeholder="" required>
+                    aria-describedby="inputGroup-sizing-default" placeholder="">
                 </div>
               </div>
               <!-- Phone Input -->
               <div class="col-7 mx-auto">
                 <label for="inputPhone" class="form-label">Phone Number</label>
                 <div class="input-group mb-3 pb-3">
-                  <input type="tel" id="phone" name="phone" class="form-control bg-light" pattern="" required />
+                  <input type="tel" id="phone" name="phone" class="form-control bg-light" pattern="" />
                 </div>
               </div>
               <!-- Buttons -->
@@ -320,7 +388,6 @@
               </div>
               <div id="carouselExample" class="carousel rounded">
                 <div class="carousel-inner">
-
                   <!-- Start Package #1 -->
                   <div class="carousel-item active">
                     <div class="row mx-auto rounded shadow-1 mb-5 bg-light border">
@@ -554,14 +621,14 @@
                       <div class="col-lg-12 col-md-12 mb-4 text-center">
 
                         <!-- Main Image -->
-                        <img class="rounded img-fluid mx-auto m-2" id="myImg"
+                        <img class="rounded img-fluid mx-auto m-2" id="interiorImg1"
                           src="images/interiors/interior-package-1/interior-render-1.png" alt=""
-                          onclick="launchModal('myImg')">
+                          onclick="launchModal('interiorImg1')">
 
                         <div class="col-4">
-                          <img class="rounded img-fluid m-2" id="myImg02"
+                          <img class="rounded img-fluid m-2" id="interiorImg1_masterbed"
                             src="images/interiors/interior-package-1/interior-1-masterbed.png"
-                            onclick="launchModal('myImg02')">
+                            onclick="launchModal('interiorImg1_masterbed')">
                         </div>
                         <!-- The Modal -->
                         <div id="myModal" class="modal">
@@ -573,7 +640,6 @@
                           <img class="modal-content" id="img01">
 
                           <!-- End Modal -->
-
                         </div>
                       </div>
                       <div class="col-lg-12 col-md-12 mb-4 text-center mx-auto">
@@ -624,12 +690,27 @@
                         <h5 class="card-title text-bold m-2 text-dark pt-2 pb-2 section-title">Interior Package 2</h5>
                       </div>
                       <div class="col-lg-12 col-md-12 mb-4 text-center">
-                        <img class="rounded img-fluid shadow-1 m-2 mx-auto"
-                          src="images/interiors/interior-package-2/interior-render-2.png">
-                        <!--  -->
+
+                        <!-- Main Image -->
+                        <img class="rounded img-fluid mx-auto m-2" id="interiorImg2"
+                          src="images/interiors/interior-package-2/interior-render-2.png" alt=""
+                          onclick="launchModal2('interiorImg2')">
+
                         <div class="col-4">
-                          <img class="rounded img-fluid m-2"
-                            src="images/interiors/interior-package-2/interior-render-2-masterbed.png">
+                          <img class="rounded img-fluid m-2" id="interiorImg2_masterbed"
+                            src="images/interiors/interior-package-2/interior-render-2-masterbed.png"
+                            onclick="launchModal2('interiorImg2_masterbed')">
+                        </div>
+                        <!-- The Modal -->
+                        <div id="myModal2" class="modal">
+
+                          <!-- The Close Button -->
+                          <span class="close">&times;</span>
+
+                          <!-- Modal Content (The Image) -->
+                          <img class="modal-content" id="img02">
+
+                          <!-- End Modal -->
                         </div>
                       </div>
                       <div class="col-lg-12 col-md-12 mb-4 text-center mx-auto">
@@ -645,7 +726,8 @@
                               Navy<br><img class="rounded mx-auto d-block" style="height: 75px;"
                                 src="images/interiors/interior-package-2/samples/cabinet_navy.jpg">
                             </div>
-                            <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Countertops</b><br>Sparkling White
+                            <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Countertops</b><br>Sparkling
+                              White
                               Quartz Eased
                               Edge<br><img class="rounded mx-auto d-block" style="height: 75px;"
                                 src="images/interiors/interior-package-2/samples/quartz_sparklingwhite.jpg">
@@ -680,12 +762,26 @@
                         <h5 class="card-title text-bold m-2 text-dark pt-2 pb-2 section-title">Interior Package 3</h5>
                       </div>
                       <div class="col-lg-12 col-md-12 mb-4 text-center">
-                        <img class="rounded img-fluid shadow-1 m-2 mx-auto"
-                          src="images/interiors/interior-package-3/interior-render-3.png">
-                        <!--  -->
+                        <!-- Main Image -->
+                        <img class="rounded img-fluid mx-auto m-2" id="interiorImg3"
+                          src="images/interiors/interior-package-3/interior-render-3.png" alt=""
+                          onclick="launchModal3('interiorImg3')">
+
                         <div class="col-4">
-                          <img class="rounded img-fluid m-2"
-                            src="images/interiors/interior-package-3/interior-render-3-masterbed.png">
+                          <img class="rounded img-fluid m-2" id="interiorImg3_masterbed"
+                            src="images/interiors/interior-package-3/interior-render-3-masterbed.png"
+                            onclick="launchModal3('interiorImg3_masterbed')">
+                        </div>
+                        <!-- The Modal -->
+                        <div id="myModal3" class="modal">
+
+                          <!-- The Close Button -->
+                          <span class="close">&times;</span>
+
+                          <!-- Modal Content (The Image) -->
+                          <img class="modal-content" id="img03">
+
+                          <!-- End Modal -->
                         </div>
                       </div>
                       <div class="col-lg-12 col-md-12 mb-4 text-center mx-auto">
@@ -735,12 +831,27 @@
                         <h5 class="card-title text-bold m-2 text-dark pt-2 pb-2 section-title">Interior Package 4</h5>
                       </div>
                       <div class="col-lg-12 col-md-12 mb-4 text-center">
-                        <img class="rounded img-fluid shadow-1 m-2 mx-auto"
-                          src="images/interiors/interior-package-4/interior-render-4.png">
-                        <!--  -->
+
+                        <!-- Main Image -->
+                        <img class="rounded img-fluid mx-auto m-2" id="interiorImg4"
+                          src="images/interiors/interior-package-4/interior-render-4.png" alt=""
+                          onclick="launchModal4('interiorImg4')">
+
                         <div class="col-4">
-                          <img class="rounded img-fluid m-2"
-                            src="images/interiors/interior-package-4/interior-render-4-masterbed.png">
+                          <img class="rounded img-fluid m-2" id="interiorImg4_masterbed"
+                            src="images/interiors/interior-package-4/interior-render-4-masterbed.png"
+                            onclick="launchModal4('interiorImg4_masterbed')">
+                        </div>
+                        <!-- The Modal -->
+                        <div id="myModal4" class="modal">
+
+                          <!-- The Close Button -->
+                          <span class="close">&times;</span>
+
+                          <!-- Modal Content (The Image) -->
+                          <img class="modal-content" id="img04">
+
+                          <!-- End Modal -->
                         </div>
                       </div>
                       <div class="col-lg-12 col-md-12 mb-4 text-center mx-auto">
@@ -791,12 +902,27 @@
                         <h5 class="card-title text-bold m-2 text-dark pt-2 pb-2 section-title">Interior Package 5</h5>
                       </div>
                       <div class="col-lg-12 col-md-12 mb-4 text-center">
-                        <img class="rounded img-fluid shadow-1 m-2 mx-auto"
-                          src="images/interiors/interior-package-5/interior-render-5.png">
-                        <!--  -->
+
+                        <!-- Main Image -->
+                        <img class="rounded img-fluid mx-auto m-2" id="interiorImg5"
+                          src="images/interiors/interior-package-5/interior-render-5.png" alt=""
+                          onclick="launchModal5('interiorImg5')">
+
                         <div class="col-4">
-                          <img class="rounded img-fluid m-2"
-                            src="images/interiors/interior-package-5/interior-render-5-masterbed.png">
+                          <img class="rounded img-fluid m-2" id="interiorImg5_masterbed"
+                            src="images/interiors/interior-package-5/interior-render-5-masterbed.png"
+                            onclick="launchModal5('interiorImg5_masterbed')">
+                        </div>
+                        <!-- The Modal -->
+                        <div id="myModal5" class="modal">
+
+                          <!-- The Close Button -->
+                          <span class="close">&times;</span>
+
+                          <!-- Modal Content (The Image) -->
+                          <img class="modal-content" id="img05">
+
+                          <!-- End Modal -->
                         </div>
                       </div>
                       <div class="col-lg-12 col-md-12 mb-4 text-center mx-auto">
@@ -860,86 +986,92 @@
           <!-- End of interior tab -->
 
 
-          <!-- Start of accessories tab-->
-          <div class="tab">
-            <div class="row bg-light text-center rounded shadow-1 text-black" id="floorplans">
-              <div class="col-12 bg-dark p-3 mb-2 text-center">
-                <!-- Title -->
-                <h4 class="bg-dark text-white text-center p-1">Upgrade Options</h4>
-                <p class="bg-dark text-white text-center p-1">Choose below from our additional upgrade options</p>
-              </div>
-
-              <!-- Start Accessory #1 -->
-              <div class="col-lg-4 p-3">
-                <div class="row bg-white p-3 rounded shadow-1 m-3">
-                  <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
-                    <img src="images/build/blackAccessory.jpg" class="img-thumbnail" alt="...">
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
-                    <h3 class="">Matte Black <br> Bathroom Accessories</h3>
-                  </div>
-                  <div class="col-lg-6"></div>
-                  <div class="col-lg-12">
-                    <h5 class="text-bold">Include Package</h5>
-                    <label class="border-0 form-controlAcc">
-                      <input id="accpackage1" class="mx-auto" type="checkbox" name="accpackage1" />
-                    </label>
+            <!-- Start of accessories tab-->
+            <div class="tab">
+              <div class="row bg-light text-center rounded shadow-1 text-black" id="floorplans">
+                <div class="col-12 bg-dark p-3 mb-2 text-center">
+                  <!-- Title -->
+                  <h4 class="bg-dark text-white text-center p-1">Upgrade Options</h4>
+                  <p class="bg-dark text-white text-center p-1">Choose below from our additional upgrade options</p>
+                </div>
+  
+                <!-- Start Accessory #1 -->
+                <div class="col-lg-4 p-3">
+                  <div class="row bg-white p-3 rounded shadow-1 m-3">
+                    <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                      <img src="images/build/blackAccessory.jpg" class="img-thumbnail" alt="...">
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                      <h3 class="">Matte Black <br> Bathroom Accessories</h3>
+                    </div>
+                    <div class="col-lg-6"></div>
+                    <div class="col-lg-12">
+                      <h5 class="text-bold">Include Package</h5>
+                      <label class="border-0 form-controlAcc">
+                        <input id="accpackage1" class="mx-auto" type="checkbox" name="accpackage1" />
+                      </label>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!-- End Accessory #1 -->
-
-              <!-- Start Accessory #2 -->
-              <div class="col-lg-4 p-3">
-                <div class="row bg-white p-3 rounded shadow-1 m-3">
-                  <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
-                    <img src="images/build/lightPackage.png" class="img-thumbnail" alt="...">
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
-                    <h3 class="">Matte Black <br> Light Fixtures</h3>
-                  </div>
-                  <div class="col-lg-6"></div>
-                  <div class="col-lg-12">
-                    <h5>Include Package</h5>
-                    <label class="border-0 form-controlAcc">
-                      <input id="accpackage2" class="mx-auto" type="checkbox" name="accpackage2" />
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <!-- End Accessory #2 -->
-
-              <!-- Start Accessory #3 -->
-              <div class="col-lg-4 p-3">
-                <div class="row bg-white p-3 rounded shadow-1 m-3">
-                  <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
-                    <img src="images/build/backsplash.jpg" class="img-thumbnail" alt="...">
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
-                    <h3 class="">Kitchen Tile BackSplash</h3>
-                  </div>
-                  <div class="col-lg-6"></div>
-                  <div class="col-lg-12">
-                    <h5>Include Package</h5>
-                    <label class="border-0 form-controlAcc">
-                      <input id="accpackage3" class="mx-auto" type="checkbox" name="accpackage3" />
-                    </label>
+                <!-- End Accessory #1 -->
+  
+                <!-- Start Accessory #2 -->
+                <div class="col-lg-4 p-3">
+                  <div class="row bg-white p-3 rounded shadow-1 m-3">
+                    <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                      <img src="images/build/lightPackage.png" class="img-thumbnail" alt="...">
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                      <h3 class="">Matte Black <br> Light Fixtures</h3>
+                    </div>
+                    <div class="col-lg-6"></div>
+                    <div class="col-lg-12">
+                      <h5>Include Package</h5>
+                      <label class="border-0 form-controlAcc">
+                        <input id="accpackage2" class="mx-auto" type="checkbox" name="accpackage2" />
+                      </label>
+                    </div>
                   </div>
                 </div>
+                <!-- End Accessory #2 -->
+  
+                <!-- Start Accessory #3 -->
+                <div class="col-lg-4 p-3">
+                  <div class="row bg-white p-3 rounded shadow-1 m-3">
+                    <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                      <img src="images/build/backsplash.jpg" class="img-thumbnail" alt="...">
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                      <h3 class="">Kitchen Tile BackSplash</h3>
+                    </div>
+                    <div class="col-lg-6"></div>
+                    <div class="col-lg-12">
+                      <h5>Include Package</h5>
+                      <label class="border-0 form-controlAcc">
+                        <input id="accpackage3" class="mx-auto" type="checkbox" name="accpackage3" />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Accessory #3 -->
+                <div class="col-lg-12">
+                  <h5>None</h5>
+                  <label class="border-0 form-controlAcc">
+                    <input id="accpackage3" class="mx-auto" type="checkbox" name="accpackage3" />
+                  </label>
+                </div>
+                <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+                  <button id="nextBtn" class="btn rounded" onclick="nextPrev(1); selectedUpgrades();">Select</button>
+                </div>
               </div>
-              <!-- End Accessory #3 -->
+  
+              <!-- Buttons -->
+              <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+                <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Back</button>
+              </div>
             </div>
-
-            <!-- Buttons -->
-            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-              <button id="nextBtn" class="btn rounded" onclick="nextPrev(1); selectedUpgrades();">Select</button>
-            </div>
-            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-              <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Back</button>
-            </div>
-          </div>
-
-          <!-- End of accessories tab -->
+  
+            <!-- End of accessories tab -->
 
 
           <!-- Start of confirmation tab -->
@@ -982,7 +1114,7 @@
               <!--Start Selected Upgrades-->
 
               <!-- Bathroom Accessories -->
-              <div class="col-lg-7 col-md-12 mx-auto text-center p-3">
+              <div class="col-lg-7 col-md-12 mx-auto text-center p-3" id="upgradeBathroomAccDiv">
                 <div class="card mx-auto shadow-1">
                   <img id="upgradeBathroomAccImage" class="img-fluid rounded mx-auto d-block" src="">
                   <div class="card-body">
@@ -991,7 +1123,7 @@
                 </div>
               </div>
               <!-- Light Fixtures -->
-              <div class="col-lg-7 col-md-12 mx-auto text-center p-3">
+              <div class="col-lg-7 col-md-12 mx-auto text-center p-3" id="upgradeLightFixDiv">
                 <div class="card mx-auto shadow-1">
                   <img id="upgradeLightFixImage" class="img-fluid rounded mx-auto d-block" src="">
                   <div class="card-body">
@@ -1000,7 +1132,7 @@
                 </div>
               </div>
               <!-- Kitchen Backsplash-->
-              <div class="col-lg-7 col-md-12 mx-auto text-center p-3">
+              <div class="col-lg-7 col-md-12 mx-auto text-center p-3" id="upgradeKitchenBackDiv">
                 <div class="card mx-auto shadow-1">
                   <img id="upgradeKitchenBackImage" class="img-fluid rounded mx-auto d-block" src="">
                   <div class="card-body">
@@ -1100,7 +1232,26 @@
   <script src="js/custom.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/buildApp.js"></script>
+  <script src="js/upgradeSelector.js"></script>
   <script>
+    // This function submits the PHP form
+    function submitForm() {
+      var nameVar, emailVar, phoneVar;
+      nameVar = document.getElementsByName("name")[0].value;
+      emailVar = document.getElementsByName("email")[0].value;
+      phoneVar = document.getElementsByName("phone")[0].value;
+      $.ajax({
+        url: "/submit.php",
+        type: "post",
+        data: {
+          name: nameVar, email: emailVar, phone: phoneVar, floorplan: floorplanName, exterior: exteriorName, interior: interiorName,
+          upgrade_bath_accessories: upgrade1Value, upgrade_light_fixtures: upgrade2Value, upgrade_kitchen_backsplash: upgrade3Value
+        },
+        success: function (result) {
+          console.log("success");
+        }
+      });
+    }
   </script>
 </body>
 
