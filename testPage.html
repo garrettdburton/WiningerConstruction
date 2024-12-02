@@ -29,8 +29,6 @@
       font-size: 1.25rem;
       font-weight: bold;
       line-height: 1.5;
-      display: grid;
-      grid-template-columns: 1.5em auto;
     }
 
     .form-control+.form-control {
@@ -56,6 +54,10 @@
       height: 1.5em;
       border: 0.15em solid currentColor;
       border-radius: 0.15em;
+      transform: translateY(-0.075em);
+      margin-top: .25em;
+      display: grid;
+      place-content: center;
     }
 
     input[type="checkbox"]::before {
@@ -145,8 +147,9 @@
                   <div class="col-lg-6"></div>
                   <div class="col-lg-6">
                     <p>Include Package</p>
-                      <input type="checkbox" name="checkbox" />
-                  
+                    <label class="border-0 form-control">
+                      <input class="mx-auto" type="checkbox" name="checkbox" />
+                    </label>
                   </div>
                 </div>
               </div>
