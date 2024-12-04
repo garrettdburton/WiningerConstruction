@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
-    
+
   <!-- Animate on Scroll -->
   <link rel="stylesheet" href="css/aos.css" />
 
@@ -133,107 +133,113 @@
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mx-auto text-black">
         <form class="rounded" id="regForm" action="">
-          <!-- Start of confirmation tab -->
-          <div class="tab rounded">
-            <div class="row bg-dark p-3">
-              <div class="col-12 bg-dark p-2 text-center">
+          <!-- Start of accessories tab-->
+          <div class="tab">
+            <div class="row bg-light text-center rounded shadow-1 text-black">
+              <div class="col-12 bg-dark p-3 mb-2 text-center rounded">
                 <!-- Title -->
-                <h3 class="bg-dark text-white text-center p-2">Confirm your build request selections</h3>
-                <h5 class="bg-dark text-white text-center p-2">Please confirm that you have made the correct
-                  selections and submit the request below. <br> One of our representatives will get back to you
-                  soon.</h5>
+                <h4 class="bg-dark text-white text-center p-1">Upgrade Options</h4>
+                <p class="bg-dark text-white text-center p-1">Choose below from our additional upgrade options</p>
+              </div>
+              <div class="col-lg-10 col-md-12 text-center mx-auto bg-light shadow-1  mb-3">
+                <div class="row bg-light">
+                  <!-- Start Accessory #1 -->
+                  <div class="col-lg-4 p-3">
+                    <div class="row bg-white p-3 rounded shadow-1 m-3 h-100">
+                      <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                        <img src="images/build/blackAccessory.jpg" class="img-thumbnail" alt="...">
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                        <h3 class="">Matte Black <br> Bathroom Accessories</h3>
+                      </div>
+                      <div class="col-lg-6"></div>
+                      <div class="col-lg-12">
+                        <h5 class="text-bold">Include Package</h5>
+                        <label class="border-0 form-controlAcc">
+                          <input id="accpackage1" class="mx-auto" type="checkbox" name="accpackage1" />
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accessory #1 -->
+
+                  <!-- Start Accessory #2 -->
+                  <div class="col-lg-4 p-3">
+                    <div class="row bg-white p-3 rounded shadow-1 m-3 h-100">
+                      <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                        <img src="images/build/lightPackage.png" class="img-thumbnail" alt="...">
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                        <h3 class="">Matte Black <br> Light Fixtures</h3>
+                      </div>
+                      <div class="col-lg-6"></div>
+                      <div class="col-lg-12">
+                        <h5>Include Package</h5>
+                        <label class="border-0 form-controlAcc">
+                          <input id="accpackage2" class="mx-auto" type="checkbox" name="accpackage2" />
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accessory #2 -->
+
+                  <!-- Start Accessory #3 -->
+                  <div class="col-lg-4 p-3">
+                    <div class="row bg-white p-3 rounded shadow-1 m-3 h-100">
+                      <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                        <img src="images/build/backsplash.jpg" class="img-thumbnail" alt="...">
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 mb-4 mx-auto text-center">
+                        <h3 class="">Kitchen Tile BackSplash</h3>
+                      </div>
+                      <div class="col-lg-6"></div>
+                      <div class="col-lg-12">
+                        <h5>Include Package</h5>
+                        <label class="border-0 form-controlAcc">
+                          <input id="accpackage3" class="mx-auto" type="checkbox" name="accpackage3" />
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Accessory #3 -->
+                  <div class="col-lg-12 p-3">
+                    <h5 class="mt-5">None</h5>
+                    <label class="border-0 form-controlAcc">
+                      <input id="noAcc" class="mx-auto" type="checkbox" name="noAcc" onclick="clearChecks()" />
+                    </label>
+                  </div>
+                  <div class="col-lg-12 bg-green mt-3">
+                    <button id="nextBtn" class="btn btn-dark rounded mt-3 mb-3 mx-auto"
+                      onclick="nextPrev(1); selectedUpgrades();">Select</button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="row bg-main p-5">
-              <!-- Start Selected Floorplan-->
-              <div class="col-lg-4 col-md-12 col-sm-12 mx-auto text-center p-3">
-                <div class="card mx-auto shadow-1">
-                  <img id="floorplanImageSelected" src="images/floorplans/lg_ranch.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title" id="floorplanNameSelected">Test</h5>
-                  </div>
-                </div>
-              </div>
-              <!--Start Selected Exterior-->
-              <div class="col-lg-4 col-md-12 mx-auto text-center p-3">
-                <div class="card mx-auto shadow-1">
-                  
-                  <img id="exteriorImageSelected" src="images/exteriors/exterior-package-1/exterior.jpg"
-                    class="img-fluid  mx-auto d-block">
-                  <div class="card-body">
-                    <h5 class="card-title" id="exteriorNameSelected">Test</h5>
-                  </div>
-                </div>
-              </div>
-              <!--Start Selected Interior-->
-              <div class="col-lg-4 col-md-12 mx-auto text-center p-3">
-                <div class="card mx-auto shadow-1">
-                  <img id="interiorImageSelected" class="img-fluid  mx-auto d-block"
-                    src="images/interiors/interior-package-1/interior-render-1.png">
-                  <div class="card-body">
-                    <h5 class="card-title" id="interiorNameSelected">Test</h5>
-                  </div>
-                </div>
-              </div>
+
+            <!-- Buttons -->
+            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+              <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Back</button>
             </div>
-            <!--Start Selected Upgrades-->
-            <div class="row bg-main">
-              <!-- Bathroom Accessories -->
-              <div class="col-lg-4 col-md-12 mx-auto text-center p-3" id="upgradeBathroomAccDiv">
-                <div class="card mx-auto shadow-1">
-                  <img id="upgradeBathroomAccImage" class="img-fluid  mx-auto d-block"
-                    src="images/build/blackAccessory.jpg">
-                  <div class="card-body">
-                    <h5 class="card-title" id="upgradeBathroomAccName">Test</h5>
-                  </div>
-                </div>
-              </div>
-              <!-- Light Fixtures -->
-              <div class="col-lg-4 col-md-12 mx-auto text-center p-3" id="upgradeLightFixDiv">
-                <div class="card mx-auto shadow-1">
-                  <img id="upgradeLightFixImage" class="img-fluid  mx-auto d-block"
-                    src="images/build/lightPackage.png">
-                  <div class="card-body">
-                    <h5 class="card-title" id="upgradeLightFixName">Test</h5>
-                  </div>
-                </div>
-              </div>
-              <!-- Kitchen Backsplash-->
-              <div class="col-lg-4 col-md-12 mx-auto text-center p-3" id="upgradeKitchenBackDiv">
-                <div class="card mx-auto shadow-1">
-                  <img id="upgradeKitchenBackImage" class="img-fluid  mx-auto d-block"
-                    src="images/build/backsplash.jpg">
-                  <div class="card-body">
-                    <h5 class="card-title" id="upgradeKitchenBackName">Test</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <!-- Buttons -->
-          <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-            <button type="button" id="prevBtn" class="btn rounded m-3" onclick="nextPrev(-1)">Back</button>
-            <button type="button" class="btn btn-dark rounded m-3" onclick="submitForm();nextPrev(1) ">Submit
-              Request</button>
+          </div>
+
+          <!-- End of accessories tab -->
+
+
+
+          <!-- Circles which indicates the steps of the form: -->
+          <div style="text-align:center;margin:0px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
           </div>
       </div>
-      <!-- End of confirmation tab -->
-
-
-
-      <!-- Circles which indicates the steps of the form: -->
-      <div style="text-align:center;margin:0px;">
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-      </div>
+      </form>
     </div>
-    </form>
-  </div>
   </div>
 
   <!-- End Footer Section -->
@@ -243,6 +249,25 @@
   <script src="js/modal.js"></script>
   <script src="js/buildApp.js"></script>
   <script>
+
+    // Function to clear check boxes after none is selected
+    function clearChecks() {
+      var noAcc = document.getElementById("noAcc").checked;
+      var acc1 = document.getElementById("accpackage1")
+      var acc2 = document.getElementById("accpackage2")
+      var acc3 = document.getElementById("accpackage3")
+      if (noAcc) { 
+        console.log("true"); 
+        $("#acc1").attr("checked", false);
+        $("#acc2").attr("checked", false);
+        $("#accpackage3").attr("checked", false);
+
+        $("#acc1").attr("disabled", true);
+        $("#acc2").attr("disabled", true);
+        $("#accpackage3").attr("disabled", true);
+        console.log("Done");
+      }
+    }
   </script>
 </body>
 
