@@ -189,4 +189,30 @@ function setInterior(image, name, cabinetTop, cabinetTopImage, cabinetBottom, ca
   console.log(interiorName, interiorCabinetTop, interiorCabinetBottom, interiorCounter, interiorHandle, interiorLaminate, interiorCarpet, interiorPaint);
 }
 
+// accessory function
+    // Function to clear check boxes after none is selected
+    function clearChecks() {
+      var noAcc = document.getElementById("noAcc").checked;
+
+      // disable check boxes
+      if (noAcc) { 
+        console.log("true"); 
+        $("#accpackage1").prop( "checked", false);
+        $("#accpackage2").prop( "checked", false);
+        $("#accpackage3").prop( "checked", false);
+
+        $("#accpackage1").attr("disabled", true);
+        $("#accpackage2").attr("disabled", true);
+        $("#accpackage3").attr("disabled", true);
+        console.log("Done");
+      }
+      // enable check boxes
+      if (!noAcc) { 
+        $("#accpackage1").attr("disabled", false);
+        $("#accpackage2").attr("disabled", false);
+        $("#accpackage3").attr("disabled", false);
+        console.log("Done");
+      }
+    }
+
 

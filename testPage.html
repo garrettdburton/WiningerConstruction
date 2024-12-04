@@ -253,18 +253,24 @@
     // Function to clear check boxes after none is selected
     function clearChecks() {
       var noAcc = document.getElementById("noAcc").checked;
-      var acc1 = document.getElementById("accpackage1")
-      var acc2 = document.getElementById("accpackage2")
-      var acc3 = document.getElementById("accpackage3")
+
+      // disable check boxes
       if (noAcc) { 
         console.log("true"); 
-        $("#acc1").attr("checked", false);
-        $("#acc2").attr("checked", false);
-        $("#accpackage3").attr("checked", false);
+        $("#accpackage1").prop( "checked", false);
+        $("#accpackage2").prop( "checked", false);
+        $("#accpackage3").prop( "checked", false);
 
-        $("#acc1").attr("disabled", true);
-        $("#acc2").attr("disabled", true);
+        $("#accpackage1").attr("disabled", true);
+        $("#accpackage2").attr("disabled", true);
         $("#accpackage3").attr("disabled", true);
+        console.log("Done");
+      }
+      // enable check boxes
+      if (!noAcc) { 
+        $("#accpackage1").attr("disabled", false);
+        $("#accpackage2").attr("disabled", false);
+        $("#accpackage3").attr("disabled", false);
         console.log("Done");
       }
     }
