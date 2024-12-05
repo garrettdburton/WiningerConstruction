@@ -133,89 +133,230 @@
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mx-auto text-black">
         <form class="rounded" id="regForm" action="">
-         <!-- Start of confirmation tab -->
-         <div class="tab rounded">
-          <div class="row bg-dark p-3">
-            <div class="col-12 bg-dark p-2 text-center">
-              <!-- Title -->
-              <h3 class="bg-dark text-white text-center p-2">Confirm your build request selections</h3>
-              <h5 class="bg-dark text-white text-center p-2">Please confirm that you have made the correct
-                selections and submit the request below. <br> One of our representatives will get back to you
-                soon.</h5>
+          <!-- Start of exterior tab -->
+          <div class="tab">
+            <div class="row bg-dark rounded shadow-1 p-3">
+              <div class="col-12 bg-dark p-2 text-center">
+                <!-- Title -->
+                <h3 class="bg-dark text-white text-center p-2">Which exterior package are
+                  you interested in?</h3>
+                <h5 class="bg-dark text-white text-center p-2">Choose below from our five avaliable exterior
+                  packages</h5>
+              </div>
+              <div class="col-12 text-center p-2" id="carousel-div">
+                <a class="col-2 text-white m-3 carousel-link"
+                  style="color: red !important; text-decoration: none !important" data-bs-target="#carouselExample"
+                  data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">1</a>
+                <a class="col-2 text-white m-3 carousel-link" style="text-decoration: none !important"
+                  data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2">2</a>
+                <a class="col-2 text-white m-3 carousel-link" style="text-decoration: none !important"
+                  data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3">3</a>
+                <a class="col-2 text-white m-3 carousel-link" style="text-decoration: none !important"
+                  data-bs-target="#carouselExample" data-bs-slide-to="3" aria-current="true" aria-label="Slide 4">4</a>
+                <a class="col-2 text-white m-3 carousel-link" style="text-decoration: none !important"
+                  data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 5">5</a>
+              </div>
+              <div id="carouselExample" class="carousel rounded">
+                <div class="carousel-inner">
+                  <!-- Start Package #1 -->
+                  <div class="carousel-item active">
+                    <div class="row mx-auto rounded shadow-1 mb-5 bg-light border">
+                      <div class="col-lg-12 text-center">
+                        <h3 class="card-title text-bold m-2 text-dark p-4">Exterior Package 1</h3>
+                      </div>
+                      <div class="col-lg-8 col-md-5 mb-4 text-center">
+                        <img class="rounded img-fluid" src="images/exteriors/exterior-package-1/exterior.jpg">
+                      </div>
+                      <div class="col-lg-4 col-md-4 mb-4 text-center mx-auto">
+                        <div class="card bg-green shadow-1">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
+                              Gray<br><img class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-1/charcoalgray.jpg"></li>
+                            <li class="list-group-item text-black"><b>Siding</b><br>Redwood<br><img
+                                class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-1/redwood.jpg"></li>
+                            <li class="list-group-item text-black"><b>Accent Color</b><br>Toasted
+                              Almond<br><img class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-1/toastedalmond.jpg"></li>
+                            <li class="list-group-item text-black"><b>Stone</b><br>Birch Stackstone<br><img
+                                class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-1/birchstackstone.jpg"></li>
+                            <!-- <li class="list-group-item text-black"><b>Front Door Color</b><br>Cityscape</li> -->
+                          </ul>
+                          <div class="card-body"><button id="" class="btn btn-dark rounded"
+                              onclick="nextPrev(1); setExterior('images/exteriors/exterior-package-1/exterior.jpg', 'Exterior Package 1', 'IKO Charcoal Gray', 'images/exteriors/exterior-package-1/charcoalgray.jpg','Redwood','images/exteriors/exterior-package-1/redwood.jpg', 'Toasted Almond','images/exteriors/exterior-package-1/toastedalmond.jpg', 'Birch Stackstone', 'images/exteriors/exterior-package-1/birchstackstone.jpg','Cityscape')">Select
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Start Package #2 -->
+                  <div class="carousel-item">
+                    <div class="row mx-auto rounded shadow-1 mb-5 bg-light">
+                      <div class="col-lg-12 text-center">
+                        <h3 class="card-title text-bold m-2 text-dark p-4">Exterior Package 2</h3>
+                      </div>
+                      <div class="col-lg-8 col-md-5 mb-4 text-center">
+                        <img class="rounded img-fluid" src="images/exteriors/exterior-package-2/exterior.jpg">
+                      </div>
+                      <div class="col-lg-4 col-md-4 mb-4 text-center mx-auto">
+                        <div class="card bg-green shadow-1">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
+                              Gray<br><img class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-2/charcoalgray.jpg"></li>
+                            <li class="list-group-item text-black"><b>Siding</b><br>Heritage
+                              Blue<br><img class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-2/heritageblue.jpg"></li>
+                            <li class="list-group-item text-black"><b>Accent Color</b><br>Blue
+                              Gray<br><img class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-2/bluegray.jpg"></li>
+                            <li class="list-group-item text-black"><b>Stone</b><br>Catalpa Summit
+                              Ledge<br><img class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-2/catalpasummitledge.jpg"></li>
+                            <!-- <li class="list-group-item text-black"><b>Front Door Color</b><br>Cityscape</li> -->
+                          </ul>
+                          <div class="card-body">
+                            <button id="" class="btn btn-dark rounded"
+                              onclick="nextPrev(1); setExterior('images/exteriors/exterior-package-2/exterior.jpg', 'Exterior Package 2', 'IKO Charcoal Gray', 'images/exteriors/exterior-package-1/charcoalgray.jpg', 'Heritage Blue', 'images/exteriors/exterior-package-2/heritageblue.jpg','Blue Gray', 'images/exteriors/exterior-package-2/bluegray.jpg','Catalpa Summit Ledge','images/exteriors/exterior-package-2/catalpasummitledge.jpg','Cityscape')">Select
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Start Package #3 -->
+                  <div class="carousel-item">
+                    <div class="row mx-auto rounded shadow-1 mb-5 bg-light">
+                      <div class="col-lg-12 text-center">
+                        <h3 class="card-title text-bold m-2 text-dark p-4">Exterior Package 3</h3>
+                      </div>
+                      <div class="col-lg-8 col-md-5 mb-4 text-center">
+                        <img class="rounded img-fluid" src="images/exteriors/exterior-package-3/exterior.jpg">
+                      </div>
+                      <div class="col-lg-4 col-md-4 mb-4 text-center">
+                        <div class="card bg-green shadow-1">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
+                              Gray<br><img class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-3/charcoalgray.jpg"></li>
+                            <li class="list-group-item text-black"><b>Siding</b><br>Cypress<br><img
+                                class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-3/cypress.jpg"></li>
+                            <li class="list-group-item text-black"><b>Accent Color</b><br>
+                              Storm<br><img class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-3/storm.jpg"></li>
+                            <li class="list-group-item text-black"><b>Stone</b><br>Twilight Summit
+                              Ledge<br><img class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-3/twillightsummitledge.jpg"></li>
+                            <!-- <li class="list-group-item text-black"><b>Front Door Color</b><br>Cityscape</li> -->
+                          </ul>
+                          <div class="card-body"><button id="" class="btn btn-dark rounded"
+                              onclick="nextPrev(1); setExterior('images/exteriors/exterior-package-3/exterior.jpg','Exterior Package 3', 'IKO Charcoal Gray', 'images/exteriors/exterior-package-1/charcoalgray.jpg', 'Cypress', 'images/exteriors/exterior-package-3/cypress.jpg','Storm','images/exteriors/exterior-package-3/storm.jpg','Twilight Summit Ledge', 'images/exteriors/exterior-package-3/twillightsummitledge.jpg','Cityscape')">Select
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Start Package #4 -->
+                  <div class="carousel-item">
+                    <div class="row mx-auto rounded shadow-1 mb-5 bg-light">
+                      <div class="col-lg-12 text-center">
+                        <h3 class="card-title text-bold m-2 text-dark p-4">Exterior Package 4</h3>
+                      </div>
+                      <div class="col-lg-8 col-md-5 mb-4 text-center">
+                        <img class="rounded img-fluid" src="images/exteriors/exterior-package-4/exterior.jpg">
+                      </div>
+                      <div class="col-lg-4 col-md-4 mb-4 text-center">
+                        <div class="card bg-green shadow-1">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
+                              Gray<br><img class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-4/charcoalgray.jpg"></li>
+                            <li class="list-group-item text-black"><b>Siding</b><br>
+                              Ironstone<br><img class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-4/ironstone.jpg"></li>
+                            <li class="list-group-item text-black"><b>Accent Color</b><br>
+                              Cypress<br><img class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-4/cypress.jpg"></li>
+                            <li class="list-group-item text-black"><b>Stone</b><br>Cinder Manor
+                              Stone<br><img class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-4/cindermanorstone.jpg"></li>
+                            <!-- <li class="list-group-item text-black"><b>Front Door Color</b><br>Cityscape</li> -->
+                          </ul>
+                          <div class="card-body"><button id="" class="btn btn-dark rounded"
+                              onclick="nextPrev(1); setExterior('images/exteriors/exterior-package-4/exterior.jpg', 'Exterior Package 4', 'IKO Charcoal Gray', 'images/exteriors/exterior-package-4/charcoalgray.jpg', 'Ironstone','images/exteriors/exterior-package-4/ironstone.jpg', 'Cypress', 'images/exteriors/exterior-package-4/cypress.jpg','Cinder Manor Stone', 'images/exteriors/exterior-package-4/cindermanorstone.jpg','Cityscape')">Select
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Start Package #5 -->
+                  <div class="carousel-item">
+                    <div class="row mx-auto rounded shadow-1 mb-5 bg-light">
+                      <div class="col-lg-12 text-center">
+                        <h3 class="card-title text-bold m-2 text-dark p-4">Exterior Package 5</h3>
+                      </div>
+                      <div class="col-lg-8 col-md-5 mb-4 text-center">
+                        <img class="rounded img-fluid" src="images/exteriors/exterior-package-5/exterior.jpg">
+                      </div>
+                      <div class="col-lg-4 col-md-4 mb-4 text-center">
+                        <div class="card bg-green shadow-1">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
+                              Gray<br><img class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-5/charcoalgray.jpg"></li>
+                            <li class="list-group-item text-black"><b>Siding</b><br>Linen<br><img
+                                class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-5/linen.jpg"></li>
+                            <li class="list-group-item text-black"><b>Accent Color</b><br>Marine Blue<br><img
+                                class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-5/marineblue.jpg"></li>
+                            <li class="list-group-item text-black"><b>Stone</b><br>Birch
+                              Summit Ledge<br><img class="rounded mx-auto d-block" style="height: 50px;"
+                                src="images/exteriors/exterior-package-5/blackbirchsummitledge.jpg">
+                            </li>
+                            <!-- <li class="list-group-item text-black"><b>Front Door Color</b><br>Cityscape</li> -->
+                          </ul>
+                          <div class="card-body"><button id="" class="btn btn-dark rounded"
+                              onclick="nextPrev(1); setExterior('images/exteriors/exterior-package-5/exterior.jpg', 'Exterior Package 5', 'IKO Charcoal Gray', 'images/exteriors/exterior-package-5/charcoalgray.jpg','Linen','images/exteriors/exterior-package-5/linen.jpg','Marine Blue','images/exteriors/exterior-package-5/marineblue.jpg','Black Birch Summit Ledge', 'images/exteriors/exterior-package-5/blackbirchsummitledge.jpg','Cityscape')">Select
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon mt-3" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon mt-3" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <!-- Buttons -->
+              <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+                <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Back</button>
+              </div>
+              <!-- End of tab 1 -->
+
             </div>
           </div>
-          <div class="row bg-main p-5">
-            <!-- Start Selected Floorplan-->
-            <div class="col-lg-4 col-md-12 col-sm-12 mx-auto text-center p-3 mt-auto">
-              <div class="card mx-auto">
-                <img id="floorplanImageSelected" src="images/floorplans/lg_ranch.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title" id="floorplanNameSelected">Test</h5>
-                </div>
-              </div>
-            </div>
-            <!--Start Selected Exterior-->
-            <div class="col-lg-4 col-md-12 mx-auto text-center p-3 mt-auto">
-              <div class="card mx-auto">
-                <img id="exteriorImageSelected" src="images/exteriors/exterior-package-1/exterior.jpg"
-                  class="img-fluid  mx-auto d-block">
-                <div class="card-body">
-                  <h5 class="card-title" id="exteriorNameSelected">Test</h5>
-                </div>
-              </div>
-            </div>
-            <!--Start Selected Interior-->
-            <div class="col-lg-4 col-md-12 mx-auto text-center p-3 mt-auto">
-              <div class="card mx-auto">
-                <img id="interiorImageSelected" class="img-fluid  mx-auto d-block"
-                  src="images/interiors/interior-package-1/interior-render-1.png">
-                <div class="card-body">
-                  <h5 class="card-title" id="interiorNameSelected">Test</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--Start Selected Upgrades-->
-          <div class="row bg-main p-5">
-            <!-- Bathroom Accessories -->
-            <div class="col-lg-4 col-md-12 mx-auto text-center p-3 mt-auto" id="upgradeBathroomAccDiv">
-              <div class="card mx-auto shadow-1">
-                <img id="upgradeBathroomAccImage" class="img-fluid  mx-auto d-block"
-                  src="images/build/blackAccessory.jpg">
-                <div class="card-body">
-                  <h5 class="card-title" id="upgradeBathroomAccName">Test</h5>
-                </div>
-              </div>
-            </div>
-            <!-- Light Fixtures -->
-            <div class="col-lg-4 col-md-12 mx-auto text-center p-3 mt-auto" id="upgradeLightFixDiv">
-              <div class="card mx-auto shadow-1">
-                <img id="upgradeLightFixImage" class="img-fluid  mx-auto d-block"
-                  src="images/build/lightPackage.png">
-                <div class="card-body">
-                  <h5 class="card-title" id="upgradeLightFixName">Test</h5>
-                </div>
-              </div>
-            </div>
-            <!-- Kitchen Backsplash-->
-            <div class="col-lg-4 col-md-12 mx-auto text-center p-3 mt-auto" id="upgradeKitchenBackDiv">
-              <div class="card mx-auto shadow-1">
-                <img id="upgradeKitchenBackImage" class="img-fluid  mx-auto d-block"
-                  src="images/build/backsplash.jpg">
-                <div class="card-body">
-                  <h5 class="card-title" id="upgradeKitchenBackName">Test</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Buttons -->
-          <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-            <button type="button" id="prevBtn" class="btn rounded m-3" onclick="nextPrev(-1)">Back</button>
-            <button type="button" class="btn btn-dark rounded m-3" onclick="submitForm();nextPrev(1) ">Submit
-              Request</button>
-          </div>
-        </div>
-        <!-- End of confirmation tab -->
+          <!-- End of exterior tab -->
 
 
 
@@ -248,11 +389,11 @@
       var noAcc = document.getElementById("noAcc").checked;
 
       // disable check boxes
-      if (noAcc) { 
-        console.log("true"); 
-        $("#accpackage1").prop( "checked", false);
-        $("#accpackage2").prop( "checked", false);
-        $("#accpackage3").prop( "checked", false);
+      if (noAcc) {
+        console.log("true");
+        $("#accpackage1").prop("checked", false);
+        $("#accpackage2").prop("checked", false);
+        $("#accpackage3").prop("checked", false);
 
         $("#accpackage1").attr("disabled", true);
         $("#accpackage2").attr("disabled", true);
@@ -260,13 +401,20 @@
         console.log("Done");
       }
       // enable check boxes
-      if (!noAcc) { 
+      if (!noAcc) {
         $("#accpackage1").attr("disabled", false);
         $("#accpackage2").attr("disabled", false);
         $("#accpackage3").attr("disabled", false);
         console.log("Done");
       }
     }
+
+    $(".carousel-link").click(function () {
+      $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
+      $(this).attr('style', 'color: red !important');
+      
+      console.log(this + " clicked");
+    });
   </script>
 </body>
 
