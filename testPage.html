@@ -145,18 +145,19 @@
               </div>
               <div class="col-12 text-center p-2" id="carousel-div">
                 <a class="col-2 text-white m-3 carousel-link"
-                  style="color: red !important; text-decoration: none !important" data-bs-target="#carouselExample"
-                  data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">1</a>
+                  style="color: #f9bf29 !important; text-decoration: none !important" data-bs-target="#carouselExample"
+                  data-bs-slide-to="0" aria-current="true" aria-label="Slide 1" id="ent0">1</a>
                 <a class="col-2 text-white m-3 carousel-link" style="text-decoration: none !important"
-                  data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2">2</a>
+                  data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2" id="ent1">2</a>
                 <a class="col-2 text-white m-3 carousel-link" style="text-decoration: none !important"
-                  data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3">3</a>
+                  data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3" id="ent2">3</a>
                 <a class="col-2 text-white m-3 carousel-link" style="text-decoration: none !important"
-                  data-bs-target="#carouselExample" data-bs-slide-to="3" aria-current="true" aria-label="Slide 4">4</a>
+                  data-bs-target="#carouselExample" data-bs-slide-to="3" aria-current="true" aria-label="Slide 4"
+                  id="ent3">4</a>
                 <a class="col-2 text-white m-3 carousel-link" style="text-decoration: none !important"
-                  data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 5">5</a>
+                  data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 5" id="ent4">5</a>
               </div>
-              <div id="carouselExample" class="carousel rounded">
+              <div id="carouselExample" class="carousel rounded" data-bs-interval="false">
                 <div class="carousel-inner">
                   <!-- Start Package #1 -->
                   <div class="carousel-item active">
@@ -338,12 +339,12 @@
 
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                  data-bs-slide="prev">
+                  data-bs-slide="prev" onclick="decrementWithArrow()">
                   <span class="carousel-control-prev-icon mt-3" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                  data-bs-slide="next">
+                  data-bs-slide="next" onclick="incrementWithArrow()">
                   <span class="carousel-control-next-icon mt-3" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
@@ -384,37 +385,40 @@
   <script src="js/buildApp.js"></script>
   <script>
 
-    // Function to clear check boxes after none is selected
-    function clearChecks() {
-      var noAcc = document.getElementById("noAcc").checked;
-
-      // disable check boxes
-      if (noAcc) {
-        console.log("true");
-        $("#accpackage1").prop("checked", false);
-        $("#accpackage2").prop("checked", false);
-        $("#accpackage3").prop("checked", false);
-
-        $("#accpackage1").attr("disabled", true);
-        $("#accpackage2").attr("disabled", true);
-        $("#accpackage3").attr("disabled", true);
-        console.log("Done");
-      }
-      // enable check boxes
-      if (!noAcc) {
-        $("#accpackage1").attr("disabled", false);
-        $("#accpackage2").attr("disabled", false);
-        $("#accpackage3").attr("disabled", false);
-        console.log("Done");
-      }
-    }
+    var enteriorCarouselIndicator = 0;
 
     $(".carousel-link").click(function () {
       $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
-      $(this).attr('style', 'color: red !important');
-      
-      console.log(this + " clicked");
+      $(this).attr('style', 'color: #f9bf29 !important');
+      enteriorCarouselIndicator = this.id.slice(-1);
+      enteriorCarouselIndicator = parseInt(enteriorCarouselIndicator, 10);
     });
+
+    function incrementWithArrow() {
+      enteriorCarouselIndicator = enteriorCarouselIndicator + 1;
+      if (enteriorCarouselIndicator > 4) {
+        enteriorCarouselIndicator = 0;
+        $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
+        $('#ent' + enteriorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
+      } else {
+        $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
+        $('#ent' + enteriorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
+      }
+    };
+
+    function decrementWithArrow() {
+      if (enteriorCarouselIndicator == 0) {
+        enteriorCarouselIndicator = 4;
+        $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
+        $('#ent' + enteriorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
+      } else {
+        enteriorCarouselIndicator = enteriorCarouselIndicator - 1;
+        $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
+        $('#ent' + enteriorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
+      }
+      console.log(enteriorCarouselIndicator);
+    };
+
   </script>
 </body>
 
