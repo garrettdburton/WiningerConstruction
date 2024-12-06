@@ -339,12 +339,12 @@
 
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                  data-bs-slide="prev" onclick="decrementWithArrow()">
+                  data-bs-slide="prev" onclick="decrementEntWithArrow()">
                   <span class="carousel-control-prev-icon mt-3" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                  data-bs-slide="next" onclick="incrementWithArrow()">
+                  data-bs-slide="next" onclick="incrementEntWithArrow()">
                   <span class="carousel-control-next-icon mt-3" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
@@ -394,7 +394,7 @@
       enteriorCarouselIndicator = parseInt(enteriorCarouselIndicator, 10);
     });
 
-    function incrementWithArrow() {
+    function incrementEntWithArrow() {
       enteriorCarouselIndicator = enteriorCarouselIndicator + 1;
       if (enteriorCarouselIndicator > 4) {
         enteriorCarouselIndicator = 0;
@@ -406,7 +406,7 @@
       }
     };
 
-    function decrementWithArrow() {
+    function decrementEntWithArrow() {
       if (enteriorCarouselIndicator == 0) {
         enteriorCarouselIndicator = 4;
         $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');

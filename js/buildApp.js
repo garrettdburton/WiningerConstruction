@@ -215,4 +215,39 @@ function setInterior(image, name, cabinetTop, cabinetTopImage, cabinetBottom, ca
       }
     }
 
+    //function to control the exterior package page
+    var enteriorCarouselIndicator = 0;
+
+    $(".carousel-link").click(function () {
+      $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
+      $(this).attr('style', 'color: #f9bf29 !important');
+      enteriorCarouselIndicator = this.id.slice(-1);
+      enteriorCarouselIndicator = parseInt(enteriorCarouselIndicator, 10);
+    });
+
+    function incrementEntWithArrow() {
+      enteriorCarouselIndicator = enteriorCarouselIndicator + 1;
+      if (enteriorCarouselIndicator > 4) {
+        enteriorCarouselIndicator = 0;
+        $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
+        $('#ent' + enteriorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
+      } else {
+        $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
+        $('#ent' + enteriorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
+      }
+    };
+
+    function decrementEntWithArrow() {
+      if (enteriorCarouselIndicator == 0) {
+        enteriorCarouselIndicator = 4;
+        $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
+        $('#ent' + enteriorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
+      } else {
+        enteriorCarouselIndicator = enteriorCarouselIndicator - 1;
+        $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
+        $('#ent' + enteriorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
+      }
+      console.log(enteriorCarouselIndicator);
+    };
+
 
