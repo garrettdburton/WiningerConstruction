@@ -133,231 +133,403 @@
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mx-auto text-black">
         <form class="rounded" id="regForm" action="">
-          <!-- Start of exterior tab -->
-          <div class="tab">
-            <div class="row bg-dark rounded shadow-1 p-3">
-              <div class="col-12 bg-dark p-2 text-center">
-                <!-- Title -->
-                <h3 class="bg-dark text-white text-center p-2">Which exterior package are
-                  you interested in?</h3>
-                <h5 class="bg-dark text-white text-center p-2">Choose below from our five avaliable exterior
-                  packages</h5>
-              </div>
-              <div class="col-12 text-center p-2" id="carousel-div">
-                <a class="col-2 text-white m-3 carousel-link"
-                  style="color: #f9bf29 !important; text-decoration: none !important" data-bs-target="#carouselExample"
-                  data-bs-slide-to="0" aria-current="true" aria-label="Slide 1" id="ent0">1</a>
-                <a class="col-2 text-white m-3 carousel-link" style="text-decoration: none !important"
-                  data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2" id="ent1">2</a>
-                <a class="col-2 text-white m-3 carousel-link" style="text-decoration: none !important"
-                  data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3" id="ent2">3</a>
-                <a class="col-2 text-white m-3 carousel-link" style="text-decoration: none !important"
-                  data-bs-target="#carouselExample" data-bs-slide-to="3" aria-current="true" aria-label="Slide 4"
-                  id="ent3">4</a>
-                <a class="col-2 text-white m-3 carousel-link" style="text-decoration: none !important"
-                  data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 5" id="ent4">5</a>
-              </div>
-              <div id="carouselExample" class="carousel rounded" data-bs-interval="false">
-                <div class="carousel-inner">
-                  <!-- Start Package #1 -->
-                  <div class="carousel-item active">
-                    <div class="row mx-auto rounded shadow-1 mb-5 bg-light border">
-                      <div class="col-lg-12 text-center">
-                        <h3 class="card-title text-bold m-2 text-dark p-4">Exterior Package 1</h3>
+        <!-- Start of interior tab -->
+        <div class="tab">
+          <div class="row bg-dark rounded shadow-1 p-3">
+            <div class="col-12 bg-dark p-2 text-center">
+              <!-- Title -->
+              <h3 class="bg-dark text-white text-center p-2">Which interior package are
+                you interested in?</h3>
+              <h5 class="bg-dark text-white text-center p-2">Choose below from our five avaliable interior
+                packages</h5>
+            </div>
+            <div class="col-12 text-center p-2">
+              <a class="col-2 text-white m-3 carousel-link" data-bs-target="#carouselExample2" data-bs-slide-to="0"
+                aria-current="true" aria-label="Slide 1"
+                style="color: #f9bf29 !important; text-decoration: none !important" id="enti0">1</a>
+              <a class="col-2 text-white m-3 carousel-link" data-bs-target="#carouselExample2" data-bs-slide-to="1"
+                aria-label="Slide 2" id="enti1">2</a>
+              <a class="col-2 text-white m-3 carousel-link" data-bs-target="#carouselExample2" data-bs-slide-to="2"
+                aria-label="Slide 3" id="enti2">3</a>
+              <a class="col-2 text-white m-3 carousel-link" data-bs-target="#carouselExample2" data-bs-slide-to="3"
+                aria-current="true" aria-label="Slide 4" id="enti3">4</a>
+              <a class="col-2 text-white m-3 carousel-link" data-bs-target="#carouselExample2" data-bs-slide-to="4"
+                aria-label="Slide 5" id="enti4">5</a>
+            </div>
+            <div id="carouselExample2" class="carousel rounded" data-bs-interval="false">
+              <div class="carousel-inner">
+                <!-- Start Package #1 -->
+                <div class="carousel-item active">
+                  <div class="row mx-auto rounded shadow-1 mb-5 bg-light border">
+                    <div class="col-lg-12 text-center">
+                      <h3 class="card-title text-bold m-2 text-dark pt-2 pb-2 section-title">Interior Package 1</h3>
+                    </div>
+                    <div class="col-lg-12 col-md-12 mb-4 text-center">
+
+                      <!-- Main Image -->
+                      <img class="rounded img-fluid mx-auto m-2" id="interiorImg1"
+                        src="images/interiors/interior-package-1/interior-render-1.png" alt=""
+                        onclick="launchModal('interiorImg1')">
+
+                      <div class="col-4">
+                        <img class="rounded img-fluid m-2" id="interiorImg1_masterbed"
+                          src="images/interiors/interior-package-1/interior-1-masterbed.png"
+                          onclick="launchModal('interiorImg1_masterbed')">
                       </div>
-                      <div class="col-lg-8 col-md-5 mb-4 text-center">
-                        <img class="rounded img-fluid" src="images/exteriors/exterior-package-1/exterior.jpg">
+                      <!-- The Modal -->
+                      <div id="myModal" class="modal">
+
+                        <!-- The Close Button -->
+                        <span class="close">&times;</span>
+
+                        <!-- Modal Content (The Image) -->
+                        <img class="modal-content" id="img01">
+
+                        <!-- End Modal -->
                       </div>
-                      <div class="col-lg-4 col-md-4 mb-4 text-center mx-auto">
-                        <div class="card bg-green shadow-1">
-                          <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
-                              Gray<br><img class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-1/charcoalgray.jpg"></li>
-                            <li class="list-group-item text-black"><b>Siding</b><br>Redwood<br><img
-                                class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-1/redwood.jpg"></li>
-                            <li class="list-group-item text-black"><b>Accent Color</b><br>Toasted
-                              Almond<br><img class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-1/toastedalmond.jpg"></li>
-                            <li class="list-group-item text-black"><b>Stone</b><br>Birch Stackstone<br><img
-                                class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-1/birchstackstone.jpg"></li>
-                            <!-- <li class="list-group-item text-black"><b>Front Door Color</b><br>Cityscape</li> -->
-                          </ul>
-                          <div class="card-body"><button id="" class="btn btn-dark rounded"
-                              onclick="nextPrev(1); setExterior('images/exteriors/exterior-package-1/exterior.jpg', 'Exterior Package 1', 'IKO Charcoal Gray', 'images/exteriors/exterior-package-1/charcoalgray.jpg','Redwood','images/exteriors/exterior-package-1/redwood.jpg', 'Toasted Almond','images/exteriors/exterior-package-1/toastedalmond.jpg', 'Birch Stackstone', 'images/exteriors/exterior-package-1/birchstackstone.jpg','Cityscape')">Select
-                            </button>
+                    </div>
+                    <div class="col-lg-12 col-md-12 mb-4 text-center mx-auto">
+                      <div class="card bg-light shadow-1">
+                        <div class="row">
+                          <div class="col-md-12 text-black mt-3">
+                            <h4>Interior Package 1</h4>
                           </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Cabinets</b><br>Black<br><img
+                              class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-1/samples/cabinet_black.jpg"><br>
+                            Vanilla<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-1/samples/cabinet_vanilla.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6  text-black m-3 mx-auto"><b>Countertops</b><br>Sparkling
+                            White<br>
+                            Quartz
+                            Eased
+                            Edge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-1/samples/quartz_sparklingwhite.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Handles</b><br>BP 65096-900</div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Laminate</b><br>Flagstaff
+                            Oak<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-1/samples/lvp_flagstaffoak.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Carpet</b><br>733 Compel<br><img
+                              class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-1/samples/carpet_compel.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Paint</b><br>Mindful
+                            Gray<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-1/samples/SW7016-mindful-gray-lg.png">
+                          </div>
+                        </div>
+                        <div class="card-body bg-green">
+                          <button id="" class="btn btn-dark rounded"
+                            onclick="nextPrev(1); setInterior('images/interiors/interior-package-1/interior-render-1.png', 'Interior Package 1', 'Black','images/interiors/interior-package-1/samples/cabinet_black.jpg', 'Vanilla','images/interiors/interior-package-1/samples/cabinet_vanilla.jpg', 'Sparkling White Quartz Eased Edge', 'images/interiors/interior-package-1/samples/quartz_sparklingwhite.jpg', 'BP 65096-900', 'Flagstaff Oak', 'images/interiors/interior-package-1/samples/lvp_flagstaffoak.jpg', '733 Compel', 'images/interiors/interior-package-1/samples/carpet_compel.jpg', 'Mindful Gray', 'images/interiors/interior-package-1/samples/SW7016-mindful-gray-lg.png')">Select</button>
                         </div>
                       </div>
                     </div>
                   </div>
-
-                  <!-- Start Package #2 -->
-                  <div class="carousel-item">
-                    <div class="row mx-auto rounded shadow-1 mb-5 bg-light">
-                      <div class="col-lg-12 text-center">
-                        <h3 class="card-title text-bold m-2 text-dark p-4">Exterior Package 2</h3>
-                      </div>
-                      <div class="col-lg-8 col-md-5 mb-4 text-center">
-                        <img class="rounded img-fluid" src="images/exteriors/exterior-package-2/exterior.jpg">
-                      </div>
-                      <div class="col-lg-4 col-md-4 mb-4 text-center mx-auto">
-                        <div class="card bg-green shadow-1">
-                          <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
-                              Gray<br><img class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-2/charcoalgray.jpg"></li>
-                            <li class="list-group-item text-black"><b>Siding</b><br>Heritage
-                              Blue<br><img class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-2/heritageblue.jpg"></li>
-                            <li class="list-group-item text-black"><b>Accent Color</b><br>Blue
-                              Gray<br><img class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-2/bluegray.jpg"></li>
-                            <li class="list-group-item text-black"><b>Stone</b><br>Catalpa Summit
-                              Ledge<br><img class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-2/catalpasummitledge.jpg"></li>
-                            <!-- <li class="list-group-item text-black"><b>Front Door Color</b><br>Cityscape</li> -->
-                          </ul>
-                          <div class="card-body">
-                            <button id="" class="btn btn-dark rounded"
-                              onclick="nextPrev(1); setExterior('images/exteriors/exterior-package-2/exterior.jpg', 'Exterior Package 2', 'IKO Charcoal Gray', 'images/exteriors/exterior-package-1/charcoalgray.jpg', 'Heritage Blue', 'images/exteriors/exterior-package-2/heritageblue.jpg','Blue Gray', 'images/exteriors/exterior-package-2/bluegray.jpg','Catalpa Summit Ledge','images/exteriors/exterior-package-2/catalpasummitledge.jpg','Cityscape')">Select
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Start Package #3 -->
-                  <div class="carousel-item">
-                    <div class="row mx-auto rounded shadow-1 mb-5 bg-light">
-                      <div class="col-lg-12 text-center">
-                        <h3 class="card-title text-bold m-2 text-dark p-4">Exterior Package 3</h3>
-                      </div>
-                      <div class="col-lg-8 col-md-5 mb-4 text-center">
-                        <img class="rounded img-fluid" src="images/exteriors/exterior-package-3/exterior.jpg">
-                      </div>
-                      <div class="col-lg-4 col-md-4 mb-4 text-center">
-                        <div class="card bg-green shadow-1">
-                          <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
-                              Gray<br><img class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-3/charcoalgray.jpg"></li>
-                            <li class="list-group-item text-black"><b>Siding</b><br>Cypress<br><img
-                                class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-3/cypress.jpg"></li>
-                            <li class="list-group-item text-black"><b>Accent Color</b><br>
-                              Storm<br><img class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-3/storm.jpg"></li>
-                            <li class="list-group-item text-black"><b>Stone</b><br>Twilight Summit
-                              Ledge<br><img class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-3/twillightsummitledge.jpg"></li>
-                            <!-- <li class="list-group-item text-black"><b>Front Door Color</b><br>Cityscape</li> -->
-                          </ul>
-                          <div class="card-body"><button id="" class="btn btn-dark rounded"
-                              onclick="nextPrev(1); setExterior('images/exteriors/exterior-package-3/exterior.jpg','Exterior Package 3', 'IKO Charcoal Gray', 'images/exteriors/exterior-package-1/charcoalgray.jpg', 'Cypress', 'images/exteriors/exterior-package-3/cypress.jpg','Storm','images/exteriors/exterior-package-3/storm.jpg','Twilight Summit Ledge', 'images/exteriors/exterior-package-3/twillightsummitledge.jpg','Cityscape')">Select
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Start Package #4 -->
-                  <div class="carousel-item">
-                    <div class="row mx-auto rounded shadow-1 mb-5 bg-light">
-                      <div class="col-lg-12 text-center">
-                        <h3 class="card-title text-bold m-2 text-dark p-4">Exterior Package 4</h3>
-                      </div>
-                      <div class="col-lg-8 col-md-5 mb-4 text-center">
-                        <img class="rounded img-fluid" src="images/exteriors/exterior-package-4/exterior.jpg">
-                      </div>
-                      <div class="col-lg-4 col-md-4 mb-4 text-center">
-                        <div class="card bg-green shadow-1">
-                          <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
-                              Gray<br><img class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-4/charcoalgray.jpg"></li>
-                            <li class="list-group-item text-black"><b>Siding</b><br>
-                              Ironstone<br><img class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-4/ironstone.jpg"></li>
-                            <li class="list-group-item text-black"><b>Accent Color</b><br>
-                              Cypress<br><img class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-4/cypress.jpg"></li>
-                            <li class="list-group-item text-black"><b>Stone</b><br>Cinder Manor
-                              Stone<br><img class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-4/cindermanorstone.jpg"></li>
-                            <!-- <li class="list-group-item text-black"><b>Front Door Color</b><br>Cityscape</li> -->
-                          </ul>
-                          <div class="card-body"><button id="" class="btn btn-dark rounded"
-                              onclick="nextPrev(1); setExterior('images/exteriors/exterior-package-4/exterior.jpg', 'Exterior Package 4', 'IKO Charcoal Gray', 'images/exteriors/exterior-package-4/charcoalgray.jpg', 'Ironstone','images/exteriors/exterior-package-4/ironstone.jpg', 'Cypress', 'images/exteriors/exterior-package-4/cypress.jpg','Cinder Manor Stone', 'images/exteriors/exterior-package-4/cindermanorstone.jpg','Cityscape')">Select
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Start Package #5 -->
-                  <div class="carousel-item">
-                    <div class="row mx-auto rounded shadow-1 mb-5 bg-light">
-                      <div class="col-lg-12 text-center">
-                        <h3 class="card-title text-bold m-2 text-dark p-4">Exterior Package 5</h3>
-                      </div>
-                      <div class="col-lg-8 col-md-5 mb-4 text-center">
-                        <img class="rounded img-fluid" src="images/exteriors/exterior-package-5/exterior.jpg">
-                      </div>
-                      <div class="col-lg-4 col-md-4 mb-4 text-center">
-                        <div class="card bg-green shadow-1">
-                          <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-black"><b>Shingles</b><br>IKO Charcoal
-                              Gray<br><img class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-5/charcoalgray.jpg"></li>
-                            <li class="list-group-item text-black"><b>Siding</b><br>Linen<br><img
-                                class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-5/linen.jpg"></li>
-                            <li class="list-group-item text-black"><b>Accent Color</b><br>Marine Blue<br><img
-                                class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-5/marineblue.jpg"></li>
-                            <li class="list-group-item text-black"><b>Stone</b><br>Birch
-                              Summit Ledge<br><img class="rounded mx-auto d-block" style="height: 50px;"
-                                src="images/exteriors/exterior-package-5/blackbirchsummitledge.jpg">
-                            </li>
-                            <!-- <li class="list-group-item text-black"><b>Front Door Color</b><br>Cityscape</li> -->
-                          </ul>
-                          <div class="card-body"><button id="" class="btn btn-dark rounded"
-                              onclick="nextPrev(1); setExterior('images/exteriors/exterior-package-5/exterior.jpg', 'Exterior Package 5', 'IKO Charcoal Gray', 'images/exteriors/exterior-package-5/charcoalgray.jpg','Linen','images/exteriors/exterior-package-5/linen.jpg','Marine Blue','images/exteriors/exterior-package-5/marineblue.jpg','Black Birch Summit Ledge', 'images/exteriors/exterior-package-5/blackbirchsummitledge.jpg','Cityscape')">Select
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                  data-bs-slide="prev" onclick="decrementEntWithArrow()">
-                  <span class="carousel-control-prev-icon mt-3" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                <!-- Start Package #2 -->
+                <div class="carousel-item">
+                  <div class="row mx-auto rounded shadow-1 mb-5 bg-light border">
+                    <div class="col-lg-12 text-center">
+                      <h3 class="card-title text-bold m-2 text-dark pt-2 pb-2 section-title">Interior Package 2</h3>
+                    </div>
+                    <div class="col-lg-12 col-md-12 mb-4 text-center">
+
+                      <!-- Main Image -->
+                      <img class="rounded img-fluid mx-auto m-2" id="interiorImg2"
+                        src="images/interiors/interior-package-2/interior-render-2.png" alt=""
+                        onclick="launchModal2('interiorImg2')">
+
+                      <div class="col-4">
+                        <img class="rounded img-fluid m-2" id="interiorImg2_masterbed"
+                          src="images/interiors/interior-package-2/interior-render-2-masterbed.png"
+                          onclick="launchModal2('interiorImg2_masterbed')">
+                      </div>
+                      <!-- The Modal -->
+                      <div id="myModal2" class="modal">
+
+                        <!-- The Close Button -->
+                        <span class="close">&times;</span>
+
+                        <!-- Modal Content (The Image) -->
+                        <img class="modal-content" id="img02">
+
+                        <!-- End Modal -->
+                      </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 mb-4 text-center mx-auto">
+                      <div class="card bg-light shadow-1">
+                        <div class="row">
+                          <div class="col-md-12 text-black mt-3">
+                            <h4>Interior Package 2</h4>
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Cabinets</b><br>
+                            Chameleon<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-2/samples/cabinet_chameleon.jpg">
+                            <br>
+                            Navy<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-2/samples/cabinet_navy.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Countertops</b><br>Sparkling
+                            White
+                            Quartz Eased
+                            Edge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-2/samples/quartz_sparklingwhite.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Handles</b><br>BP 65096-900</div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Laminate</b><br>Monterrey
+                            Oak<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-2/samples/lvp_montereyoak.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Carpet</b><br>733 Compel<br><img
+                              class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-2/samples/carpet_compel.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Paint</b><br>Magnetic
+                            Gray<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-2/samples/SW7058-magnetic-gray-lg.png">
+                          </div>
+                        </div>
+                        <div class="card-body bg-green">
+                          <button id="" class="btn btn-dark rounded"
+                            onclick="nextPrev(1); setInterior('images/interiors/interior-package-2/interior-render-2.png','Interior Package 2', 'Chameleon', 'images/interiors/interior-package-2/samples/cabinet_chameleon.jpg', 'Navy','images/interiors/interior-package-2/samples/cabinet_navy.jpg', 'Sparkling White Quartz Eased Edge', 'images/interiors/interior-package-2/samples/quartz_sparklingwhite.jpg','BP 65096-900', 'Monterrey Oak', 'images/interiors/interior-package-2/samples/lvp_montereyoak.jpg', '733 Compel', 'images/interiors/interior-package-2/samples/carpet_compel.jpg','Magnetic Gray', 'images/interiors/interior-package-2/samples/SW7058-magnetic-gray-lg.png')">Select</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Start Package #3 -->
+                <div class="carousel-item">
+                  <div class="row mx-auto rounded shadow-1 mb-5 bg-light border">
+                    <div class="col-lg-12 text-center">
+                      <h3 class="card-title text-bold m-2 text-dark pt-2 pb-2 section-title">Interior Package 3</h3>
+                    </div>
+                    <div class="col-lg-12 col-md-12 mb-4 text-center">
+                      <!-- Main Image -->
+                      <img class="rounded img-fluid mx-auto m-2" id="interiorImg3"
+                        src="images/interiors/interior-package-3/interior-render-3.png" alt=""
+                        onclick="launchModal3('interiorImg3')">
+
+                      <div class="col-4">
+                        <img class="rounded img-fluid m-2" id="interiorImg3_masterbed"
+                          src="images/interiors/interior-package-3/interior-render-3-masterbed.png"
+                          onclick="launchModal3('interiorImg3_masterbed')">
+                      </div>
+                      <!-- The Modal -->
+                      <div id="myModal3" class="modal">
+
+                        <!-- The Close Button -->
+                        <span class="close">&times;</span>
+
+                        <!-- Modal Content (The Image) -->
+                        <img class="modal-content" id="img03">
+
+                        <!-- End Modal -->
+                      </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 mb-4 text-center mx-auto">
+                      <div class="card bg-light shadow-1">
+                        <div class="row">
+                          <div class="col-md-12 text-black mt-3">
+                            <h4>Interior Package 3</h4>
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Cabinets</b><br> Khaki<br><img
+                              class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-3/samples/cabinet_khaki.jpg">
+                            <br>
+                            Ivory<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-3/samples/cabinet_ivory.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Countertops</b><br>Sparkling White
+                            Quartz Eased
+                            Edge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-3/samples/quartz_sparklingwhite.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Handles</b><br>BP 65096-900</div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Laminate</b><br>Galveston
+                            Oak<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-3/samples/lvp_galvestonoak.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Carpet</b><br>956 Engage<br><img
+                              class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-3/samples/carpet_engage.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Paint</b><br>Alpaca
+                            <br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-3/samples/SW7022-alpaca-lg.png">
+                          </div>
+                        </div>
+                        <div class="card-body bg-green">
+                          <button id="" class="btn btn-dark rounded"
+                            onclick="nextPrev(1); setInterior('images/interiors/interior-package-3/interior-render-3.png', 'Interior Package 3', 'Khaki','images/interiors/interior-package-3/samples/cabinet_khaki.jpg', 'Ivory','images/interiors/interior-package-3/samples/cabinet_ivory.jpg','Sparkling White Quartz Eased Edge', 'images/interiors/interior-package-3/samples/quartz_sparklingwhite.jpg','BP 65096-900', 'Galveston Oak', 'images/interiors/interior-package-3/samples/lvp_galvestonoak.jpg','956 Engage', 'images/interiors/interior-package-3/samples/carpet_engage.jpg', 'Alpaca', 'images/interiors/interior-package-3/samples/SW7022-alpaca-lg.png')">Select</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Start Package #4 -->
+                <div class="carousel-item">
+                  <div class="row mx-auto rounded shadow-1 mb-5 bg-light border">
+                    <div class="col-lg-12 text-center">
+                      <h3 class="card-title text-bold m-2 text-dark pt-2 pb-2 section-title">Interior Package 4</h3>
+                    </div>
+                    <div class="col-lg-12 col-md-12 mb-4 text-center">
+
+                      <!-- Main Image -->
+                      <img class="rounded img-fluid mx-auto m-2" id="interiorImg4"
+                        src="images/interiors/interior-package-4/interior-render-4.png" alt=""
+                        onclick="launchModal4('interiorImg4')">
+
+                      <div class="col-4">
+                        <img class="rounded img-fluid m-2" id="interiorImg4_masterbed"
+                          src="images/interiors/interior-package-4/interior-render-4-masterbed.png"
+                          onclick="launchModal4('interiorImg4_masterbed')">
+                      </div>
+                      <!-- The Modal -->
+                      <div id="myModal4" class="modal">
+
+                        <!-- The Close Button -->
+                        <span class="close">&times;</span>
+
+                        <!-- Modal Content (The Image) -->
+                        <img class="modal-content" id="img04">
+
+                        <!-- End Modal -->
+                      </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 mb-4 text-center mx-auto">
+                      <div class="card bg-light shadow-1">
+                        <div class="row">
+                          <div class="col-md-12 text-black mt-3">
+                            <h4>Interior Package 4</h4>
+                          </div>
+
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Cabinets</b><br> Sage<br><img
+                              class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-4/samples/cabinet_sage.jpg"> <br>
+
+                            Coffee<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-4/samples/cabinet_coffee.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Countertops</b><br>Sparkling White
+                            Quartz Eased
+                            Edge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-4/samples/quartz_sparklingwhite.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Handles</b><br>BP 65096-900</div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Laminate</b><br>Flagstaff
+                            Oak<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-4/samples/lvp_flagstaffoak.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Carpet</b><br>944 Tantalize<br><img
+                              class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-4/samples/carpet_tantlalize.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Paint</b><br>Grassland
+                            <br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-4/samples/SW6163-grassland-lg.png">
+                          </div>
+                        </div>
+                        <div class="card-body bg-green">
+                          <button id="" class="btn btn-dark rounded"
+                            onclick="nextPrev(1); setInterior('images/interiors/interior-package-4/interior-render-4.png','Interior Package 4', 'Sage','images/interiors/interior-package-4/samples/cabinet_sage.jpg','Coffee','images/interiors/interior-package-4/samples/cabinet_coffee.jpg','Sparkling White Quartz Eased Edge', 'images/interiors/interior-package-4/samples/quartz_sparklingwhite.jpg','BP 65096-900', 'Flagstaff Oak', 'images/interiors/interior-package-4/samples/lvp_flagstaffoak.jpg','944 Tantalize', 'images/interiors/interior-package-4/samples/carpet_tantlalize.jpg', 'Grassland','images/interiors/interior-package-4/samples/SW6163-grassland-lg.png')">Select</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Start Package #5 -->
+                <div class="carousel-item">
+                  <div class="row mx-auto rounded shadow-1 mb-5 bg-light border">
+                    <div class="col-lg-12 text-center">
+                      <h3 class="card-title text-bold m-2 text-dark pt-2 pb-2 section-title">Interior Package 5</h3>
+                    </div>
+                    <div class="col-lg-12 col-md-12 mb-4 text-center">
+
+                      <!-- Main Image -->
+                      <img class="rounded img-fluid mx-auto m-2" id="interiorImg5"
+                        src="images/interiors/interior-package-5/interior-render-5.png" alt=""
+                        onclick="launchModal5('interiorImg5')">
+
+                      <div class="col-4">
+                        <img class="rounded img-fluid m-2" id="interiorImg5_masterbed"
+                          src="images/interiors/interior-package-5/interior-render-5-masterbed.png"
+                          onclick="launchModal5('interiorImg5_masterbed')">
+                      </div>
+                      <!-- The Modal -->
+                      <div id="myModal5" class="modal">
+
+                        <!-- The Close Button -->
+                        <span class="close">&times;</span>
+
+                        <!-- Modal Content (The Image) -->
+                        <img class="modal-content" id="img05">
+
+                        <!-- End Modal -->
+                      </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 mb-4 text-center mx-auto">
+                      <div class="card bg-light shadow-1">
+                        <div class="row">
+                          <div class="col-md-12 text-black mt-3">
+                            <h4>Interior Package 5</h4>
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Cabinets</b><br> Vanilla<br><img
+                              class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-5/samples/cabinet_vanilla.jpg">
+                            <br>
+                            Navy<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-5/samples/cabinet_navy.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Countertops</b><br>Sparkling White
+                            Quartz Eased
+                            Edge<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-5/samples/quartz_sparklingwhite.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Handles</b><br>BP 65096-900</div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Laminate</b><br>Flagstaff
+                            Oak<br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-5/samples/lvp_flagstaffoak.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Carpet</b><br>733 Compel<br><img
+                              class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-5/samples/carpet_compel.jpg">
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-black m-3 mx-auto"><b>Paint</b><br>Morning Fog
+                            <br><img class="rounded mx-auto d-block" style="height: 75px;"
+                              src="images/interiors/interior-package-5/samples/SW6255-morning-fog-lg.png">
+                          </div>
+                        </div>
+                        <div class="card-body bg-green">
+                          <button id="" class="btn btn-dark rounded"
+                            onclick="nextPrev(1); setInterior('images/interiors/interior-package-5/interior-render-5.png', 'Interior Package 5', 'Vanilla', 'images/interiors/interior-package-5/samples/cabinet_vanilla.jpg','Navy','images/interiors/interior-package-5/samples/cabinet_navy.jpg','Sparkling White Quartz Eased Edge', 'images/interiors/interior-package-5/samples/quartz_sparklingwhite.jpg','BP 65096-900', 'Flagstaff Oak', 'images/interiors/interior-package-5/samples/lvp_flagstaffoak.jpg','733 Compel', 'images/interiors/interior-package-5/samples/carpet_compel.jpg', 'Morning Fog', 'images/interiors/interior-package-5/samples/SW6255-morning-fog-lg.png')">Select</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2"
+                  data-bs-slide="prev" onclick="decrementEntiWithArrow()">
+                  <span id="scroll" class="carousel-control-prev-icon mt-3" aria-hidden="true"></span>
+                  <span class="visually-hidden" >Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                  data-bs-slide="next" onclick="incrementEntWithArrow()">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2"
+                  data-bs-slide="next" onclick="incrementEntiWithArrow()">
                   <span class="carousel-control-next-icon mt-3" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
-              <!-- Buttons -->
-              <div class="mt-5 mb-5 text-center" style="overflow:auto;">
-                <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Back</button>
-              </div>
-              <!-- End of tab 1 -->
-
+            </div>
+            <!-- Buttons -->
+            <div class="mt-5 mb-5 text-center" style="overflow:auto;">
+              <button type="button" id="prevBtn" class="rounded" onclick="nextPrev(-1)">Back</button>
             </div>
           </div>
-          <!-- End of exterior tab -->
+        </div>
+        <!-- End of interior tab -->
 
 
 
@@ -384,39 +556,43 @@
   <script src="js/modal.js"></script>
   <script src="js/buildApp.js"></script>
   <script>
-
-    var enteriorCarouselIndicator = 0;
+    
+    var interiorCarouselIndicator = 0;
+    console.log(interiorCarouselIndicator);
 
     $(".carousel-link").click(function () {
       $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
       $(this).attr('style', 'color: #f9bf29 !important');
-      enteriorCarouselIndicator = this.id.slice(-1);
-      enteriorCarouselIndicator = parseInt(enteriorCarouselIndicator, 10);
+      interiorCarouselIndicator = this.id.slice(-1);
+      interiorCarouselIndicator = parseInt(interiorCarouselIndicator, 10);
+      console.log(interiorCarouselIndicator);
     });
 
-    function incrementEntWithArrow() {
-      enteriorCarouselIndicator = enteriorCarouselIndicator + 1;
-      if (enteriorCarouselIndicator > 4) {
-        enteriorCarouselIndicator = 0;
+    function incrementEntiWithArrow() {
+      interiorCarouselIndicator = interiorCarouselIndicator + 1;
+      
+      if (interiorCarouselIndicator > 4) {
+        interiorCarouselIndicator = 0;
         $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
-        $('#ent' + enteriorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
+        $('#enti' + interiorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
       } else {
         $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
-        $('#ent' + enteriorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
+        $('#enti' + interiorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
       }
+      console.log(interiorCarouselIndicator);
     };
 
-    function decrementEntWithArrow() {
-      if (enteriorCarouselIndicator == 0) {
-        enteriorCarouselIndicator = 4;
+    function decrementEntiWithArrow() {
+      if (interiorCarouselIndicator == 0) {
+        interiorCarouselIndicator = 4;
         $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
-        $('#ent' + enteriorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
+        $('#enti' + interiorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
       } else {
-        enteriorCarouselIndicator = enteriorCarouselIndicator - 1;
+        interiorCarouselIndicator = interiorCarouselIndicator - 1;
         $(".carousel-link").attr('style', 'color: white !important; text-decoration: none !important');
-        $('#ent' + enteriorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
+        $('#enti' + interiorCarouselIndicator).attr('style', 'color: #f9bf29 !important');
       }
-      console.log(enteriorCarouselIndicator);
+      console.log(interiorCarouselIndicator);
     };
 
   </script>
