@@ -31,6 +31,8 @@ VALUES (DEFAULT, Now(),'$name', '$email', '$phone', '$floorplan', '$exterior', '
 
 /* Send email */
 mail('thenorthsider35@gmail.com', 'New Customer Request', $emailMessage);
+mail('twininger@winingerconstruction.com', 'New Customer Request', $emailMessage);
+mail('holland@winingerconstruction.com', 'New Customer Request', $emailMessage);
 
 /* Confirmation of completed actions */
 if ($conn->query($sql) === TRUE) {
